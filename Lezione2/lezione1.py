@@ -232,13 +232,21 @@ while y in x:
         print(len(x))
         x.pop(2)
         x.insert(3,"barca")
-        break 
+        break
 
 # ES. 6-1:
+
 '''Use a dictionary to store information about a person you know.
- Store their first name, last name, age, and the city in which they live. 
- You should have keys such as first_name, last_name, age, and city.
- Print each piece of information stored in your dictionary.'''
+Store their first name, last name, age, and the city in which they live. 
+You should have keys such as first_name, last_name, age, and city.
+Print each piece of information stored in your dictionary.'''
+
+# Soluzione ES. 6-1:
+
+user_information = {"name":"Giacomo","last_name":"Panella","age":"32","city":"porano"}
+
+for key,value in user_information.items:
+    print(value)
 
 
 
