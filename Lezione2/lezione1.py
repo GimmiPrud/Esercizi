@@ -358,6 +358,56 @@ for nam,num in fav_numbers.items():
     for n in num:
         print(n)
 
+# ES. 6-11:
+'''
+Make a dictionary called cities.
+Use the names of three cities as keys in your dictionary.
+Create a dictionary of information about each city and include the country that the city is in,its approximate population, and one fact about that city.
+The keys for each city’s dictionary should be something like country, population, and fact.
+Print the name of each city and all of the information you have stored about it.'''
+
+# Soluzione ES. 6-11:
+
+city: dict = {
+"Roma":{
+"country":"Regione Lazio",
+"population": 2754228,
+"fact":"Roma é la città con più fontane al mondo. Ha più di 2.000 fontane di varie forme e dimensioni"},
+
+"Firenze":{
+"country":"Regione Toscana",
+"population": 382258,
+"fact":"Nel complesso conventuale di Santa Maria Novella, vicino alla stazione, c'è la più antica e storica farmacia di tutta Europa. Risale al 1612 e da secoli è in attività. Oggi si è trasformata più che altro in erboristeria e profumeria."},
+
+"Venezia":{
+"country":"Regione Veneto",
+"population": 250296,
+"fact":" Ca'Dario è un palazzo in stile rinascimentale veneziano affacciato su Canal Grande. Il palazzo è noto perché su di esso sembra gravare una maledizione. Infatti, fin dal 1487, quando fu costruito, tutti i suoi proprietari sono morti in modo inspiegabile. "}
+}
+
+for cit,curios in city.items():
+    print(f" {cit} :")
+    print(f"country:\n{curios["country"]}\npopulation:\n{curios["population"]}\nfact:\n{curios["fact"]}")
+    
+# ES. 6-12
+'''
+We’re now working with examples that are complex enough that they can be extended in any number of ways.
+Use one of the example programs from this chapter.
+extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.'''
+
+# Soluzione ES. 6-12:
+
+    
+
+    
+
+    
+
+
+
+
+
+
 
 
 
