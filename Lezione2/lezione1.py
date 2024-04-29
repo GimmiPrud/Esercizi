@@ -243,7 +243,7 @@ Print each piece of information stored in your dictionary.'''
 
 # Soluzione ES. 6-1:
 
-user_information = {"name":"Giacomo","last_name":"Panella","age":"32","city":"porano"}
+user_information: dict = {"name":"Giacomo","last_name":"Panella","age":"32","city":"porano"}
 
 for key,value in user_information.items():
     print(f"{key}:\n{value}")
@@ -257,6 +257,42 @@ Print each person’s name and their favorite number.
 For even more fun, poll a few friends and get some actual data for your program.'''
 
 # Soluzione ES. 6-2:
+
+fav_numbers: dict = {"luca":25, "alessio":3, "matteo":31, "francesco":18, "damiano":7}
+
+for name,number in fav_numbers.items():
+    print(f"nome: {name}\n numero preferito: {number}")
+    
+# ES. 6-3:
+'''
+A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
+• Think of five programming words you’ve learned about in the previous chapters.
+Use these words as the keys in your glossary, and store their meanings as values.
+• Print each word and its meaning as neatly formatted output. 
+You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line.
+Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.'''
+
+# Soluzine ES. 6-3:
+
+glossary: dict = {
+"Kernel": "Nucleo centrale di un sistema operativo, che si occupa dell’interazione al livello più profondo tra il software e lo hardware su cui si trova installato",
+"Booleano":"campo dell'analisi matematica nel quale si eseguono confronti. Operatori booleani possono essere ad esempio OR, AND, NOT, EQV, VERO (true), FALSO (false), ecc.",
+"Debugger":"programma che agevola il compito di correzione degli errori che si commettono durante la creazione di un applicativo",
+"Dir":"visualizza il contenuto di una directory",
+"Funzione":"un insieme di istruzioni accumunate da un alias. Quests alias viene poi usato per richiamare l’insieme del codice, contenuto nella funzione stessa, senza doverlo scrivere nuovamente"
+}
+
+for k,v in glossary.items():
+    print("Glossario informatico:\n",f"\n{k}:\n{v}")
+
+# ES. 6-7:
+'''
+Start with the program you wrote for Exercise 6-1. 
+Make two new dictionaries representing different people, and store all three dictionaries in a list called people.
+Loop through your list of people.
+As you loop through the list, print everything you know about each person.'''
+
+
 
 
     
