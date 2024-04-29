@@ -353,6 +353,12 @@ fav_numbers: dict = {
 "damiano":[7,14,21]
 }
 
+for nam,num in fav_numbers.items():
+    print(f"nome:\n{nam}\nfavourite numbers:")
+    for n in num:
+        print(n)
+
+
 
 
     
