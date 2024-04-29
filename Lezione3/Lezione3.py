@@ -16,4 +16,48 @@ for pizza in favourite_pizza:
             
 print("Adoro la pizza")
 
+# ES. 4-2:
+'''
+Think of at least three different animals that have a common characteristic. 
+Store the names of these animals in a list, and then use a for loop to print out the name of each animal.
+• Modify your program to print a statement about each animal, such as A dog would make a great pet.
+• Add a line at the end of your program, stating what these animals have in common.
+You could print a sentence, such as Any of these animals would make a great pet!'''
+
+# Soluzione ES. 4-2:
+
+animals: list = ["pipistrello","gatto","gufo"]
+for animal in animals:
+    print(animal+ ":")
+    print(f"il {animal} è molto agile al buio")
+
+print("ognuno di questi animali saprebbe muoversi molto bene al buio")
+
+# ES. 4-3:
+
+'''Use a for loop to print the numbers from 1 to 20, inclusive.'''
+
+# Soluzione ES. 4-3:
+
+for numbers in range(0,21):
+    print(numbers)
+
+# ES. 4-4:
+'''
+Make a list of the numbers from one to one million, and then use a for loop to print the numbers.
+(If the output is taking too long, stop it by pressing CTRL-C or by closing the output window.)
+'''
+# Soluzione ES. 4-4:
+
+for num in range(0,1000001):
+   print(num)
+
+
+    
+
+
+
+
+
+
 
