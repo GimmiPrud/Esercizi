@@ -292,6 +292,61 @@ Make two new dictionaries representing different people, and store all three dic
 Loop through your list of people.
 As you loop through the list, print everything you know about each person.'''
 
+# Soluzione ES. 6-7:
+
+user1_information: dict = {"name":"Mattia","last_name":"campanelli","age":"26","city":"Castel Giorgio"}
+
+user2_information: dict = {"name":"David","last_name":"Palmucci","age":"33","city":"Castel Giorgio"}
+
+Person: list = [user_information, user1_information, user2_information]
+
+for p in Person:
+    print(p)
+    
+# ES. 6-8:
+'''
+Make several dictionaries, where each dictionary represents a different pet.
+In each dictionary, include the kind of animal and the owner’s name. 
+Store these dictionaries in a list called pets.
+Next, loop through your list and as
+you do, print everything you know about each pet. '''
+
+# Soluzione ES. 6-8:
+
+animal_1: dict = {"kind_of_animal":"Dog","owners_name":"Sergio"}
+
+animal_2: dict = {"kind_of_animal":"Cat","owners_name":"Bruno"}
+
+animal_3: dict = {"kind_of_animal":"Horse","owners_name":"Elena"}
+
+pets: list = [animal_1, animal_2, animal_3]
+
+for pet in pets:
+    print(pet)
+    
+# ES. 6-9:
+'''
+Make a dictionary called favorite_places.
+Think of three names to use as keys in the dictionary, and store one to three favorite places for each person.
+To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. 
+Loop through the dictionary, and print each person’s name and their favorite places.'''
+
+# Soluzione ES. 6-9:
+
+Favorite_places: dict = {}
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
