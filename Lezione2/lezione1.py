@@ -333,7 +333,28 @@ Loop through the dictionary, and print each person’s name and their favorite p
 
 # Soluzione ES. 6-9:
 
-Favorite_places: dict = {}
+Favorite_places: dict = {"Camilla":"New York","Alessandro":"Ibiza","Alma":"i Caraibi"}
+
+for name,place in Favorite_places.items():
+    print(f"Caio sono {name} e vorrei visitare {place}")
+    
+# ES. 6-10:
+'''
+Modify your program from Exercise 6-2 so each person can have more than one favorite number.
+Then print each person’s name along with their favorite numbers.'''
+
+# Soluzione ES. 6-10:
+
+fav_numbers: dict = {
+"luca":[25,56,6], 
+"alessio":[34,78,45],
+"matteo":[31,28,5],
+"francesco":[18,48,2],
+"damiano":[7,14,21]
+}
+
+
+
     
     
     
