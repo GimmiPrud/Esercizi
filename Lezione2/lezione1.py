@@ -396,6 +396,56 @@ Use one of the example programs from this chapter.
 extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.'''
 
 # Soluzione ES. 6-12:
+'''
+We’re now working with examples that are complex enough that they can be extended in any number of ways.
+Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.'''
+
+# Soluzione ES. 6-12:   (modifica dell'esercizio 6-7)
+
+Total_user : dict = {
+
+"USER1": {
+"name":"Mattia",
+"last_name":"campanelli",
+"age":"26",
+"city":"Castel Giorgio",
+"favourite food":["pasta","pizza","bistecca"]},
+
+"USER2": {"name":"David",
+"last_name":"Palmucci",
+"age":"33",
+"city":"Castel Giorgio",
+"favourite food":["Trippa","pizza","pollo"]},
+
+"USER4":{"name":"Andrea",
+"last_name":"Basili",
+"age":"30",
+"city":"Roma",
+"favourite food":["pasta","sushi","pesce"]},
+
+"USER5":{"name":"Gioia",
+"last_name":"Stampachiacchere",
+"age":"24",
+"city":"Castel Viscardo",
+"favourite food":["latte","pizza","formaggi"]},
+
+"USER6":{"name":"Gioia",
+"last_name":"Stampachiacchere",
+"age":"24",
+"city":"Allerona",
+"favourite food":["sushi","Miele","cioccolata"]}
+}
+
+
+
+
+
+
+
+
+
+
+
 
     
 
