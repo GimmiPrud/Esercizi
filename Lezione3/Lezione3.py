@@ -167,6 +167,31 @@ Choose three of the programs you’ve written in this chapter and modify each on
 '''
 # Soluzione ES. 4-14 & 4-15:
 
+if False:
+    # 1)
+    multi = []
+    for i in range(3, 31, 3):
+        multi.append(i)
+
+    print(multi)
+    
+    # 2)
+    number_range = range(0, 1000001)
+    print(f"Massimo: {max(number_range)}\nminimo: {min(number_range)}")
+    print(sum(number_range))
+    
+    # 3)
+    animals = ["pipistrello", "gatto", "gufo"]
+    for animal in animals:
+        print(animal + ":")
+        print(f"Il {animal} è molto agile al buio.")
+
+    
+    
+    
+    
+    
+    
 
 
 
