@@ -52,6 +52,31 @@ Make a list of the numbers from one to one million, and then use a for loop to p
 for num in range(0,1000001):
    print(num)
 
+# ES. 4-5:
+'''
+ Make a list of the numbers from one to one million, and then use min() and max() to make sure your list actually starts at one and ends at one million.
+ Also, use the sum() function to see how quickly Python can add a million numbers.
+'''
+# Soluzione ES. 4-5:
+
+number_range: int = range(0,1000001)
+print(f"Massimo: {max(number_range)}\n minimo: {min(number_range)}")
+print(sum(number_range))
+
+# ES. 4-6:
+'''
+Use the third argument of the range() function to make a list of the odd numbers from 1 to 20.
+Use a for loop to print each number.
+'''
+# Soluzione ES. 4-6:
+
+
+
+    
+
+
+    
+   
 
     
 
