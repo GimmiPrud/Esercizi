@@ -86,7 +86,60 @@ city_country("Paris","France")
 city_country("Madrid","Spain")
 city_country(city="Oslo",country="Norway")
 
-# ES. 8-7:
+# ES. 8-7 & 8-8:
+'''
+Write a function called make_album() that builds a dictionary describing a music album.
+The function should take in an artist name and an album title, and it should return a dictionary containing these two pieces of information.
+Use the function to make three dictionaries representing different albums.
+Print each return value to show that the  dictionaries are storing the album information correctly.
+Use None to add an optional parameter to make_album() that allows you to store the number of songs on an album. If the calling line includes a value for the number of songs, add that value to the album’s dictionary.
+Make at least one new function call that includes the number of songs on an album.
+
+Start with your program from Exercise 8-7.
+Write a while loop that allows users to enter an album’s artist and title.
+Once you have that information, call make_album() with the user’s input and print the dictionary that’s created.
+Be sure to include a quit value in the while loop.
+'''
+# Soluzione ES. 8-7 & 8-8:
+
+def make_album(Band: str, album: str, number_songs_album: int = None )-> dict:
+    info = {"name":Band, "album":album}
+    if number_songs_album:
+        info["number_songs_album"]= number_songs_album
+    return info
+
+print(make_album("Metallica","Master of Puppets"))
+print(make_album("Iron Maiden","Fear of the Dark"))
+print(make_album("Linkin Park","Meteora"))
+print(make_album("Pink Floyd","The Wall"))
+
+while True:
+    print("enter 'q' at any time to quit")
+    
+    band = input("enter the name of the Band: ")
+    if band == "q":
+        break
+    
+    albums = input("enter the name of the album: ")
+    if albums == "q":
+        break
+    
+print(make_album(band,albums))
+
+# ES. 8-9:
+'''
+Make a list containing a series of short text messages.
+Pass the list to a function called show_messages(), which prints each text message.
+'''
+# Soluzione ES. 8-9
+
+
+
+
+
+
+    
+
 
 
     
