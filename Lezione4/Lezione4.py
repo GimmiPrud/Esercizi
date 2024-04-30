@@ -72,6 +72,22 @@ describe_city("Rome")
 describe_city("Tokyo","japan")
 
 # ES. 8-6:
+'''
+Write a function called city_country() that takes in the name of a city and its country.
+The function should return a string formatted like this: "Santiago, Chile".
+Call your function with at least three city-country pairs, and print the values that are returned.
+'''
+# Soluzione ES. 8-6:
+
+def city_country(city: str, country: str)-> str:
+    print(f"{city},{country}")
+
+city_country("Paris","France")
+city_country("Madrid","Spain")
+city_country(city="Oslo",country="Norway")
+
+# ES. 8-7:
+
 
     
     
