@@ -126,16 +126,19 @@ if False:
     
     print(make_album(band,albums))
 
-# ES. 8-9 & 8-10:
+# ES. 8-9 & 8-10 & 8-11:
 '''
 Make a list containing a series of short text messages.
 Pass the list to a function called show_messages(), which prints each text message.
 
 Start with a copy of your program from Exercise 8-9. Write a function called send_messages() that prints each text message and moves each message to a new list called sent_messages as it’s printed.
 After calling the function, print both of your lists to make sure the messages were moved correctly.
+
+start with your work from Exercise 8-10. Call the function send_messages() with a copy of the list of messages.
+After calling the function, print both of your lists to show that the original list has retained its messages.
 '''
 
-# Soluzione ES. 8-9 & 8-10:
+# Soluzione ES. 8-9 & 8-10 & 8-11:
 
 short_text: list[str] = ["Ciao,come stai?","Vuoi uscire dal programma","lo sapevo","hai ragione"]
 
@@ -152,13 +155,33 @@ def send_messages(short_text: list[str],sent_messages: list[str])->list[str]:
     pass
 
 
+# ES. 8-12:
+'''
+Write a function that accepts a list of items a person wants on a sandwich.
+The function should have one parameter that collects as many items as the function call provides,
+and it should print a summary of the sandwich that’s being ordered.
+Call the function three times, using a different number of arguments each time.
+'''
+# Soluzione ES. 8-12:
 
-# ES. 8-11:
+def sandwich(*items: list[str])-> str:
+    print(f"items on a sandwich:\n{items}")
+
+sandwich("salad","pepperoni","tabasco","cheese")
+sandwich("maionese","ham")
+sandwich("cucumbers","mozzarella","tomatoes")
+
+# ES. 8-13:
 '''
-tart with your work from Exercise 8-10. Call the function send_messages() with a copy of the list of messages.
-After calling the function, print both of your lists to show that the original list has retained its messages.
+Build a profile of yourself by calling build_profile(), using your first and last names and three other key-value pairs that describe you.
+All the values must be passed to the function as parameters.
+The function then must return a string such as "Eric Crow, age 45, hair brown, weight 67"
 '''
-# Soluzione ES. 8-11:
+# Soluzione ES. 8-13:
+
+    
+    
+
 
 
 
