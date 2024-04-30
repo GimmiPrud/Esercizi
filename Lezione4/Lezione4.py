@@ -32,13 +32,13 @@ Call the function once using positional arguments to make a shirt.
 Call the function a second time using keyword arguments.
 '''
 # Soluzione ES. 8-3:
+if False:
+    def make_shirt(size: str, text: str)-> str:
+        print(f"size t-shirt: {size}")
+        print(f"text of a message that should be printed on the shirt:\n{text}")
 
-def make_shirt(size: str, text: str)-> str:
-    print(f"size t-shirt: {size}")
-    print(f"text of a message that should be printed on the shirt:\n{text}")
-
-make_shirt("L","Hello world")
-make_shirt(size= "XL" ,text="Vida Loca")
+    make_shirt("L","Hello world")
+    make_shirt(size= "M", text= "Vida Loca")
 
 # ES. 8-4:
 '''
@@ -46,6 +46,36 @@ Modify the make_shirt() function so that shirts are large by default with a mess
 Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
 '''
 # Soluzione ES. 8-4:
+
+def make_shirt(size: str = "L", text: str = "I love python")-> str:
+    print(f"size t-shirt: {size}")
+    print(f"text of a message that should be printed on the shirt:\n{text}")
+
+make_shirt()
+make_shirt("M")
+make_shirt(text="The day after tomorrow")
+
+# ES. 8-5:
+'''
+Write a function called describe_city() that accepts the name of a city and its country.
+The function should print a simple sentence, such as Reykjavik is in Iceland.
+Give the parameter for the country a default value. 
+Call your function for three different cities, at least one of which is not in the default country.
+'''
+# Soluzione ES. 8-5:
+
+def describe_city(city: str, country: str = "Italy")-> str:
+    print(f"{city} is in {country}")
+
+describe_city("Firenze")
+describe_city("Rome")
+describe_city("Tokyo","japan")
+
+# ES. 8-6:
+
+    
+    
+    
 
 
 
