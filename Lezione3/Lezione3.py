@@ -294,7 +294,7 @@ Write an if-elif-else chain that determines a person’s stage of life. Set a va
 '''
 # Soluzione ES. 5-6:
 
-age: int = int(input("inserisci l'età di una persona: "))
+age: int = int(input("enter an age: "))
 
 if age < 2:
     print("that person is a baby")
@@ -337,7 +337,24 @@ Loop through the list, and print a greeting to each user.
 '''
 # Soluzione ES. 5-8:
 
-usernames: list[str] = ["Max","Alessio","Marco"]
+usernames: list[str] = ["Max","Alessio","admin","Marco","Carlo"]
+for user in usernames:
+    if user == "admin":
+        print("Hello admin, would you like to see a status report ?")
+        continue
+    else:
+        print(f"Hello {user} ,thank you for logging in again.")
+
+# ES. 5-9:
+'''
+Add an if test to hello_admin.py to make sure the list of users is not empty.
+• If the list is empty, print the message We need to find some users!
+• Remove all of the usernames from your list, and make sure the correct message is printed.
+'''
+# Soluzione ES. 5-9:
+
+        
+        
 
 
 
