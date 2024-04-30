@@ -293,19 +293,19 @@ Write an if-elif-else chain that determines a person’s stage of life. Set a va
 • If the person is age 65 or older, print a message that the person is an elder.
 '''
 # Soluzione ES. 5-6:
+if False:
+    age: int = int(input("enter an age: "))
 
-age: int = int(input("enter an age: "))
-
-if age < 2:
-    print("that person is a baby")
-elif 4 < age < 13:
-    print("that person is a toddler")
-elif 13 < age < 20:
-    print("that person is a teenager")
-elif 20 < age < 65:
-    print("that person is an adult")
-elif age >= 65:
-    print("that person is an elder")
+    if age < 2:
+        print("that person is a baby")
+    elif 4 < age < 13:
+        print("that person is a toddler")
+    elif 13 < age < 20:
+        print("that person is a teenager")
+    elif 20 < age < 65:
+        print("that person is an adult")
+    elif age >= 65:
+        print("that person is an elder")
     
 # ES. 5-7:
 '''
@@ -364,6 +364,31 @@ If a username has not been used, print a message saying that the username is ava
 • Make sure your comparison is case insensitive. If 'John' has been used, 'JOHN' should not be accepted.
 (To do this, you’ll need to make a copy of current_users containing the lowercase versions of all existing users.)
 '''
+# Soluzione ES. 5-10:
+
+current_users: list[str] = ["Marc","Gimmi","Silvio","Kevin","Sandro","Rita"]
+
+current_users_lower = [user.lower() for user in current_users]
+
+new_users: list[str] = ["Biggio","Pioli","GiMMi","SaNDro","Jessica","Leao"]
+
+for users in new_users:
+    if users.lower() in current_users_lower:
+        print("sorry, this username already exists. Will need to enter a new username.")
+    else:
+        print(f"{users} ? yes, this username is available")
+        
+# ES. 5-11:
+'''
+Ordinal numbers indicate their position in a list, such as 1st or 2nd.
+Most ordinal numbers end in th, except 1, 2, and 3.
+• Store the numbers 1 through 9 in a list.
+• Loop through the list.
+• Use an if-elif-else chain inside the loop to print the proper ordinal ending for each number.
+Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
+'''
+
+
 
 
 
