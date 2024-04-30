@@ -31,7 +31,7 @@ for animal in animals:
     print(animal+ ":")
     print(f"il {animal} è molto agile al buio")
 
-print("ognuno di questi animali saprebbe muoversi molto bene al buio")
+print("\nognuno di questi animali saprebbe muoversi molto bene al buio")
 
 # ES. 4-3:
 
@@ -60,7 +60,7 @@ if False:
 # Soluzione ES. 4-5:
 
 number_range: int = range(0,1000001)
-print(f"Massimo: {max(number_range)}\n minimo: {min(number_range)}")
+print(f"Max: {max(number_range)}\n min: {min(number_range)}")
 print(sum(number_range))
 
 # ES. 4-6:
@@ -148,11 +148,11 @@ Friend_pizzas: list = favourite_pizza.copy()
 favourite_pizza.append("Capricciosa")
 Friend_pizzas.append("Boscaiola")
 
-print("My favorite pizzas are:")
+print("\nMy favorite pizzas are:")
 for pizze in favourite_pizza:
     print(pizze)
 
-print("My friend’s favorite pizzas are:") 
+print("\nMy friend’s favorite pizzas are:") 
 for p in Friend_pizzas:
     print(p)
     
@@ -185,6 +185,55 @@ if False:
     for animal in animals:
         print(animal + ":")
         print(f"Il {animal} è molto agile al buio.")
+
+# ES. 5-1:
+'''
+Write a series of conditional tests. Print a statement
+describing each test and your prediction for the results of each test.
+Your code should look something like this:
+car = 'subaru'
+print("Is car == 'subaru'? I predict True.")
+print(car == 'subaru')
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+• Look closely at your results, and make sure you understand why each line
+evaluates to True or False.
+• Create at least 10 tests. Have at least 5 tests evaluate to True and another
+5 tests evaluate to False.
+'''
+# Soluzione ES. 5-1:
+
+bird = "eagle"
+
+print("Is bird == 'eagle' ? I predict True.")
+print(bird == "eagle")
+print("\nIs bird == 'horse'? I predict False.")
+print(bird == "horse")
+print("\nIs bird != 'horse'? I predict True ")
+print(bird != "horse")
+print("\nIs bird != 'eagle'? I predict False ")
+print(bird != "eagle")
+print("\nIs bird == 'eagle'+'horse'? I predict False ")
+print(bird == "eagle"+"horse")
+print("\nIs 'horse' == 'eagle'? I predict False ")
+print("horse" == "eagle")
+print("\nIs Len(horse) < len('eagle')? I predict False ")
+print(len("horse") < len("eagle"))
+print("\nIs Len(horse) <= len('eagle')? I predict True ")
+print(len("horse") <= len("eagle"))
+print("\nIs 'horse'[4] == 'eagle'[4]? I predict True ")
+print("horse"[4] == "eagle"[4])
+print("\nIs bird == len('horse')? I predict True ")
+print(bird != len('horse'))
+
+
+
+
+
+
+
+
+
 
     
     
