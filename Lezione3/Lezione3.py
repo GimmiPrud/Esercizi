@@ -226,6 +226,21 @@ print("horse"[4] == "eagle"[4])
 print("\nIs bird == len('horse')? I predict True ")
 print(bird != len('horse'))
 
+# Per L'esercizio 5-2 ho creato un file conditional_tests.py sulla cartella Lezione3
+
+# ES. 5-3:
+'''
+Imagine an alien was just shot down in a game. Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+• Write an if statement to test whether the alien’s color is green. If it is, print a message that the player just earned 5 points.
+• Write one version of this program that passes the if test and another that fails.
+(The version that fails will have no output.)
+'''
+# Soluzione ES. 5-3:
+
+
+
+
+
 
 
 
