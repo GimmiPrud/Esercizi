@@ -248,6 +248,53 @@ into an if-elif-else chain.
 '''
 # Soluzione ES. 5-3, 5-4, 5-5:
 
+alien_color: str = "green"
+if alien_color == "green":
+    print("good job, you just earned 5 points ")
+else:
+    pass
+    
+if alien_color != "green":
+    print("good job, you just earned 5 points")
+else:
+    pass
+
+alien2_color: str = "red"
+
+if alien_color == "green":
+    print(f"good job you killed {alien_color} alien. You just earned 5 points")
+elif alien_color == "red":
+    print(f"good job you killed {alien2_color} alien. You just earned 15 points")
+else:
+    print("good job you killed yellow alien. You just earned 10 points")
+    
+if alien2_color == "green":
+    print(f"good job you killed {alien_color} alien. You just earned 5 points")
+elif alien2_color == "red":
+    print(f"good job you killed {alien2_color} alien. You just earned 15 points")
+else:
+    print("good job you killed yellow alien. You just earned 10 points")
+    
+if alien2_color != "red":
+    print(f"good job you killed {alien_color} alien. You just earned 5 points")
+elif alien_color == "red":
+    print(f"good job you killed {alien2_color} alien. You just earned 15 points")
+else:
+    print("good job you killed yellow alien. You just earned 10 points")
+    
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+
 
 
 
