@@ -387,6 +387,18 @@ Most ordinal numbers end in th, except 1, 2, and 3.
 • Use an if-elif-else chain inside the loop to print the proper ordinal ending for each number.
 Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
 '''
+# Soluzione ES. 5-11:
+
+ordinal_numbers: list[int] = [n for n in range(1,10)]
+for number in ordinal_numbers:
+    if number == 1:
+        print(f"{ordinal_numbers[0]}st")
+    elif number == 2:
+        print(f"{ordinal_numbers[1]}nd")
+    elif number == 3:
+        print(f"{ordinal_numbers[2]}rd")
+    else:
+        print(f"{number}th")
 
 
 
