@@ -308,7 +308,36 @@ elif age >= 65:
     print("that person is an elder")
     
 # ES. 5-7:
+'''
+Make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list.
+• Make a list of your three favorite fruits and call it favorite_fruits.
+• Write five if statements.
+Each should check whether a certain kind of fruit is in your list. If the fruit is in your list, the if block should print a statement, such as You really like Apples!
+'''
+# Soluzione ES. 5-7:
 
+favourite_fruits: list[str] = ["apple","banana","watermelon"]
+if "apple" in favourite_fruits:
+    print(f"you really like {favourite_fruits[0]} ")
+if "banana"in favourite_fruits[2]:
+    print("you hate banana")
+if favourite_fruits[2] is "watermelon":
+    print("you really like watermelon") 
+if "banana" and "watermelon" in favourite_fruits:
+    print(f"you really like {favourite_fruits[1]} and {favourite_fruits[2]} ")
+if "apple" or "banana"in favourite_fruits:
+    print("I like classic fruit")
+    
+# ES. 5-8:
+'''
+Make a list of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user after they log in to a website.
+Loop through the list, and print a greeting to each user.
+• If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
+• Otherwise, print a generic greeting, such as Hello Jaden, thank you for logging in again.
+'''
+# Soluzione ES. 5-8:
+
+usernames: list[str] = ["Max","Alessio","Marco"]
 
 
 
