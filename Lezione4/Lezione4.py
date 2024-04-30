@@ -101,37 +101,66 @@ Once you have that information, call make_album() with the user’s input and pr
 Be sure to include a quit value in the while loop.
 '''
 # Soluzione ES. 8-7 & 8-8:
+if False:
+    def make_album(Band: str, album: str, number_songs_album: int = None )-> dict:
+        info = {"name":Band, "album":album}
+        if number_songs_album:
+            info["number_songs_album"]= number_songs_album
+        return info
 
-def make_album(Band: str, album: str, number_songs_album: int = None )-> dict:
-    info = {"name":Band, "album":album}
-    if number_songs_album:
-        info["number_songs_album"]= number_songs_album
-    return info
+    print(make_album("Metallica","Master of Puppets"))
+    print(make_album("Iron Maiden","Fear of the Dark"))
+    print(make_album("Linkin Park","Meteora"))
+    print(make_album("Pink Floyd","The Wall",26))
 
-print(make_album("Metallica","Master of Puppets"))
-print(make_album("Iron Maiden","Fear of the Dark"))
-print(make_album("Linkin Park","Meteora"))
-print(make_album("Pink Floyd","The Wall"))
-
-while True:
-    print("enter 'q' at any time to quit")
+    while True:
+        print("enter 'q' at any time to quit")
     
-    band = input("enter the name of the Band: ")
-    if band == "q":
-        break
+        band = input("enter the name of the Band: ")
+        if band == "q":
+            break
     
-    albums = input("enter the name of the album: ")
-    if albums == "q":
-        break
+        albums = input("enter the name of the album: ")
+        if albums == "q":
+            break
     
-print(make_album(band,albums))
+    print(make_album(band,albums))
 
-# ES. 8-9:
+# ES. 8-9 & 8-10:
 '''
 Make a list containing a series of short text messages.
 Pass the list to a function called show_messages(), which prints each text message.
+
+Start with a copy of your program from Exercise 8-9. Write a function called send_messages() that prints each text message and moves each message to a new list called sent_messages as it’s printed.
+After calling the function, print both of your lists to make sure the messages were moved correctly.
 '''
-# Soluzione ES. 8-9
+
+# Soluzione ES. 8-9 & 8-10:
+
+short_text: list[str] = ["Ciao,come stai?","Vuoi uscire dal programma","lo sapevo","hai ragione"]
+
+def show_messages(text: str)-> str:
+    for t in text:
+        print(t)
+    return text
+
+show_messages(short_text)
+
+sent_messages: list[str] = []
+
+def send_messages(short_text: list[str],sent_messages: list[str])->list[str]:
+    pass
+
+
+
+# ES. 8-11:
+'''
+tart with your work from Exercise 8-10. Call the function send_messages() with a copy of the list of messages.
+After calling the function, print both of your lists to show that the original list has retained its messages.
+'''
+# Soluzione ES. 8-11:
+
+
 
 
 
