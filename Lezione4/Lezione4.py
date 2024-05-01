@@ -303,6 +303,21 @@ if False:
     print(city_country(city="Oslo", country="Norway"))
     
 
+# ESERCIZI LEZIONE4 (OPZIONALI):
+
+# ES. 1:
+'''
+ Create a function that takes a student's name and their scores in different subjects as input.
+The function calculates the average score and prints the student's name, average, and a message indicating whether the student passed the exam (average >= 60) or failed.
+Create a for loop to iterate over a list of students and scores, calling the function for each student.
+''' 
+# Soluzione ES. 1:
+if False:
+
+    def students_score(name: str, score: int):
+        name = input("HELLO STUDENT!! Enter your name: ")
+
+
     
         
 
