@@ -141,20 +141,25 @@ After calling the function, print both of your lists to show that the original l
 # Soluzione ES. 8-9 & 8-10 & 8-11:
 
 short_text: list[str] = ["Ciao,come stai?","Vuoi uscire dal programma","lo sapevo","hai ragione"]
+sent_message = []
 
 def show_messages(text: str)-> str:
-    for t in text:
-        print(t)
-    return text
+    for m in text:
+        print(m)
 
 show_messages(short_text)
 
-sent_messages: list[str] = []
+def send_messages(text: list[str] ,sent_messages: list[str])-> list[str]:
+    while text:
+        mex = text.pop()
+        print(mex)
+        sent_messages.append(mex)
 
-def send_messages(short_text: list[str],sent_messages: list[str])->list[str]:
-    pass
-
-
+send_messages(short_text[:], sent_message)
+print(f"original list: {short_text}")
+print(f"new list: {sent_message}")
+    
+    
 # ES. 8-12:
 '''
 Write a function that accepts a list of items a person wants on a sandwich.
