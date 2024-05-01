@@ -218,7 +218,9 @@ Write an import statement at the top of printing_models.py, and modify the file 
 '''
 # Soluzione ES. 8-15:
 
+from printing_functions import info_car
 
+info_car("Toyota","Yaris", color = "Blue", tow_package= False)
 
     
     
