@@ -209,7 +209,7 @@ if False:
         return build
 
     build_car = info_car("Bmw","Z4", color= "black", tow_package=True) 
-    print(build_car)  
+    print(build_car)
 
 # ES. 8-15:
 '''
@@ -217,10 +217,10 @@ Put the functions for the example printing_models.py in a separate file called p
 Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
 '''
 # Soluzione ES. 8-15:
+if False:
+    import printing_functions
 
-from printing_functions import info_car
-
-info_car("Toyota","Yaris", color = "Blue", tow_package= False)
+    printing_functions.info_car("Toyota","Yaris",color = "Blue", tow_package= True)
 
     
     
