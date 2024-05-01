@@ -211,16 +211,92 @@ if False:
     build_car = info_car("Bmw","Z4", color= "black", tow_package=True) 
     print(build_car)
 
-# ES. 8-15:
+# ES. 8-15 & 8-16:
 '''
 Put the functions for the example printing_models.py in a separate file called printing_functions.py.
 Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
+
+Using a program you wrote that has one function in it, store that function in a separate file. 
+Import the function into your main program file, and call the function using each of these approaches:
+import module_name
+from module_name import function_name
+from module_name import function_name as fn
+import module_name as mn
+from module_name import *
 '''
-# Soluzione ES. 8-15:
+# Soluzione ES. 8-15 & 8-16:
 if False:
     import printing_functions
+    from printing_functions import info_car
+    from printing_functions import info_car as mn
+    from printing_functions import*
 
     printing_functions.info_car("Toyota","Yaris",color = "Blue", tow_package= True)
+
+# ES. 8-17:
+'''
+Choose any three programs you wrote for this chapter.
+make sure they follow the styling guidelines described in this section.
+'''
+# Soluzione ES. 8-17:
+if False:
+    # 1)
+    def sandwich(*items: list[str]) -> str:
+        """
+        Stampa gli ingredienti di un panino.
+
+        :param items: Una lista di ingredienti.
+        :return: Una stringa che conferma gli ingredienti del panino.
+        """
+
+        print("\nIngredienti del panino:")
+        for item in items:
+            print(f"- {item}")
+            
+            return "Panino preparato con successo!"
+
+    
+    # 2)
+    def info_car(manufacture: str, model_name: str, **build) -> dict:
+     """
+     Restituisce un dizionario che contiene i dettagli dell'auto.
+
+        :param manufacture: Il produttore dell'auto.
+        :param model_name: Il modello dell'auto.
+        :param build: Altri dettagli dell'auto.
+        :return: Un dizionario che contiene i dettagli dell'auto.
+        """
+
+     build["manufacture"] = manufacture
+     build["model_name"] = model_name
+
+     return build
+
+
+    build_car = info_car("Bmw", "Z4", color="black", tow_package=True)
+    print(build_car)
+    
+    # 3)
+    def city_country(city: str, country: str) -> str:
+        """
+        Restituisce una stringa che rappresenta la città e il paese.
+
+        :param city: Il nome della città da includere nella stringa.
+        :param country: Il nome del paese da includere nella stringa.
+        :return: Una stringa che contiene il nome della città e il nome del paese.
+        """
+
+        return f"{city}, {country}"
+
+
+    print(city_country("Paris", "France"))
+    print(city_country("Madrid", "Spain"))
+    print(city_country(city="Oslo", country="Norway"))
+    
+
+    
+        
+
 
     
     
