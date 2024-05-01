@@ -142,6 +142,7 @@ After calling the function, print both of your lists to show that the original l
 
 short_text: list[str] = ["Ciao,come stai?","Vuoi uscire dal programma","lo sapevo","hai ragione"]
 sent_message = []
+new_short_text = short_text.copy()
 
 def show_messages(text: str)-> str:
     for m in text:
@@ -158,6 +159,9 @@ def send_messages(text: list[str] ,sent_messages: list[str])-> list[str]:
 send_messages(short_text[:], sent_message)
 print(f"original list: {short_text}")
 print(f"new list: {sent_message}")
+send_messages(short_text[:], new_short_text)
+print(f"original list: {short_text}")
+print(f"copy of original list: {new_short_text}")
     
     
 # ES. 8-12:
