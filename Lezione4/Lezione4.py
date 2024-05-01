@@ -165,7 +165,10 @@ Call the function three times, using a different number of arguments each time.
 # Soluzione ES. 8-12:
 
 def sandwich(*items: list[str])-> str:
-    print(f"items on a sandwich:\n{items}")
+    
+    print("\nItems in the sandwich:")
+    for item in items:
+        print(f"- {item}")
 
 sandwich("salad","pepperoni","tabasco","cheese")
 sandwich("maionese","ham")
@@ -179,6 +182,27 @@ The function then must return a string such as "Eric Crow, age 45, hair brown, w
 '''
 # Soluzione ES. 8-13:
 
+def build_profile(first_name: str, last_name: str, age: int, weight: int, height: int):
+
+ info = f"{first_name} {last_name}, age {age}, weight {weight}, height {height}"
+ return info
+
+myprofile = build_profile("Giammarco","prudenzi", 27, 74, 180)
+print(myprofile)
+
+# ES. 8-14:
+'''
+Write a function that stores information about a car in a dictionary. 
+The function should always receive a manufacturer and a model name.
+It should then accept an arbitrary number of keyword arguments.
+Call the function with the required information and two other name-value pairs, such as a color or an optional feature.
+Your function should work for a call like this one:
+car = make_car('subaru', 'outback', color='blue', tow_package=True) Print the dictionary that’s returned to make sure all the information was stored correctly. 
+'''
+# Soluzione ES. 8-14:
+
+    
+    
     
     
 
