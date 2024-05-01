@@ -5,15 +5,18 @@
 Your message should be simple, such as, “Hello Eric, would you like to learn some Python today?”'''
 
 # Soluzione ES. 2-3:
+
 name: str = "Alessio"
 
 print(f"Ciao {name} would you like to learn some python today")
 
 # ES. 2-4:
+
 '''Use a variable to represent a person’s name. 
 then print that person’s name in lowercase, uppercase, and title case.'''
 
 # Soluzione ES. 2-4:
+
 N: str = "Carletto"
 
 print(N.upper(), N.title(), N.lower())
@@ -218,21 +221,21 @@ For example, you could make a list of mountains, rivers, countries, cities, lang
 Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.'''
 
 # Soluzione ES. 3-10:
-
-y = input("scrivi qualcosa: ")
-x = []
-x.append(y)
-while y in x:
-    z = input("scrivi qualcosa: ")
-    x.append(z)
-    if len(x) == 8:
-        print(x)
-        x.append("...")
-        print(sorted(x))
-        print(len(x))
-        x.pop(2)
-        x.insert(3,"barca")
-        break
+if False:
+    y = input("scrivi qualcosa: ")
+    x = []
+    x.append(y)
+    while y in x:
+        z = input("scrivi qualcosa: ")
+        x.append(z)
+        if len(x) == 8:
+            print(x)
+            x.append("...")
+            print(sorted(x))
+            print(len(x))
+            x.pop(2)
+            x.insert(3,"barca")
+            break
 
 # ES. 6-1:
 
@@ -333,10 +336,11 @@ Loop through the dictionary, and print each person’s name and their favorite p
 
 # Soluzione ES. 6-9:
 
-Favorite_places: dict = {"Camilla":"New York","Alessandro":"Ibiza","Alma":"i Caraibi"}
+if False:
+    Favorite_places: dict = {"Camilla":"New York","Alessandro":"Ibiza","Alma":"i Caraibi"}
 
-for name,place in Favorite_places.items():
-    print(f"Caio sono {name} e vorrei visitare {place}")
+    for name,place in Favorite_places.items():
+        print(f"Caio sono {name} e vorrei visitare {place}")
     
 # ES. 6-10:
 '''
@@ -395,45 +399,24 @@ We’re now working with examples that are complex enough that they can be exten
 Use one of the example programs from this chapter.
 extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.'''
 
-# Soluzione ES. 6-12:   (aggiornamento dell'esercizio 6-7)
+# Soluzione ES. 6-12:             (ES. 6-9)
 
-Total_user : dict = {
+favorite_places: dict = {"Camilla":"New York","Alessandro":"Ibiza","Alma":"i Caraibi"}
 
-"USER1": {
-"name":"Mattia",
-"last_name":"campanelli",
-"age":"26",
-"city":"Castel Giorgio",
-"favourite food":["pasta","pizza","bistecca"]},
+favorite_places["Sergio"]= "Africa"
 
-"USER2": {
-"name":"David",
-"last_name":"Palmucci",
-"age":"33",
-"city":"Castel Giorgio",
-"favourite food":["Trippa","pizza","pollo"]},
+for name,place in favorite_places.items():
+    print(f"Caio sono {name} e vorrei visitare {place}")
+    if place == "Ibiza":
+        print("amo Ibiza")    
+    elif place == "New York":
+        print("Dovrei partire domani")
+    else:
+        print("\nma dovrò aspettare ancora un pò di tempo prima di partire")
+    
 
-"USER4":{
-"name":"Andrea",
-"last_name":"Basili",
-"age":"30",
-"city":"Roma",
-"favourite food":["pasta","sushi","pesce"]},
 
-"USER5":{
-"name":"Gioia",
-"last_name":"Stampachiacchere",
-"age":"24",
-"city":"Castel Viscardo",
-"favourite food":["latte","pizza","formaggi"]},
 
-"USER6":{
-"name":"Gioia",
-"last_name":"Stampachiacchere",
-"age":"24",
-"city":"Allerona",
-"favourite food":["sushi","Miele","cioccolata"]}
-}
 
 
 
