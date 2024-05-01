@@ -201,7 +201,21 @@ car = make_car('subaru', 'outback', color='blue', tow_package=True) Print the di
 '''
 # Soluzione ES. 8-14:
 
+def info_car(manufacture: str, model_name: str, **build):
     
+    build["manufacture"] = manufacture
+    build["model_name"] = model_name
+    return build
+
+build_car = info_car("Bmw","Z4", color= "black", tow_package=True) 
+print(build_car)  
+
+# ES. 8-15:
+'''
+Put the functions for the example printing_models.py in a separate file called printing_functions.py.
+Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
+'''
+# Soluzione ES. 8-15:
     
     
     
