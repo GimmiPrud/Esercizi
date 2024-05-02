@@ -78,9 +78,6 @@ if False:
         pass
     
 
-        
-
-
 # ES. 6:
 '''
 Scrivi una funzione che verifica se una combinazione di condizioni (A, B, e C) è soddisfatta per procedere con un'operazione.
@@ -123,7 +120,6 @@ if False:
     def count_isolated(num_list: list[int]) -> int:
         pass
         
-
 
 # ES. 9:
 '''
