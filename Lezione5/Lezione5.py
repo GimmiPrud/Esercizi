@@ -74,9 +74,18 @@ Utilizza il concetto di parametri opzionali per il parametro to_fahrenheit.
 # Svolgimento ES. 5:
 
 if False:
-    def convert_temperature(to_fahrenheit) -> float:
-        pass
-    
+    def convert_temperature(to_fahrenheit: float, Celsius: bool = False) -> float:
+        if Celsius == False:
+            print ((to_fahrenheit * 1.8) + 32 , "°F") 
+        
+        if Celsius == True:
+            print((to_fahrenheit - 32) / 1.8, "°C")
+        
+    convert_temperature(32, True)
+    convert_temperature(0,False)
+    convert_temperature(to_fahrenheit=50, Celsius= False)
+    convert_temperature( 10, 0)
+            
 
 # ES. 6:
 '''
