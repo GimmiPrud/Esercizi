@@ -39,13 +39,42 @@ if False:
 
 # ES. 9-3:
 '''
-Make a class called User. Create two attributes called first_name and last_name,
- and then create several other attributes that are typically stored in a user profile.
- Make a method called describe_user() that prints a summary of the user’s information.
- Make another method called greet_user() that prints a personalized greeting to the user.
- Create several instances representing different users, and call both methods for each user.
+Make a class called User. 
+Create two attributes called first_name and last_name,
+and then create several other attributes that are typically stored in a user profile.
+Make a method called describe_user() that prints a summary of the user’s information.
+Make another method called greet_user() that prints a personalized greeting to the user.
+Create several instances representing different users, and call both methods for each user.
 '''
 # Svolgimento ES. 9-3:
+
+if True:
+    class User:
+        def __init__(self, first_name: str, last_name: str):
+            self.first_name = first_name
+            self.last_name = last_name
+            self.age = None
+            self.active = None
+
+        def describe_user(self, newage: int, newactive: bool = True):
+            self.age = newage
+            self.active = newactive
+            return f"first name:\n- {self.first_name}\nlast name:\n- {self.last_name}\nage:\n- {self.age}\n active:\n- {self.active}"
+
+        def greet_user(self):
+            return f" Hello { self.first_name}, welcome!!"
+        
+    Giacomo = User("Giacomo","Panella")
+    print(Giacomo.describe_user(33, False))
+    print(Giacomo.greet_user())
+    print(Giacomo.age)
+    print(Giacomo.active)
+    Alessio = User("Alessio","Perazzino")
+    print(Alessio.describe_user(26,True))
+    print(Alessio.greet_user)
+
+
+
 
 
 
