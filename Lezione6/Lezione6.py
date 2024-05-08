@@ -48,7 +48,7 @@ Create several instances representing different users, and call both methods for
 '''
 # Svolgimento ES. 9-3:
 
-if True:
+if False:
     class User:
         def __init__(self, first_name: str, last_name: str):
             self.first_name = first_name
@@ -72,6 +72,8 @@ if True:
     Alessio = User("Alessio","Perazzino")
     print(Alessio.describe_user(26,True))
     print(Alessio.greet_user)
+
+    
 
 
 
