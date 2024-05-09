@@ -3,7 +3,6 @@
 
 from typing import Tuple
 
-
 class Person:                 # questa è una superclasse (classe padre)
     def __init__(self,
                 nome: str,
