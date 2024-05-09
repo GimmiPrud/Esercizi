@@ -27,10 +27,10 @@ class Dipendente(Person):  # questa è una sottoclasse cioè la classe che eredi
          self.ore_lavorate = ore_lavorate # questo è un attributo specifico della sottoclasse che la superclasse non può vedere 
 
     def calcola_stipendio(self):
-        return 1500           # questa funzione è all'interno della sottoclasse dipendente e verrà visto solo dalla sottoclasse 
-                              # quindi non verrà visto dalla classe padre(superclasse)(Person)
+        return 1500            # questa funzione è all'interno della sottoclasse dipendente e verrà visto solo dalla sottoclasse 
+                               # quindi non verrà visto dalla classe padre(superclasse)(Person)
 
-class Professore(Dipendente): # sottoclasse di una sottoclasse 
+class Professore(Dipendente):   # sottoclasse di una sottoclasse 
 
     def __init__(self, nome: str, cognome: str, genere: str, data_di_nascita: str, ore_lavorate: int,
                  materia_insegnata: str, ore_di_lezione: int):
@@ -41,10 +41,10 @@ class Professore(Dipendente): # sottoclasse di una sottoclasse
         self.ore_di_lezione = ore_di_lezione
     
 
-    def __eq__(self, value: object) -> bool: # metodo che rappresenta l'uguaglianza (si utilizza per confrontare gli oggetti)
+    def __eq__(self, value: object) -> bool:  # metodo che rappresenta l'uguaglianza (si utilizza per confrontare gli oggetti)
         return super().__eq__(value)
     
-    def __repr__(self) -> str: # si utilizza per ispezionare gli oggetti ed avere informazioni (debug)
+    def __repr__(self) -> str:  # si utilizza per ispezionare gli oggetti ed avere informazioni (debug)
         return super().__repr__()
 
 
