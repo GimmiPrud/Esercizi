@@ -43,6 +43,9 @@ class Professore(Dipendente): # sottoclasse di una sottoclasse
 
     def __eq__(self, value: object) -> bool: # metodo che rappresenta l'uguaglianza (si utilizza per confrontare gli oggetti)
         return super().__eq__(value)
+    
+    def __repr__(self) -> str: # si utilizza per ispezionare gli oggetti ed avere informazioni (debug)
+        return super().__repr__()
 
 
 persona1 = Person(nome="Luca",
