@@ -9,6 +9,7 @@
 # questo è un metodo efficace per trovare un elemento all'interno della lista che contiene molti elementi
 
 # Funzioni ricorsive (Ricorsive)
+
 if False:
     
     def binary_search(array: list[int], x: int )-> int:
