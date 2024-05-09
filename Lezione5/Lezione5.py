@@ -125,20 +125,19 @@ Un elemento è considerato isolato se non è affiancato sia a destra che a sinis
 '''
 # Svolgimento ES. 8:
 
-if True:
-    def count_isolated(num_list: list[int]) -> int:
+if False:
+    def count_isolated(num_list: list[int]) -> int:                         
         count = 0
-        for n in num_list:
-            if num_list.count(n) == 1:
-                count+= 1
-        
-        
-        
-        
-        
-        
+        for n in range(len(num_list)):
+             if num_list[n] != num_list[n-1] and (n == len(num_list)-1 or num_list[n] != num_list[n+1]):
+                count += 1
+        return count
+                     
     print(count_isolated([1, 2, 2, 3, 3, 3, 4]))
+    print(count_isolated([1, 1, 2, 2, 3, 4, 4]))
     print(count_isolated([1, 2, 3, 4, 5]))
+    print(count_isolated([1,1,1,1,1,1]))
+    print(count_isolated([]))
         
 
 # ES. 9:
