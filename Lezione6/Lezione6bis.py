@@ -39,12 +39,16 @@ class Professore(Dipendente): # sottoclasse di una sottoclasse
 
         self.materia_insegnata = materia_insegnata
         self.ore_di_lezione = ore_di_lezione
+    
+
+    def __eq__(self, value: object) -> bool: # metodo che rappresenta l'uguaglianza (si utilizza per confrontare gli oggetti)
+        return super().__eq__(value)
+
 
 persona1 = Person(nome="Luca",
                   cognome="Caprasecca",
                   genere= "M",
-                  data_di_nascita="09/05/2024")
-       
+                  data_di_nascita="09/05/2024")       
 
 dipendente1 = Dipendente(nome="Luca",
                   cognome="Caprasecca",
@@ -59,6 +63,7 @@ professore1 = Professore(nome="Luca",
                   ore_lavorate=500,
                   materia_insegnata="Storia",
                   ore_di_lezione=40)
+
 
 print(dipendente1.calcola_età())
 print(dipendente1.calcola_stipendio())
