@@ -47,9 +47,9 @@ Il dizionario contiene elementi da rimuovere come chiavi e il numero di volte ch
 '''
 # Svolgimento ES. 3:
 
-if True:
+if False:
     def rimuovi_elementi(lista: list[int], da_rimuovere: dict[int:int]) -> list[int]:
-        
+
 
         return lista
 
@@ -86,10 +86,16 @@ Scrivi una funzione che accetti un dizionario di prodotti con i prezzi
 e restituisca un nuovo dizionario con solo i prodotti che hanno un prezzo superiore a 20, scontati del 10%
 '''
 # Svolgimento ES. 5:
-if False:
+
+if True:
 
     def filtra_e_mappa(prodotti: dict[str:float]) -> list[str:float]:
-        pass
+        new_dict = {}
+        for i in prodotti.values():
+            if i > 20:
+                pass
+
+
 
 
     print(filtra_e_mappa({'Penna': 15.0, 'Zaino': 50.0, 'Quaderno': 22.0}))
@@ -100,7 +106,6 @@ if False:
 
 # ES. 6:
 '''
-
 PARTE 1
 Scrivi una funzione chiamata create_contact() che accetta il nome e cognome, 
 e-mail (facoltativo) e numero di telefono (facoltativo). La funzione dovrebbe restituire un dizionario con i dettagli del contatto.
@@ -112,16 +117,24 @@ Scrivi una funzione chiamata update_contact() che accetta il dizionario creato, 
 # Svolgimento ES. 6:
 
 if False:
+
     def create_contact(name: str, email: str=None, telefono: int=None) -> dict:
+
         info = {"name":name, "email": email, "telefono":telefono}
         return info 
 
     
     def update_contact(dictionary: dict, name: str, email: str =None, telefono: int=None) -> dict:
-        pass
-        
-             
 
+        if dictionary["name"] == name:
+            if email:
+                dictionary["email"] = email
+            
+            if telefono:
+                dictionary["telefono"] = telefono
+
+        return dictionary
+        
     contact = create_contact("Mario Rossi", email="mario.rossi@gmail.com", telefono=788787)
     print(create_contact("Mario Rossi", email="mario.rossi@gmail.com", telefono=788787))
     print(update_contact(contact, "Mario Rossi", telefono=123456789))
