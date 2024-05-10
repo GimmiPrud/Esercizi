@@ -40,6 +40,7 @@ def binary_search_iterative(array: list[int],x: int)-> int:
             low = mid + 1
         else:
             hight = mid -1
+            
 # in caso di liste già ordinate conviene utilizzare i cicli 
 
 
