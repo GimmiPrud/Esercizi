@@ -90,12 +90,7 @@ e restituisca un nuovo dizionario con solo i prodotti che hanno un prezzo superi
 if True:
 
     def filtra_e_mappa(prodotti: dict[str:float]) -> list[str:float]:
-        new_dict = {}
-        for i in prodotti.values():
-            if i > 20:
-                pass
-
-
+        pass
 
 
     print(filtra_e_mappa({'Penna': 15.0, 'Zaino': 50.0, 'Quaderno': 22.0}))
