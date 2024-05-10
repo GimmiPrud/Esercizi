@@ -85,7 +85,17 @@ Call this method with any number you like that could represent how many customer
 # Svolgimento ES. 9-4:
 
 if True:
-    pass
+     class Restaurant:
+        def __init__(self, restaurant_name: str, cuisine_type: str, number_served: int = 0):
+            self.restaurant_name = restaurant_name
+            self.cuisine_type = cuisine_type
+            self.number_served = number_served
+
+        def describe_restaurant(self):
+            return f"name restaurant = {self.restaurant_name}\ncuisine type = {self.cuisine_type}"
+
+        def open_restaurant(self):
+            return f"today {self.restaurant_name} is open"
         
 
 
