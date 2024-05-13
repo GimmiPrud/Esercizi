@@ -20,6 +20,7 @@ if False:
     print(trova_chiave_per_valore({'a': 100, 'b': 200, 'c': 300}, 200))
     print(trova_chiave_per_valore({'k1': 'v1', 'k2': 'v2'}, 'v3'))
 
+
 # ES. 2:
 '''
 Scrivi una funzione che riceve una lista di numeri, filtra i numeri pari,
@@ -40,22 +41,27 @@ if False:
     print(filtra_moltiplica([1, 2, 3, 4, 5, 6], 3))
     print(filtra_moltiplica([], 3))
 
+
 # ES. 3:
 '''
-crivi una funzione che elimini dalla lista dati certi elementi specificati in un dizionario.
+scrivi una funzione che elimini dalla lista dati certi elementi specificati in un dizionario.
 Il dizionario contiene elementi da rimuovere come chiavi e il numero di volte che devono essere rimossi come valori.
 '''
 # Svolgimento ES. 3:
 
 if False:
     def rimuovi_elementi(lista: list[int], da_rimuovere: dict[int:int]) -> list[int]:
-
-
+        for k,v in da_rimuovere.items():
+            for n in range(v):
+                if k in lista:
+                    lista.remove(v)
+                    
         return lista
-
-
+                
+                
     print(rimuovi_elementi([1, 2, 3, 2, 4], {2: 2}))
     print(rimuovi_elementi([], {2:1})) 
+
 
 # ES. 4:
 '''
@@ -79,6 +85,7 @@ if False:
 
     print(aggrega_voti([{'nome': 'Alice', 'voto': 90}, {'nome': 'Bob', 'voto': 75}, {'nome': 'Alice', 'voto': 85}]))
     print(aggrega_voti([])) 
+
 
 # ES. 5:
 '''
