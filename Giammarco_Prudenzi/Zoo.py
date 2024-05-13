@@ -36,4 +36,6 @@ class Fence:
         
 class ZooKeeper:
     def __init__(self, name: str, surname: str, id: int):
-        pass
+        self.name = name
+        self.surname = surname
+        self.id = id
