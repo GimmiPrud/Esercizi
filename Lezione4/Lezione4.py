@@ -7,10 +7,11 @@ Call the function, and make sure the message displays correctly.
 '''
 # Soluzione ES. 8-1:
 
-def display_message() -> str:
-    print("in this chapter we are learning how to use functions, how to use them and their structure.")
-
-display_message()
+if False:
+    def display_message() -> str:
+        print("in this chapter we are learning how to use functions, how to use them and their structure.")
+    
+    display_message()
 
 # ES. 8-2:
 '''
@@ -19,10 +20,11 @@ Call the function, making sure to include a book title as an argument in the fun
 '''
 # Soluzione ES. 8-2:
 
-def favourite_book(title: str)-> str:
-    print("One of my favorite books is The Lord of the Rings")
+if False:
+    def favourite_book(title: str)-> str:
+        print("One of my favorite books is The Lord of the Rings")
 
-favourite_book("Lord of the Rings")
+    favourite_book("Lord of the Rings")
 
 # ES. 8-3:
 '''
@@ -32,6 +34,7 @@ Call the function once using positional arguments to make a shirt.
 Call the function a second time using keyword arguments.
 '''
 # Soluzione ES. 8-3:
+
 if False:
     def make_shirt(size: str, text: str)-> str:
         print(f"size t-shirt: {size}")
@@ -47,13 +50,14 @@ Make a large shirt and a medium shirt with the default message, and a shirt of a
 '''
 # Soluzione ES. 8-4:
 
-def make_shirt(size: str = "L", text: str = "I love python")-> str:
-    print(f"size t-shirt: {size}")
-    print(f"text of a message that should be printed on the shirt:\n{text}")
+if False:  
+    def make_shirt(size: str = "L", text: str = "I love python")-> str:
+        print(f"size t-shirt: {size}")
+        print(f"text of a message that should be printed on the shirt:\n{text}")
 
-make_shirt()
-make_shirt("M")
-make_shirt(text="The day after tomorrow")
+    make_shirt()
+    make_shirt("M")
+    make_shirt(text="The day after tomorrow")
 
 # ES. 8-5:
 '''
@@ -64,12 +68,13 @@ Call your function for three different cities, at least one of which is not in t
 '''
 # Soluzione ES. 8-5:
 
-def describe_city(city: str, country: str = "Italy")-> str:
-    print(f"{city} is in {country}")
+if False:
+    def describe_city(city: str, country: str = "Italy")-> str:
+        print(f"{city} is in {country}")
 
-describe_city("Firenze")
-describe_city("Rome")
-describe_city("Tokyo","japan")
+    describe_city("Firenze")
+    describe_city("Rome")
+    describe_city("Tokyo","japan")
 
 # ES. 8-6:
 '''
@@ -79,12 +84,13 @@ Call your function with at least three city-country pairs, and print the values 
 '''
 # Soluzione ES. 8-6:
 
-def city_country(city: str, country: str)-> str:
-    print(f"{city},{country}")
+if False:
+    def city_country(city: str, country: str)-> str:
+        print(f"{city},{country}")
 
-city_country("Paris","France")
-city_country("Madrid","Spain")
-city_country(city="Oslo",country="Norway")
+    city_country("Paris","France")
+    city_country("Madrid","Spain")
+    city_country(city="Oslo",country="Norway")
 
 # ES. 8-7 & 8-8:
 '''
@@ -101,6 +107,7 @@ Once you have that information, call make_album() with the user’s input and pr
 Be sure to include a quit value in the while loop.
 '''
 # Soluzione ES. 8-7 & 8-8:
+
 if False:
     def make_album(Band: str, album: str, number_songs_album: int = None )-> dict:
         info = {"name":Band, "album":album}
@@ -140,28 +147,29 @@ After calling the function, print both of your lists to show that the original l
 
 # Soluzione ES. 8-9 & 8-10 & 8-11:
 
-short_text: list[str] = ["Ciao,come stai?","Vuoi uscire dal programma","lo sapevo","hai ragione"]
-sent_message = []
-new_short_text = short_text.copy()
+if False:
+    short_text: list[str] = ["Ciao,come stai?","Vuoi uscire dal programma","lo sapevo","hai ragione"]
+    sent_message = []
+    new_short_text = short_text.copy()
 
-def show_messages(text: str)-> str:
-    for m in text:
-        print(m)
+    def show_messages(text: str)-> str:
+        for m in text:
+            print(m)
 
-show_messages(short_text)
+    show_messages(short_text)
 
-def send_messages(text: list[str] ,sent_messages: list[str])-> list[str]:
-    while text:
-        mex = text.pop()
-        print(mex)
-        sent_messages.append(mex)
+    def send_messages(text: list[str] ,sent_messages: list[str])-> list[str]:
+        while text:
+            mex = text.pop()
+            print(mex)
+            sent_messages.append(mex)
 
-send_messages(short_text[:], sent_message)
-print(f"original list: {short_text}")
-print(f"new list: {sent_message}")
-send_messages(short_text[:], new_short_text)
-print(f"original list: {short_text}")
-print(f"copy of original list: {new_short_text}")
+    send_messages(short_text[:], sent_message)
+    print(f"original list: {short_text}")
+    print(f"new list: {sent_message}")
+    send_messages(short_text[:], new_short_text)
+    print(f"original list: {short_text}")
+    print(f"copy of original list: {new_short_text}")
     
     
 # ES. 8-12:
@@ -173,15 +181,16 @@ Call the function three times, using a different number of arguments each time.
 '''
 # Soluzione ES. 8-12:
 
-def sandwich(*items: list[str])-> str:
+if False:
+    def sandwich(*items: list[str])-> str:
     
-    print("\nItems in the sandwich:")
-    for item in items:
-        print(f"- {item}")
+        print("\nItems in the sandwich:")
+        for item in items:
+            print(f"- {item}")
 
-sandwich("salad","pepperoni","tabasco","cheese")
-sandwich("maionese","ham")
-sandwich("cucumbers","mozzarella","tomatoes")
+    sandwich("salad","pepperoni","tabasco","cheese")
+    sandwich("maionese","ham")
+    sandwich("cucumbers","mozzarella","tomatoes")
 
 # ES. 8-13:
 '''
@@ -191,13 +200,14 @@ The function then must return a string such as "Eric Crow, age 45, hair brown, w
 '''
 # Soluzione ES. 8-13:
 
-def build_profile(first_name: str, last_name: str, age: int, weight: int, height: int):
+if False:
+    def build_profile(first_name: str, last_name: str, age: int, weight: int, height: int):
 
- info = f"{first_name} {last_name}, age {age}, weight {weight}, height {height}"
- return info
+        info = f"{first_name} {last_name}, age {age}, weight {weight}, height {height}"
+        return info
 
-myprofile = build_profile("Giammarco","prudenzi", 27, 74, 180)
-print(myprofile)
+    myprofile = build_profile("Giammarco","prudenzi", 27, 74, 180)
+    print(myprofile)
 
 # ES. 8-14:
 '''
@@ -234,6 +244,7 @@ import module_name as mn
 from module_name import *
 '''
 # Soluzione ES. 8-15 & 8-16:
+
 if False:
     import printing_functions
     from printing_functions import info_car
@@ -248,6 +259,7 @@ Choose any three programs you wrote for this chapter.
 make sure they follow the styling guidelines described in this section.
 '''
 # Soluzione ES. 8-17:
+
 if False:
     # 1)
     def sandwich(*items: list[str]) -> str:
