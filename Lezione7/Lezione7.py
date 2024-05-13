@@ -87,16 +87,18 @@ e restituisca un nuovo dizionario con solo i prodotti che hanno un prezzo superi
 '''
 # Svolgimento ES. 5:
 
-if True:
+if False:
 
     def filtra_e_mappa(prodotti: dict[str:float]) -> list[str:float]:
-        pass
-
+        sconto: dict = {}
+        for k,v in prodotti.items():
+            if v > 20:
+                sconto[k] = v * 0.9
+                
+        return sconto
 
     print(filtra_e_mappa({'Penna': 15.0, 'Zaino': 50.0, 'Quaderno': 22.0}))
     print(filtra_e_mappa({'Gomma': 2.0, 'Matita': 1.0})) 
-
-
 
 
 # ES. 6:
