@@ -75,7 +75,8 @@ if False:
 
 # ES. 9-4:
 '''
- Start with your program from Exercise 9-1. Add an attribute called number_served with a default value of 0.
+Start with your program from Exercise 9-1.
+Add an attribute called number_served with a default value of 0.
 Create an instance called restaurant from this class.
 Print the number of customers the restaurant has served, and then change this value and print it again.
 Add a method called set_number_served() that lets you set the number of customers that have been served. 
@@ -85,7 +86,33 @@ Call this method with any number you like that could represent how many customer
 # Svolgimento ES. 9-4:
 
 if True:
-    pass
+     class Restaurant:
+        def __init__(self, restaurant_name: str, cuisine_type: str, number_served: int = 0):
+            self.restaurant_name = restaurant_name
+            self.cuisine_type = cuisine_type
+            self.number_served = number_served
+
+        def describe_restaurant(self):
+            return f"name restaurant = {self.restaurant_name}\ncuisine type = {self.cuisine_type}"
+        
+        def set_number_served(self,new_number_served: int):
+            self.number_served = new_number_served
+            return f" Customers served = {self.number_served}"
+        
+        def increment_number_served(self):
+            pass
+
+
+        def open_restaurant(self):
+            return f"today {self.restaurant_name} is open"
+        
+        
+restaurant = Restaurant("Da Ciccio","Italian",10)
+print(restaurant.describe_restaurant())
+print(restaurant.number_served)
+print(restaurant.set_number_served(5))
+
+
 
 
 
