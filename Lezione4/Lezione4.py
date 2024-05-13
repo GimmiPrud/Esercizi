@@ -324,6 +324,7 @@ The function calculates the average score and prints the student's name, average
 Create a for loop to iterate over a list of students and scores, calling the function for each student.
 ''' 
 # Soluzione ES. 1:
+
 if False:
 
     def students_score(name: str, score: int):
