@@ -11,7 +11,7 @@ Funzionalità:
 4. clean(fence: Fence) (Pulizia dei recinti): implementare un metodo che consenta al guardiano dello zoo di pulire tutti i recinti dello zoo. Questo metodo restituisce un valore di tipo float che indica il tempo che il guardiano impiega per pulire il recinto. Il tempo di pulizia è il rapporto dell'area occupata dagli animali diviso l'area residua del recinto. Se l'area residua è pari a 0, restituire l'area occupata.
 5. describe_zoo() (Visualizza informazioni sullo zoo): visualizza informazioni su tutti i guardani dello zoo, sui recinti dello zoo che contengono animali. 
 '''
-# Svolgimento Progetto:
+# Svolgimento Progetto Zoo:
 
 class Zoo:
     def __init__(self, fences: str, zoo_keepers: str):
@@ -41,3 +41,15 @@ class ZooKeeper:
         self.name = name
         self.surname = surname
         self.id = id
+
+    def add_animal(self, animal: str, fence):
+        pass
+
+    def remove_animal(self, animal: str, fence):
+        pass
+
+    def feed(self, animal: str):
+        pass
+
+    def clean(self, fence):
+        pass
