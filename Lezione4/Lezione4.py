@@ -325,10 +325,18 @@ Create a for loop to iterate over a list of students and scores, calling the fun
 ''' 
 # Soluzione ES. 1:
 
-if False:
+if True:
 
-    def students_score(name: str, score: int):
+    def students_score(name: str, score: list[float]):
+        list_score = []
         name = input("HELLO STUDENT!! Enter your name: ")
+        score = float(input("Enter your list of scores: "))
+        for n in range(0,score):
+            scores = float(input())
+            list_score.append(scores)
+            
+
+
 
 
     

@@ -90,8 +90,8 @@ class Zoo:
         
 
         
-a1 = Animal("Sirio","Rinoceronte",10,1500,335,"Savana",7)
+a1 = Animal(name="Sirio",species="Rinoceronte",age=10,height=1500,width=335,preferred_habitat="Savana",health=7)
 a2 = Fence(animals=["Lillo"], area= 70, temperature= 25, habitat= "Savana")
-a3 = ZooKeeper("Giancarlo","Strizzi",123)
+a3 = ZooKeeper(name="Giancarlo",surname="Strizzi",id=123)
 
 print(a3.feed(a1))
