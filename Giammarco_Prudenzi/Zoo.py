@@ -89,3 +89,9 @@ class Zoo:
         return f"Zookeepers = {self.zoo_keepers}"
         
 
+        
+a1 = Animal("Sirio","Rinoceronte",10,1500,335,"Savana",7)
+a2 = Fence(animals=["Lillo"], area= 70, temperature= 25, habitat= "Savana")
+a3 = ZooKeeper("Giancarlo","Strizzi",123)
+
+print(a3.feed(a1))
