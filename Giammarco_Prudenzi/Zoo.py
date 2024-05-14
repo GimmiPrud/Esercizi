@@ -12,11 +12,6 @@ Funzionalità:
 5. describe_zoo() (Visualizza informazioni sullo zoo): visualizza informazioni su tutti i guardani dello zoo, sui recinti dello zoo che contengono animali. 
 '''
 # Svolgimento Progetto Zoo:
-
-class Zoo:
-    def __init__(self, fences: str, zoo_keepers: str):
-        self.fences = fences
-        self.zoo_keepers = zoo_keepers
     
 class Animal:
     def __init__(self, name: str, species: str, age: int, height: float, width: float, preferred_habitat: str, health: float):
@@ -26,12 +21,11 @@ class Animal:
         self.height = height
         self.width = width
         self.preferred_habitat = preferred_habitat
-        self.health = health
-        
         self.health = round(100 * (1 / self.age), 3)
         
 class Fence:
-    def __init__(self, area: float, temperature: float, habitat: str):
+    def __init__(self, animals: list[Animal], area: float, temperature: float, habitat: str):
+        self.animals = animals
         self.area = area
         self.temperature = temperature
         self.habitat = habitat
@@ -42,14 +36,56 @@ class ZooKeeper:
         self.surname = surname
         self.id = id
 
-    def add_animal(self, animal: str, fence):
-        pass
+    def add_animal(self, animal: Animal, fence: Fence):
+        if animal.preferred_habitat != fence.habitat and fence.area < animal.height * animal.width:
+            pass
 
-    def remove_animal(self, animal: str, fence):
-        pass
+        else:
+            fence.animals.append(animal)
 
-    def feed(self, animal: str):
-        pass
+            fence.area = (animal.height * animal.width) - fence.area
 
-    def clean(self, fence):
-        pass
+    def remove_animal(self, animal: Animal, fence: Fence):
+        fence.animals.remove(animal)
+        fence.area = (animal.height * animal.width) + fence.area
+
+    def feed(self, animal: Animal):
+       # while >= animal.height * animal.width:
+            animal.health *= 1.01
+            animal.height *= 1.02
+            animal.width *= 1.02
+        
+        #return animal.health, animal.height
+
+    def clean(self, fence: Fence) -> float:
+        if fence.area == 0:
+            return "L'area è occupata"
+        
+        animals_area: float = 0
+        animals_height: int = 0
+        animals_width: int = 0
+
+        for f in range(len(fence.animals)):
+            animals_width += fence.animals[f]
+            animals_height += fence.animals[f]
+            animals_area = animals_height*animals_width
+
+        if fence.area / animals_area <= 0:
+            return "L'area è occupata"
+        
+        else:
+            return fence.area / animals_area
+        
+
+class Zoo:
+    def __init__(self, fences: list[Fence], zoo_keepers: list[ZooKeeper]):
+        self.fences = fences
+        self.zoo_keepers = zoo_keepers
+
+    def describe_zoo(self):
+        for i in self.fences:
+            return f" Fences = {self.fences[i.animals[i]]}"
+        
+        return f"Zookeepers = {self.zoo_keepers}"
+        
+
