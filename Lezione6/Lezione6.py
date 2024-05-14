@@ -99,8 +99,9 @@ if True:
             self.number_served = new_number_served
             return f" Customers served = {self.number_served}"
         
-        def increment_number_served(self):
-            pass
+        def increment_number_served(self, increment: int):
+            increment = self.number_served + increment
+            return f" number served = {increment}"
 
 
         def open_restaurant(self):
@@ -111,6 +112,18 @@ restaurant = Restaurant("Da Ciccio","Italian",10)
 print(restaurant.describe_restaurant())
 print(restaurant.number_served)
 print(restaurant.set_number_served(5))
+print(restaurant.increment_number_served(40))
+
+# ES. 9-5:
+'''
+Add an attribute called login_attempts to your User class from Exercise 9-3.
+Write a method called increment_login_attempts() that increments the value of login_attempts by 1.
+Write another method called reset_login_attempts() that resets the value of login_attempts to 0. 
+Make an instance of the User class and call increment_login_attempts() several times.
+Print the value of login_attempts to make sure it was incremented properly, and then call reset_login_attempts().
+Print login_attempts again to make sure it was reset to 0.
+'''
+# Svolgimento ES. 9-5:
 
 
 
