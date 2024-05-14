@@ -37,7 +37,7 @@ if False:
     print(restaurant2.describe_restaurant())
     print(restaurant3.describe_restaurant())
 
-# ES. 9-3:
+# ES. 9-3 & 9-5:
 '''
 Make a class called User. 
 Create two attributes called first_name and last_name,
@@ -45,21 +45,39 @@ and then create several other attributes that are typically stored in a user pro
 Make a method called describe_user() that prints a summary of the user’s information.
 Make another method called greet_user() that prints a personalized greeting to the user.
 Create several instances representing different users, and call both methods for each user.
-'''
-# Svolgimento ES. 9-3:
 
-if False:
+Add an attribute called login_attempts to your User class from Exercise 9-3.
+Write a method called increment_login_attempts() that increments the value of login_attempts by 1.
+Write another method called reset_login_attempts() that resets the value of login_attempts to 0. 
+Make an instance of the User class and call increment_login_attempts() several times.
+Print the value of login_attempts to make sure it was incremented properly, and then call reset_login_attempts().
+Print login_attempts again to make sure it was reset to 0.
+'''
+# Svolgimento ES. 9-3 & 9-5:
+
+if True:
     class User:
-        def __init__(self, first_name: str, last_name: str):
+        def __init__(self, first_name: str, last_name: str, login_attempts: int = 0):
             self.first_name = first_name
             self.last_name = last_name
             self.age = None
             self.active = None
+            self.login_attempts = login_attempts
 
         def describe_user(self, newage: int, newactive: bool = True):
             self.age = newage
             self.active = newactive
-            return f"first name:\n- {self.first_name}\nlast name:\n- {self.last_name}\nage:\n- {self.age}\n active:\n- {self.active}"
+            return f"first name:\n- {self.first_name}\nlast name:\n- {self.last_name}\nage:\n- {self.age}\n active:\n- {self.active}\n login attempts:\n- {self.login_attempts}"
+        
+        def increment_login_attempts(self):
+            while self.login_attempts:
+                self.login_attempts += 1
+
+        def reset_login_attempts(self):
+            if self.login_attempts > 0:
+                reset_login = self.login_attempts - range(self.login_attempts)
+
+            return reset_login
 
         def greet_user(self):
             return f" Hello { self.first_name}, welcome!!"
@@ -71,7 +89,10 @@ if False:
     print(Giacomo.active)
     Alessio = User("Alessio","Perazzino")
     print(Alessio.describe_user(26,True))
-    print(Alessio.greet_user)
+    print(Alessio.greet_user())
+    Mattia = User("Mattia","Campanelli")
+    print(Mattia.describe_user(26,False))
+    print(Mattia.increment_login_attempts())
 
 # ES. 9-4:
 '''
@@ -85,8 +106,8 @@ Call this method with any number you like that could represent how many customer
 '''
 # Svolgimento ES. 9-4:
 
-if True:
-     class Restaurant:
+if False:
+    class Restaurant:
         def __init__(self, restaurant_name: str, cuisine_type: str, number_served: int = 0):
             self.restaurant_name = restaurant_name
             self.cuisine_type = cuisine_type
@@ -101,29 +122,21 @@ if True:
         
         def increment_number_served(self, increment: int):
             increment = self.number_served + increment
-            return f" number served = {increment}"
-
+            return f" number served today  = {increment}"
 
         def open_restaurant(self):
             return f"today {self.restaurant_name} is open"
         
         
-restaurant = Restaurant("Da Ciccio","Italian",10)
-print(restaurant.describe_restaurant())
-print(restaurant.number_served)
-print(restaurant.set_number_served(5))
-print(restaurant.increment_number_served(40))
+    restaurant = Restaurant("Da Ciccio","Italian",10)
+    print(restaurant.describe_restaurant())
+    print(restaurant.number_served)
+    print(restaurant.set_number_served(5))
+    print(restaurant.increment_number_served(40))
 
-# ES. 9-5:
-'''
-Add an attribute called login_attempts to your User class from Exercise 9-3.
-Write a method called increment_login_attempts() that increments the value of login_attempts by 1.
-Write another method called reset_login_attempts() that resets the value of login_attempts to 0. 
-Make an instance of the User class and call increment_login_attempts() several times.
-Print the value of login_attempts to make sure it was incremented properly, and then call reset_login_attempts().
-Print login_attempts again to make sure it was reset to 0.
-'''
-# Svolgimento ES. 9-5:
+
+
+
 
 
 
