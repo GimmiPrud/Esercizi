@@ -37,7 +37,7 @@ class ZooKeeper:
         self.id = id
 
     def add_animal(self, animal: Animal, fence: Fence):
-        if animal.preferred_habitat != fence.habitat and fence.area < animal.height * animal.width:
+        if animal.preferred_habitat != fence.habitat and animal.height * animal.width > fence.area:
             pass
 
         else:
