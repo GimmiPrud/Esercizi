@@ -28,8 +28,8 @@ class Animal:
 
 
 class Fence:
-    def __init__(self, animals: list[Animal], area: float, temperature: float, habitat: str):
-        self.animals = animals
+    def __init__(self, area: float, temperature: float, habitat: str):
+        self.animals = []
         self.area = area
         self.temperature = temperature
         self.habitat = habitat
@@ -42,47 +42,28 @@ class ZooKeeper:
         self.id = id
 
 
-    def add_animal(self, animal: Animal, fence: Fence):
-        if animal.preferred_habitat != fence.habitat and fence.area < animal.height * animal.width:
-            pass
-
-        else:
-            fence.animals.append(animal)
-            fence.area = (animal.height * animal.width) - fence.area
-
-
-    def remove_animal(self, animal: Animal, fence: Fence):
-        fence.animals.remove(animal)
-        fence.area = (animal.height * animal.width) + fence.area
-
-
-    def feed(self, animal: Animal):
-       # while >= animal.height * animal.width:
+    def feed(self, animal: Animal, fence):
+        if fence.area > animal.height * animal.width:
             animal.health *= 1.01
             animal.height *= 1.02
             animal.width *= 1.02
         
-        #return animal.health, animal.height
+        return round(animal.health, 3), round(animal.height, 3), round(animal.width ,3)
 
 
     def clean(self, fence: Fence) -> float:
-        if fence.area == 0:
-            return "L'area è occupata"
-        
-        animals_area: float = 0
-        animals_height: int = 0
-        animals_width: int = 0
+        for a in fence.animals:
+            occupied_area = a.height * a.width
+            remaning = fence.area - occupied_area
 
-        for f in range(len(fence.animals)):
-            animals_width += fence.animals[f]
-            animals_height += fence.animals[f]
-            animals_area = animals_height*animals_width
-
-        if fence.area / animals_area <= 0:
-            return "L'area è occupata"
+        if fence.area <= 0:
+            return round(occupied_area,3)
         
         else:
-            return fence.area / animals_area
+            return round(occupied_area/remaning,3)
+        
+    def __str__(self) -> str:
+        pass
         
 
 
@@ -90,6 +71,20 @@ class Zoo:
     def __init__(self, fences: list[Fence], zoo_keepers: list[ZooKeeper]):
         self.fences = fences
         self.zoo_keepers = zoo_keepers
+
+    def add_animal(self, animal: Animal, fence: Fence):
+        if animal.preferred_habitat != fence.habitat and fence.area < animal.height * animal.width:
+            pass
+
+        else:
+            fence.animals.append(animal)
+            fence.area -= (animal.height * animal.width)
+
+
+    def remove_animal(self, animal: Animal, fence: Fence):
+        if animal in fence.animals:
+            fence.animals.remove(animal)
+            fence.area += (animal.height * animal.width)
 
     def describe_zoo(self):
         pass
