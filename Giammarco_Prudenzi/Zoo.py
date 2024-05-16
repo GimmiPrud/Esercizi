@@ -82,7 +82,26 @@ class Zoo:
             fence.animals.remove(animal)
             fence.area += (animal.height * animal.width)
 
-            
+
     def describe_zoo(self):
-        pass
+        for zookeeper in self.zoo_keepers:
+            pass
+        for fence in self.fences:
+            pass
+            for animal in fence.animals:
+                pass
+        
+        
+        
+
+
+a1 = Animal(name="lupo",species="mammifero",age=3,height=12,width=3,preferred_habitat="continent")
+a2 = Animal(name="scimmia",species="mammifero",age=10,height=15,width=2,preferred_habitat="continent")
+f1 = Fence(area=23,temperature=15,habitat="continent")
+f2 = Fence(area=12,temperature=3,habitat="tropical")
+z1 = ZooKeeper(name="Lapo",surname="Elkan",id=121)
+z2 = ZooKeeper(name="alessio",surname="sisti",id=344)
+zoo = Zoo(zoo_keepers=[z1,z2],fences=[f1,f2])
+zoo.describe_zoo()
+
 
