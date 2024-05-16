@@ -97,27 +97,5 @@ class Zoo:
             
             print("#"*30,"\n")
 
-        
-        
-fence1 = Fence(area=1000, temperature=25, habitat="Continent")
-fence2 = Fence(area=1400, temperature=15, habitat="Jungle")
-zoo_keeper1 = ZooKeeper(name="Lorenzo", surname="Maggi", id=1234)
-zoo_keeper2= ZooKeeper(name="Luca", surname="rossi", id=2335)
-zoo = Zoo(zoo_keepers=[zoo_keeper1,zoo_keeper2], fences=[fence1,fence2])
-zoo.fences.append(fence1)
-zoo.fences.append(fence2)
-animal1 = Animal(name="Scoiattolo", species="Blabla", height=25.8, width =10.8, age=10, preferred_habitat="Continent")
-animal2 = Animal(name="Lupo", species="Lupus", height=14.7, age=7, width=20.8, preferred_habitat="Continent")
-animal3 = Animal(name="pippo", species="gghi", age=10, height=2.99,width= 2.8, preferred_habitat="Jungle")
-print(zoo.add_animal(animal1, fence1))
-print(zoo.add_animal(animal1, fence1))
-print(zoo.add_animal(animal2, fence1))
-print(zoo.add_animal(animal3, fence2))
-print(zoo.remove_animal(animal1,fence2))
-print(zoo_keeper1.feed(animal1,fence1))
-print(zoo_keeper1.feed(animal2,fence1))
-print(zoo_keeper1.clean(fence1))
-print(zoo_keeper1.clean(fence2))
-zoo.describe_zoo()
 
 
