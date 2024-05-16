@@ -22,32 +22,36 @@ class Animal:
         self.width = width
         self.preferred_habitat = preferred_habitat
         self.health = round(100 * (1 / self.age), 3)
-        
+
+
 class Fence:
     def __init__(self, animals: list[Animal], area: float, temperature: float, habitat: str):
         self.animals = animals
         self.area = area
         self.temperature = temperature
         self.habitat = habitat
-        
+
+
 class ZooKeeper:
     def __init__(self, name: str, surname: str, id: int):
         self.name = name
         self.surname = surname
         self.id = id
 
+
     def add_animal(self, animal: Animal, fence: Fence):
-        if animal.preferred_habitat != fence.habitat and animal.height * animal.width > fence.area:
+        if animal.preferred_habitat != fence.habitat and fence.area < animal.height * animal.width:
             pass
 
         else:
             fence.animals.append(animal)
-
             fence.area = (animal.height * animal.width) - fence.area
+
 
     def remove_animal(self, animal: Animal, fence: Fence):
         fence.animals.remove(animal)
         fence.area = (animal.height * animal.width) + fence.area
+
 
     def feed(self, animal: Animal):
        # while >= animal.height * animal.width:
@@ -56,6 +60,7 @@ class ZooKeeper:
             animal.width *= 1.02
         
         #return animal.health, animal.height
+
 
     def clean(self, fence: Fence) -> float:
         if fence.area == 0:
@@ -77,21 +82,12 @@ class ZooKeeper:
             return fence.area / animals_area
         
 
+
 class Zoo:
     def __init__(self, fences: list[Fence], zoo_keepers: list[ZooKeeper]):
         self.fences = fences
         self.zoo_keepers = zoo_keepers
 
     def describe_zoo(self):
-        for i in self.fences:
-            return f" Fences = {self.fences[i.animals[i]]}"
-        
-        return f"Zookeepers = {self.zoo_keepers}"
-        
+        pass
 
-        
-a1 = Animal(name="Sirio",species="Rinoceronte",age=10,height=1500,width=335,preferred_habitat="Savana",health=7)
-a2 = Fence(animals=["Lillo"], area= 70, temperature= 25, habitat= "Savana")
-a3 = ZooKeeper(name="Giancarlo",surname="Strizzi",id=123)
-
-print(a3.feed(a1))
