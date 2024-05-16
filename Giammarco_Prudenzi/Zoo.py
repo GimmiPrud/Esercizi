@@ -17,15 +17,14 @@ Funzionalità:
 # Svolgimento Progetto Zoo:
     
 class Animal:
-    def __init__(self, name: str, species: str, age: int, height: float, width: float, preferred_habitat: str, health: float):
+    def __init__(self, name: str, species: str, age: int, height: float, width: float, preferred_habitat: str):
         self.name = name
         self.species = species
         self.age = age
         self.height = height
         self.width = width
         self.preferred_habitat = preferred_habitat
-        self.health = round(100 * (1 / self.age), 3)
-
+        self.health = round(100 *(1 / self.age), 3)
 
 class Fence:
     def __init__(self, area: float, temperature: float, habitat: str):
@@ -49,8 +48,8 @@ class ZooKeeper:
             animal.width *= 1.02
         
         return round(animal.health, 3), round(animal.height, 3), round(animal.width ,3)
-
-
+        
+    
     def clean(self, fence: Fence) -> float:
         for a in fence.animals:
             occupied_area = a.height * a.width
@@ -61,8 +60,7 @@ class ZooKeeper:
         
         else:
             return round(occupied_area/remaning,3)
-        
-
+    
 class Zoo:
     def __init__(self, fences: list[Fence], zoo_keepers: list[ZooKeeper]):
         self.fences = fences
@@ -84,24 +82,39 @@ class Zoo:
 
 
     def describe_zoo(self):
+        print(f"Guardians:\n")
         for zookeeper in self.zoo_keepers:
-            pass
+            print(f"ZooKeepers(name={zookeeper.name},surname={zookeeper.surname},id={zookeeper.id})\n")
         for fence in self.fences:
-            pass
+            print(f"Fences:\n")
+            print(f"Fence(area={fence.area},temperature={fence.temperature},habitat={fence.habitat})\n")
+            print(f"with animals\n")
             for animal in fence.animals:
-                pass
-        
-        
-        
+                print(f"Animal(name={animal.name},species={animal.species},age={animal.age})\n")
+            
+            print("#"*30,"\n")
 
-
-a1 = Animal(name="lupo",species="mammifero",age=3,height=12,width=3,preferred_habitat="continent")
-a2 = Animal(name="scimmia",species="mammifero",age=10,height=15,width=2,preferred_habitat="continent")
-f1 = Fence(area=23,temperature=15,habitat="continent")
-f2 = Fence(area=12,temperature=3,habitat="tropical")
-z1 = ZooKeeper(name="Lapo",surname="Elkan",id=121)
-z2 = ZooKeeper(name="alessio",surname="sisti",id=344)
-zoo = Zoo(zoo_keepers=[z1,z2],fences=[f1,f2])
+        
+        
+fence1 = Fence(area=1000, temperature=25, habitat="Continent")
+fence2 = Fence(area=1400, temperature=15, habitat="Jungle")
+zoo_keeper1 = ZooKeeper(name="Lorenzo", surname="Maggi", id=1234)
+zoo_keeper2= ZooKeeper(name="Luca", surname="rossi", id=2335)
+zoo = Zoo(zoo_keepers=[zoo_keeper1,zoo_keeper2], fences=[fence1,fence2])
+zoo.fences.append(fence1)
+zoo.fences.append(fence2)
+animal1 = Animal(name="Scoiattolo", species="Blabla", height=25.8, width =10.8, age=10, preferred_habitat="Continent")
+animal2 = Animal(name="Lupo", species="Lupus", height=14.7, age=7, width=20.8, preferred_habitat="Continent")
+animal3 = Animal(name="pippo", species="gghi", age=10, height=2.99,width= 2.8, preferred_habitat="Jungle")
+print(zoo.add_animal(animal1, fence1))
+print(zoo.add_animal(animal1, fence1))
+print(zoo.add_animal(animal2, fence1))
+print(zoo.add_animal(animal3, fence2))
+print(zoo.remove_animal(animal1,fence2))
+print(zoo_keeper1.feed(animal1,fence1))
+print(zoo_keeper1.feed(animal2,fence1))
+print(zoo_keeper1.clean(fence1))
+print(zoo_keeper1.clean(fence2))
 zoo.describe_zoo()
 
 
