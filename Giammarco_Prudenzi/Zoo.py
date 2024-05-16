@@ -72,12 +72,16 @@ class Zoo:
         else:
             fence.animals.append(animal)
             fence.area -= (animal.height * animal.width)
+        
+        return fence.area
 
 
     def remove_animal(self, animal: Animal, fence: Fence):
         if animal in fence.animals:
             fence.animals.remove(animal)
             fence.area += (animal.height * animal.width)
+        
+        return fence.area
 
 
     def describe_zoo(self):
