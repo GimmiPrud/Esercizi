@@ -81,7 +81,7 @@ class Zoo:
         if animal in fence.animals:
             fence.animals.remove(animal)
             fence.area += (animal.height * animal.width)
-            
+
             
     def describe_zoo(self):
         pass
