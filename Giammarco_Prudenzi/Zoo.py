@@ -62,10 +62,6 @@ class ZooKeeper:
         else:
             return round(occupied_area/remaning,3)
         
-    def __str__(self) -> str:
-        pass
-        
-
 
 class Zoo:
     def __init__(self, fences: list[Fence], zoo_keepers: list[ZooKeeper]):
@@ -85,7 +81,8 @@ class Zoo:
         if animal in fence.animals:
             fence.animals.remove(animal)
             fence.area += (animal.height * animal.width)
-
+            
+            
     def describe_zoo(self):
         pass
 
