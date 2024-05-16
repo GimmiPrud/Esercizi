@@ -55,9 +55,8 @@ class ZooKeeper:
             occupied_area = a.height * a.width
             remaning = fence.area - occupied_area
 
-        if fence.area <= 0:
+        if remaning <= 0:
             return round(occupied_area,3)
-        
         else:
             return round(occupied_area/remaning,3)
     
