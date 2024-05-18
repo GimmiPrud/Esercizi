@@ -325,15 +325,32 @@ Create a for loop to iterate over a list of students and scores, calling the fun
 ''' 
 # Soluzione ES. 1:
 
-if True:
+if False:
 
     def students_score(name: str, score: list[float]):
-        list_score = []
-        name = input("HELLO STUDENT!! Enter your name: ")
-        score = float(input("Enter your list of scores: "))
-        for n in range(0,score):
-            scores = float(input())
-            list_score.append(scores)
+        counter = 0
+        for s in score:
+            counter += s     
+        if counter / len(score) >= 60:
+            return f" studente: \n{name}\nmedia:\n {round(counter/len(score),2)}\nesito: \nprommosso\n"
+        else:
+            return f"studente: \n{name}\nmedia:\n {round(counter/len(score),2)}\nesito: \nbocciato\n"
+                      
+    Luca = students_score(name="Luca",score=[50,50,60,70])
+    Alice = students_score("Alice",[90,80,85,80])
+    Sandro = students_score("Sandro",[70,75,72,68])
+    
+    list_student = [Luca,Alice,Sandro]
+    
+    for student in list_student:
+        print(student)
+    
+
+            
+
+            
+            
+            
             
 
 
