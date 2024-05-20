@@ -355,16 +355,29 @@ Terminate the loop when the user guesses the number correctly or reaches the max
 # Svolgimento ES. 2:
 
 if True:
-    import random
+    from random import*
 
-    def casual_number(num):
+    def casual_number(num, num_right):
         tentativi = 3
-        pass
+        num1 = randint(num)
+        while tentativi > 0:
+            if num_right == num1:
+                return f"Very good, {num1} is the right number"
+            
+            elif num_right > num1:
+                tentativi -= 1
+                print(f"your guess is too hight try it")
+                print(num)
 
-
-    print(casual_number(5))
-
-
+            elif num_right < num1:
+                tentativi -= 1
+                print(f"your guess is too low try it")
+                print(num)
+            
+            if tentativi == 0:
+                return f"finished attempts"
+            break
+        
     
 
             
