@@ -357,8 +357,10 @@ Terminate the loop when the user guesses the number correctly or reaches the max
 if True:
     import random
 
-    def casual_number(nums):
+    def casual_number(num):
+        tentativi = 3
         pass
+
 
     print(casual_number(5))
 
