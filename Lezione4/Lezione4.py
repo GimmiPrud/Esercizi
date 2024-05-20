@@ -359,27 +359,24 @@ if True:
 
     def casual_number(num, num_right):
         tentativi = 3
-        num1 = randint(num)
-        while tentativi > 0:
-            if num_right == num1:
-                return f"Very good, {num1} is the right number"
-            
-            elif num_right > num1:
-                tentativi -= 1
-                print(f"your guess is too hight try it")
-                print(num)
+        num = randrange(num)
+        while num != num_right :
 
-            elif num_right < num1:
-                tentativi -= 1
-                print(f"your guess is too low try it")
-                print(num)
+            if num_right == num:
+                return f"Very good, {num} is the right number"
             
-            if tentativi == 0:
-                return f"finished attempts"
-            break
-        
-    
+            elif num_right > num:
+                tentativi -= 1
+                return f"your guess is too hight try it\n attempts = {tentativi}"
 
+            elif num_right < num:
+                tentativi -= 1
+                return f"your guess is too low try it\n attempts = {tentativi}"
+ 
+
+    print(casual_number(10,4))
+    print(casual_number(10,4))
+    print(casual_number(10,4))
             
 
             
