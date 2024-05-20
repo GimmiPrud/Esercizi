@@ -354,6 +354,15 @@ Terminate the loop when the user guesses the number correctly or reaches the max
 '''
 # Svolgimento ES. 2:
 
+if True:
+    import random
+
+    def casual_number(nums):
+        pass
+
+    print(casual_number(5))
+
+
     
 
             
