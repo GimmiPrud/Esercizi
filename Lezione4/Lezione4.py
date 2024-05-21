@@ -363,8 +363,7 @@ if True:
         num1 = randint(0,num)
         num_num = int(input("inserisci un numero che credi sia giusto: "))
         while num1 != num_num:
-            num = int(input("inserisci un numero: "))
-            num_num = int(input("inserisci un numero che credi sia giusto: "))
+            tentativi -= 1
             if num1 == num_num:
                 return f"Bravo hai indovinato, il numero giusto era {num}"
                 break
