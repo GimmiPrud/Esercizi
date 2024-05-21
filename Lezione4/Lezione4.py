@@ -363,13 +363,16 @@ if True:
         num1 = randint(0,num)
         num_num = int(input("inserisci un numero che credi sia giusto: "))
         while num1 != num_num:
-            tentativi -= 1
+            num = int(input("inserisci un numero: "))
+            num_num = int(input("inserisci un numero che credi sia giusto: "))
             if num1 == num_num:
                 return f"Bravo hai indovinato, il numero giusto era {num}"
+                break
             elif num1 > num_num:
-                return f"la tua ipotesi è piu alta del numero scelto, riprova numero tentativi: {tentativi}"
+                return f"la tua ipotesi è piu alta del numero scelto, riprova!!\n numero tentativi: {tentativi}"
             else:
-                return f"la tua ipotesi è più bassa del numero scelto, riprova numero tentativi: {tentativi}"
+                return f"la tua ipotesi è più bassa del numero scelto, riprova!!\n numero tentativi: {tentativi}"
+                    
 
     
     print(casual_number())
