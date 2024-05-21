@@ -56,6 +56,7 @@ Print login_attempts again to make sure it was reset to 0.
 # Svolgimento ES. 9-3 & 9-5:
 
 if True:
+
     class User:
         def __init__(self, first_name: str, last_name: str, login_attempts: int = 0):
             self.first_name = first_name
@@ -133,7 +134,6 @@ if False:
     print(restaurant.number_served)
     print(restaurant.set_number_served(5))
     print(restaurant.increment_number_served(40))
-
 
 
 
