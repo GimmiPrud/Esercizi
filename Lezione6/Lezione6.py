@@ -55,7 +55,7 @@ Print login_attempts again to make sure it was reset to 0.
 '''
 # Svolgimento ES. 9-3 & 9-5:
 
-if True:
+if False:
 
     class User:
         def __init__(self, first_name: str, last_name: str, login_attempts: int = 0):
@@ -73,12 +73,12 @@ if True:
         def increment_login_attempts(self):
             while self.login_attempts:
                 self.login_attempts += 1
+            return self.login_attempts
 
         def reset_login_attempts(self):
-            if self.login_attempts > 0:
-                reset_login = self.login_attempts - range(self.login_attempts)
-
-            return reset_login
+            if self.login_attempts != 0:
+                self.login_attempts = 0
+            return self.login_attempts 
 
         def greet_user(self):
             return f" Hello { self.first_name}, welcome!!"
