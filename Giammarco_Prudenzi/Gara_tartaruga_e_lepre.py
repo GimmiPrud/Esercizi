@@ -1,16 +1,40 @@
+import random
 
-from random import*
+def tartaruga(pos: int):
 
-class Gara():
+    mov_tartaruga: int = random.randint(1,10)
 
-    def __init__(self,) -> None:
-        pass
+    if 1 <= mov_tartaruga <= 5:
+        pos += 3
+    elif 6 <= mov_tartaruga <=7:
+        pos -= 6
+        if pos < 1:
+            pos = 1
+    elif 8 <= mov_tartaruga <= 10:
+        pos += 1
+    
+    return pos
 
-    def posizioni(self,):
-        pass
+def lepre(pos: int):
 
-    def mov_tartaruga(self,):
-        pass
+    mov_lepre: int = random.randint(1,10)
 
-    def mov_lepre(self,):
-        pass
+    if 1 <= mov_lepre <= 2:
+        pos = pos
+    elif 3 <= mov_lepre <= 4:
+        pos += 9 
+    elif mov_lepre == 5:
+        pos -= 12
+        if pos < 1:
+            pos = 1
+    elif 6 <= mov_lepre <= 8:
+        pos += 1
+    elif 9 <= mov_lepre <=10:
+        pos -= 2
+        if pos < 1:
+            pos = 1
+
+    return pos
+
+print(lepre(1))
+print(tartaruga(1))
