@@ -1,5 +1,8 @@
 import random
 
+pos_tarta = 1
+pos_lepre = 1
+
 def tartaruga(pos: int):
 
     mov_tartaruga: int = random.randint(1,10)
@@ -37,10 +40,18 @@ def lepre(pos: int):
     return pos
 
 def Gara():
-    circuito = ["_" for n in range(1,70)]
-    pos_iniziale_lepre = 1    # H
-    pos_iniziale_tarta = 1    # T
+    circuito = [ "_" for n in range(1,70)]
+    pos_i_tarta = 1
+    pos_i_lepre = 1
+    circuito[pos_i_tarta] = "T"
+    circuito[pos_i_lepre-1] = "H"
+    print("BANG !!!!! AND THEY'RE OFF !!!!!")
     
+    # while pos_i_tarta or pos_i_lepre < circuito[70]:
+    
+    return circuito
+    
+print(Gara())
 
 
 
