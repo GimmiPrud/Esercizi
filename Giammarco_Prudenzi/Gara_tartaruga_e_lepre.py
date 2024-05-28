@@ -40,10 +40,7 @@ def Gara():
     circuito = ["_" for n in range(1,70)]
     pos_iniziale_lepre = 1    # H
     pos_iniziale_tarta = 1    # T
-
-    print("BANG !!!!! AND THEY'RE OFF ") 
-
-print(Gara())
+    
 
 
 
