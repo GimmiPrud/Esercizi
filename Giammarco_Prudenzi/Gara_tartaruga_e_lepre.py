@@ -36,5 +36,7 @@ def lepre(pos: int):
 
     return pos
 
-print(lepre(1))
-print(tartaruga(1))
+def Gara():
+    pass
+
+
