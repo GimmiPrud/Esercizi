@@ -3,6 +3,9 @@ from random import*
 
 class Gara():
 
+    def __init__(self) -> None:
+        pass
+    
     def posizioni(self,):
         pass
 
