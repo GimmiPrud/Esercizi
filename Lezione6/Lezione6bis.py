@@ -133,3 +133,8 @@ gatto1 = gatto(nome= "kitty")
 print(gatto1.nome)
 gatto1.verso()
 gatto1.movimento(15)
+
+
+#/////////////////////////////////////////////////////////////#
+
+
