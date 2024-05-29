@@ -109,6 +109,7 @@ class cane(AbcAnimal):  # Sottoclasse di AbcAnimal
 
 
 cane1 = cane(nome= "Ulisse")
+print(cane1.nome)
 cane1.verso()
 cane1.movimento(t=10)
 
@@ -128,5 +129,6 @@ class gatto(AbcAnimal):
         print(self.velocità*t)
 
 gatto1 = gatto(nome= "kitty")
+print(gatto1.nome)
 gatto1.verso()
 gatto1.movimento(15)
