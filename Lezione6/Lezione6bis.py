@@ -149,7 +149,7 @@ class contobancario():
         contobancario.total_accounts += 1 # questo permette di chiamare la variabile di classe globale 
                                           # questa variabile aumenterà ogni volta che si chiamerà la classe 
     
-    def deposito(self,importo):
+    def deposito(self,importo): # i metodi di istanza sono riferiti alla singola instanza e sono caratterizzate dal self 
         self.saldo += importo
         print(f"{importo}£ depositati. il nuovo saldo è {self.saldo}£")
 
@@ -157,12 +157,13 @@ class contobancario():
         self.saldo -= importo
         print(f"{importo}£ prelevati. il nuovo saldo è {self.saldo}£")
     
-    @classmethod # metodo che si chiama e rigurda tutta la classe e non le singole istanza (come se fosse un metodo globale della Classe )
+    @classmethod # metodi che si chiama e rigurda tutta la classe e non le singole istanza (come se fosse un metodo globale della Classe )
 
     def get_total_accounts(cls):
         print(f"Account totali creati: {cls.total_accounts}")
     
-    @staticmethod # 
+    @staticmethod # sono metodi che non sono scritti comunque all'interno della classe ma che non è riferita a nessuna istanza e neanche alla classe stessa
+                  # (non prende in input nessun metodo esterno)(una funzione in più che potrebbe servire per fare dei controlli ma che non modifica istanze e calssi)
 
     def valida_account(iban):
         if isinstance(iban, int) and len(str(iban))==10:
@@ -180,4 +181,29 @@ account1.prelievo(250)
 account2.prelievo(75)
 contobancario.get_total_accounts()
 
+#////////////////////////////////////////////////////////////////#
 
+class Banca():
+
+    def __init__(self, nome: str, simbolo: str):
+
+        self.nome = nome
+        self.simbolo = simbolo
+        self.lista_filiali: list[Filiale] = [] # questa lista deve contenere oggetti della classe filiale 
+
+class Filiale():
+    def __init__(self, code: str, indirizzo: str, banca: Banca):
+
+        self.code = code
+        self.indirizzo = indirizzo
+        self.banca = banca
+
+
+unicredit: Banca = Banca(nome= "Unicredit", simbolo= "UCG") # 1° banca creata 
+intesa: Banca = Banca(nome= "Intesa San Paolo", simbolo= "ISP")   # 2° banca
+
+filiale_unicredit: Filiale = Filiale(code= "UCG01", indirizzo= "Via Sierra Nevada,60,Roma,Italia",banca= unicredit) # si prendono le informazioni della banca unicredit creata
+
+print(filiale_unicredit.banca.nome)
+
+unicredit.lista_filiali.append(filiale_unicredit) 
