@@ -191,12 +191,33 @@ class Banca():
         self.simbolo = simbolo
         self.lista_filiali: list[Filiale] = [] # questa lista deve contenere oggetti della classe filiale 
 
+    def numero_filiali(self)-> int:
+
+        return len(self.lista_filiali)
+    
+    def aggiungi_filiale(self, filiale: "Filiale"):
+
+        if self.simbolo in filiale.code:
+            self.lista_filiali.append(filiale)
+        else:
+            raise ValueError("La Filiale non appartiene a questa banca")
 class Filiale():
+
+    filiali_create: int = 0
+    
     def __init__(self, code: str, indirizzo: str, banca: Banca):
 
         self.code = code
         self.indirizzo = indirizzo
         self.banca = banca
+
+        Filiale.filiali_create += 1
+    
+    @classmethod
+
+    def tot_filiali_create(cls):
+
+        return cls.filiali_create
 
 
 unicredit: Banca = Banca(nome= "Unicredit", simbolo= "UCG") # 1° banca creata 
