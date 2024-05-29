@@ -40,6 +40,7 @@ def lepre(pos: int):
     return pos
 
 def Gara():
+<<<<<<< HEAD
     circuito = [ "_" for n in range(1,70)]
     circuito[pos_tarta] = "T"
     circuito[pos_lepre-1] = "H"
@@ -48,6 +49,15 @@ def Gara():
     return circuito
     
 print(Gara())
+=======
+    circuito = ["__" for n in range(1,70)]
+    pos_iniziale_lepre = 1    # H
+    pos_iniziale_tarta = 1    # T
+
+    while True:
+        pass
+
+>>>>>>> 4566b94 (sss)
 
 
 
