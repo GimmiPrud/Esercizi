@@ -53,7 +53,4 @@ def Gara(mov_tarta, mov_lepre):
             return "HARE WINS || YUCH!!!"
         elif mov_lepre and mov_tarta == 70:
             return "IT'S A TIE."
-        else:
-            circuito[mov_tarta-1] = "T"
-            circuito[mov_lepre-1] = "H"
 
