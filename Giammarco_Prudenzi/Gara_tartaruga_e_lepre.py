@@ -57,10 +57,3 @@ def Gara(mov_tarta, mov_lepre):
             circuito[mov_tarta-1] = "T"
             circuito[mov_lepre-1] = "H"
 
-    return circuito
-
-
-
-
-
-
