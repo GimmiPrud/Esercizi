@@ -137,4 +137,47 @@ gatto1.movimento(15)
 
 #/////////////////////////////////////////////////////////////#
 
+class contobancario():
+
+    total_accounts = 0
+
+    def __init__(self,iban, saldo, nome):
+        self.iban = iban
+        self.nome = nome
+        self.saldo = saldo
+
+        contobancario.total_accounts += 1 # questo permette di chiamare la variabile di classe globale 
+                                          # questa variabile aumenterà ogni volta che si chiamerà la classe 
+    
+    def deposito(self,importo):
+        self.saldo += importo
+        print(f"{importo}£ depositati. il nuovo saldo è {self.saldo}£")
+
+    def prelievo(self, importo):
+        self.saldo -= importo
+        print(f"{importo}£ prelevati. il nuovo saldo è {self.saldo}£")
+    
+    @classmethod # metodo che si chiama e rigurda tutta la classe e non le singole istanza (come se fosse un metodo globale della Classe )
+
+    def get_total_accounts(cls):
+        print(f"Account totali creati: {cls.total_accounts}")
+    
+    @staticmethod # 
+
+    def valida_account(iban):
+        if isinstance(iban, int) and len(str(iban))==10:
+            print("iban valido")
+            return True
+        else:
+            print("iban non valido")
+            return False
+
+account1 = contobancario(1345566789,0,"Luca")
+account2 = contobancario(4789654306,100,"Loris")
+account1.deposito(300)
+account2.deposito(100)
+account1.prelievo(250)
+account2.prelievo(75)
+contobancario.get_total_accounts()
+
 
