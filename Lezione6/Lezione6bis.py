@@ -228,3 +228,4 @@ filiale_unicredit: Filiale = Filiale(code= "UCG01", indirizzo= "Via Sierra Nevad
 print(filiale_unicredit.banca.nome)
 
 unicredit.lista_filiali.append(filiale_unicredit) 
+intesa.aggiungi_filiale(filiale_unicredit)
