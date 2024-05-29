@@ -73,3 +73,10 @@ print(persona1.calcola_età())
 print(dipendente1.ore_lavorate)
 print(professore1.materia_insegnata)
 print(professore1.ore_di_lezione)
+
+#////////////////////////////////////////////////////////////////////////////////////////#
+
+# Come funzionano le classi
+# Spiegazione ed esempi di ripasso:
+
+
