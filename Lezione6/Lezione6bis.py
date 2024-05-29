@@ -229,3 +229,6 @@ print(filiale_unicredit.banca.nome)
 
 unicredit.lista_filiali.append(filiale_unicredit) 
 intesa.aggiungi_filiale(filiale_unicredit)
+print(unicredit.numero_filiali())
+print(intesa.numero_filiali())
+print(Filiale.tot_filiali_create())
