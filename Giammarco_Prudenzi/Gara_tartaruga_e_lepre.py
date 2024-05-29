@@ -46,11 +46,17 @@ def Gara(mov_tarta, mov_lepre):
         mov_lepre = lepre(mov_lepre)
         circuito = [ "_" for n in range(1,70)]
         if mov_lepre == mov_tarta:
-            circuito[mov_lepre] = "OUCH"
+            circuito[mov_tarta] = "OUCH"
+        elif mov_lepre:
+            circuito[mov_lepre] = "H"
+        elif mov_tarta:
+            circuito[mov_tarta]= "T"
         elif mov_tarta == 70:
             return "TORTOISE WINS! || VAY!!!"
         elif mov_lepre == 70:
             return "HARE WINS || YUCH!!!"
         elif mov_lepre and mov_tarta == 70:
             return "IT'S A TIE."
+    return circuito
+        
 
