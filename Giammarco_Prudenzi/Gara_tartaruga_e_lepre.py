@@ -39,12 +39,14 @@ def lepre(pos: int):
 
     return pos
 
-def Gara():
-    circuito = [ "_" for n in range(1,70)]
-    circuito[pos_tarta] = "T"
-    circuito[pos_lepre-1] = "H"
+def Gara(mov_tarta, mov_lepre):
     print("BANG !!!!! AND THEY'RE OFF !!!!!")
-    
+    while mov_lepre and mov_lepre < 70:
+        mov_tarta = tartaruga(mov_tarta)
+        mov_lepre = lepre(mov_lepre)
+        circuito = [ "_" for n in range(1,70)]
+        if mov_lepre == mov_tarta:
+            circuito[mov_tarta] = "OUCH"
     return circuito
     
 print(Gara())
