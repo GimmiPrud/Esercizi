@@ -47,6 +47,7 @@ def Gara(mov_tarta, mov_lepre):
         circuito = [ "_" for n in range(1,70)]
         if mov_lepre == mov_tarta:
             circuito[mov_tarta] = "OUCH"
+            
     return circuito
     
 print(Gara())
