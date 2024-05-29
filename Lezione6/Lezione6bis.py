@@ -80,3 +80,53 @@ print(professore1.ore_di_lezione)
 # Spiegazione ed esempi di ripasso:
 
 
+from abc import ABC, abstractmethod  # abstractmethod è un decorator (i decorator usano il cls=@) 
+                                     # abstractmethod deve essere importato per essere utilizzato 
+class AbcAnimal(ABC):   # facciamo ereditare la funzione ABC alla classe
+
+    @abstractmethod # si utilizza per creare una classe astratta 
+    def verso(self):
+        pass
+    
+    @abstractmethod
+    def movimento(self):
+        pass
+
+
+class cane(AbcAnimal):  # Sottoclasse di AbcAnimal 
+
+    def __init__(self, nome: str) -> None:
+        super().__init__()
+
+        self.nome = nome
+        self.velocità: float = 10 # m/s
+    
+    def verso(self):
+        print("Bau")
+    
+    def movimento(self, t: int):
+        print(self.velocità*t)
+
+
+cane1 = cane(nome= "Ulisse")
+cane1.verso()
+cane1.movimento(t=10)
+
+
+class gatto(AbcAnimal):
+
+    def __init__(self, nome: str) -> None:
+        super().__init__()
+
+        self.nome = nome
+        self.velocità: float = 15.0 # m/s
+    
+    def verso(self):
+        print("Miao")
+
+    def movimento(self, t: float):
+        print(self.velocità*t)
+
+gatto1 = gatto(nome= "kitty")
+gatto1.verso()
+gatto1.movimento(15)
