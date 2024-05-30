@@ -169,4 +169,3 @@ Scrivi una funzione che elimini dalla lista dati certi elementi specificati in u
 Il dizionario contiene elementi da rimuovere come chiavi e il numero di volte che devono essere rimossi come valori.
 '''
 # Svolgimento ES.8:
-
