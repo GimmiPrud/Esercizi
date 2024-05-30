@@ -142,3 +142,33 @@ if False:
     contact = create_contact("Mario Rossi", email="mario.rossi@gmail.com", telefono=788787)
     print(create_contact("Mario Rossi", email="mario.rossi@gmail.com", telefono=788787))
     print(update_contact(contact, "Mario Rossi", telefono=123456789))
+
+
+# ES. 7:
+'''
+Scrivi una funzione che prenda in input una lista di dizionari che rappresentano voti di studenti e aggrega i voti per studente in un nuovo dizionario.
+'''
+# Svolgimento ES. 7:
+
+if True:
+
+    def voti_studenti(voti: list[dict])-> dict:
+        voto_per_studente = {}
+        for i in voti:
+            studente = i["Studente"]
+            voto = i["voti"]
+
+
+
+
+
+    print(voti_studenti(voti= [{"Studente":"Alessio", "voti": [23,21,18]}, {"Studente":"Camilla", "voti":[28,27,30]}, {"Studente":"Luca","voti":[22,25,24]}]))
+
+
+# ES. 8:
+'''
+Scrivi una funzione che elimini dalla lista dati certi elementi specificati in un dizionario.
+Il dizionario contiene elementi da rimuovere come chiavi e il numero di volte che devono essere rimossi come valori.
+'''
+# Svolgimento ES.8:
+
