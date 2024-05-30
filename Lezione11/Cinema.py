@@ -17,7 +17,7 @@ Classi:
 
 Metodi:
     - prenota_posti(num_posti): Prenota un certo numero di posti nella sala, se disponibili.
-    - Restituisce un messaggio di conferma o di errore.
+    Restituisce un messaggio di conferma o di errore.
     - posti_disponibili(): Restituisce il numero di posti ancora disponibili nella sala.
  
 - Cinema: Gestisce le operazioni legate alla gestione delle sale.
@@ -34,5 +34,45 @@ Test case:
 
 '''
 # Svolgimento ES. Cinema:
+
+class Film():
+
+    def __init__(self, titolo: str, durata: float):
+
+        self.titolo = titolo
+        self.durata = durata
+
+
+class Sala():
+
+    def __init__(self, id: int, film_in_programmazione: Film, posti_totali: int, posti_prenotati: int):
+
+        self.id = id
+        self.film_in_programmazione = film_in_programmazione
+        self.posti_totali = posti_totali
+        self.posti_prenotati = posti_prenotati
+
+    def prenota_posti(self, num_posti: int):
+        pass
+
+    def posti_disponibili():
+        pass
+
+
+class Cinema():
+
+    def __init__(self,):
+        pass
+
+    def aggiungi_sala(self, sala: Sala):
+        pass
+
+    def prenota_film(self,):
+        pass
+
+
+
+
+
 
 
