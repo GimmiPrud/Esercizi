@@ -45,15 +45,17 @@ class Film():
 
 class Sala():
 
-    def __init__(self, id: int, film_in_programmazione: Film, posti_totali: int, posti_prenotati: int):
+    def __init__(self, id: int, film_in_programmazione: str, posti_totali: int, posti_prenotati: int = 0):
 
         self.id = id
         self.film_in_programmazione = film_in_programmazione
         self.posti_totali = posti_totali
         self.posti_prenotati = posti_prenotati
 
+
     def prenota_posti(self, num_posti: int):
         pass
+
 
     def posti_disponibili():
         pass
@@ -67,12 +69,11 @@ class Cinema():
     def aggiungi_sala(self, sala: Sala):
         pass
 
-    def prenota_film(self,):
+    def prenota_film(self, titolo_film: str, num_posti: int):
         pass
 
 
-
-
+sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 40)
 
 
 
