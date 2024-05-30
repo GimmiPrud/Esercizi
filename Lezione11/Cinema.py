@@ -54,13 +54,26 @@ class Sala():
 
 
     def prenota_posti(self, num_posti: int):
-        pass
 
+        while self.posti_prenotati <= self. posti_totali:
+            self.posti_prenotati += num_posti
 
-    def posti_disponibili():
-        pass
+            if self.posti_prenotati < self.posti_totali:
+                self.posti_totali -= self.posti_prenotati
+                return "Ciao, abbiamo ancora dei posti disponibili"
+            else:
+                print("Mi dispiace ma abbiamo finito i posti ")
+            break
+            
 
+    def posti_disponibili(self):
+        posti_dispo = self.posti_prenotati - self.posti_prenotati
+        return f"Sono ancora disponibili {posti_dispo} posti in questa sala"
+    
 
+sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 0)
+
+''''
 class Cinema():
 
     def __init__(self,):
@@ -71,9 +84,10 @@ class Cinema():
 
     def prenota_film(self, titolo_film: str, num_posti: int):
         pass
+'''
 
 
-sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 40)
+
 
 
 
