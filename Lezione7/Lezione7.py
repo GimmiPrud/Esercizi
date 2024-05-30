@@ -160,8 +160,6 @@ if True:
 
 
 
-
-
     print(voti_studenti(voti= [{"Studente":"Alessio", "voti": [23,21,18]}, {"Studente":"Camilla", "voti":[28,27,30]}, {"Studente":"Luca","voti":[22,25,24]}]))
 
 
