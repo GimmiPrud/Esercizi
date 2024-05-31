@@ -18,7 +18,7 @@ result = sum(a=5,b=2)
 test_value: int = 7
 assert i == test_value, f" Error, the value i must be {test_value} instead is {i}"
 
-# ci sono diversi tipi di assert che si trovano importando la libreria unittest{}
+# ci sono diversi tipi di assert che si trovano all'interno della libreria unittest{}
 
 
 
