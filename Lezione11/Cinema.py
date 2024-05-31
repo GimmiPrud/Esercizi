@@ -62,7 +62,7 @@ class Sala():
         
         elif self.posti_totali == num_posti + self.posti_prenotati:
             self.posti_prenotati += num_posti
-            
+
             return f"Grazie della prenotazione.\nÈ sata raggiunta la capienza massima di {self.posti_totali} posti in sala"
         
         else:
@@ -72,16 +72,6 @@ class Sala():
     def posti_disponibili(self):
         return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
     
-
-
-
-sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 0)
-print(sala_rossa.prenota_posti(20))
-print(sala_rossa.prenota_posti(80))
-print(sala_rossa.posti_prenotati)
-print(sala_rossa.posti_disponibili())
-
-
 
 ''''
 class Cinema():
@@ -97,6 +87,11 @@ class Cinema():
 '''
 
 
+sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 0)
+print(sala_rossa.prenota_posti(20))
+print(sala_rossa.prenota_posti(70))
+print(sala_rossa.posti_prenotati)
+print(sala_rossa.posti_disponibili())
 
 
 
