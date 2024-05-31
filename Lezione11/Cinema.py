@@ -71,7 +71,7 @@ class Sala():
     def posti_disponibili(self):
         return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
     
-class Cinema():
+class Cinema(Sala):
 
     def __init__(self,):
         pass
