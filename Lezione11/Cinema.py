@@ -42,7 +42,6 @@ class Film():
         self.titolo = titolo
         self.durata = durata
 
-
 class Sala():
 
     def __init__(self, id: int, film_in_programmazione: str, posti_totali: int, posti_prenotati: int = 0):
@@ -72,8 +71,6 @@ class Sala():
     def posti_disponibili(self):
         return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
     
-
-''''
 class Cinema():
 
     def __init__(self,):
@@ -84,7 +81,7 @@ class Cinema():
 
     def prenota_film(self, titolo_film: str, num_posti: int):
         pass
-'''
+
 
 
 sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 0)

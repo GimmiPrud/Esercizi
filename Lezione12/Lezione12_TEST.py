@@ -20,5 +20,13 @@ assert i == test_value, f" Error, the value i must be {test_value} instead is {i
 
 # ci sono diversi tipi di assert che si trovano importando la libreria unittest{}
 
+
+
+
+
+
+
+#---------------------------------------------------------------------------------------------------------------------#
 # la funzine all() di python controlla se tutto quello che è all'interno di un object sia True 
 # se tutto è true il risultato sarà true, se anche una sola condizione è false il risultato sarà false (tipo un and )
+#---------------------------------------------------------------------------------------------------------------------#
