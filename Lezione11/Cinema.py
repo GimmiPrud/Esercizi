@@ -55,23 +55,33 @@ class Sala():
 
     def prenota_posti(self, num_posti: int):
 
-        while self.posti_prenotati <= self. posti_totali:
+        if self.posti_prenotati < self.posti_totali and self.posti_prenotati + num_posti < self.posti_totali:
             self.posti_prenotati += num_posti
 
-            if self.posti_prenotati < self.posti_totali:
-                self.posti_totali -= self.posti_prenotati
-                return "Ciao, abbiamo ancora dei posti disponibili"
-            else:
-                print("Mi dispiace ma abbiamo finito i posti ")
-            break
+            return f"Abbiamo ancora posti disponibili"
+        
+        elif self.posti_totali == num_posti + self.posti_prenotati:
+            self.posti_prenotati += num_posti
             
+            return f"Grazie della prenotazione.\nÈ sata raggiunta la capienza massima di {self.posti_totali} posti in sala"
+        
+        else:
+            return "Mi dispiace ma i posti disponibili sono terminati "
+
 
     def posti_disponibili(self):
-        posti_dispo = self.posti_prenotati - self.posti_prenotati
-        return f"Sono ancora disponibili {posti_dispo} posti in questa sala"
+        return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
     
 
+
+
 sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 0)
+print(sala_rossa.prenota_posti(20))
+print(sala_rossa.prenota_posti(80))
+print(sala_rossa.posti_prenotati)
+print(sala_rossa.posti_disponibili())
+
+
 
 ''''
 class Cinema():
