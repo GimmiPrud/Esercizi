@@ -1,7 +1,5 @@
 import random
 
-import random
-
 # Costanti
 LUNGHEZZA_CORSIA = 70
 CAMBIO_CONDIZIONI = 10  # Ogni quanti tick cambiano le condizioni
