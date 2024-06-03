@@ -12,7 +12,6 @@ Sviluppa un sistema in Python che gestisca le prenotazioni per un cinema.
  
 Classi:
 - Film: Rappresenta un film con titolo e durata.
- 
 - Sala: Rappresenta una sala con numero identificativo, film attualmente in programmazione, posti totali, posti prenotati.
 
 Metodi:
@@ -71,10 +70,10 @@ class Sala():
     def posti_disponibili(self):
         return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
     
-class Cinema(Sala):
+class Cinema():
 
-    def __init__(self,):
-        pass
+    def __init__(self, sale: list[Sala]):
+        self.sale = sale 
 
     def aggiungi_sala(self, sala: Sala):
         pass
