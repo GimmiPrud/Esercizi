@@ -71,17 +71,16 @@ class Sala():
         return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
     
 class Cinema():
-
-    def __init__(self, sale: list[Sala]):
-        self.sale = sale 
+    
+    def __init__(self):
+        pass
 
     def aggiungi_sala(self, sala: Sala):
         pass
-
+        
     def prenota_film(self, titolo_film: str, num_posti: int):
         pass
-
-
+                
 
 sala_rossa = Sala(id= 203, film_in_programmazione= "King Kong",posti_totali= 100, posti_prenotati= 0)
 print(sala_rossa.prenota_posti(20))
