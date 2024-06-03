@@ -3,6 +3,7 @@
 
 # Esercizi sulle classi:
 
+# Cinema:
 '''
 Sistema di Prenotazione Cinema
 
