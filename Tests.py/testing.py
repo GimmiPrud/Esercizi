@@ -1,7 +1,7 @@
 
 import unittest
 from Ripasso.ripasso import calc # questo metodo di import si chiama import relativo 
-# import relativo sintassi = "from..nome_directori.nome_file import nome funzione o classe  "
+# import relativo sintassi = "from..nome_directori.nome_file import nome funzione o classe "(oppure "from Ripasso.ripasso import calc")
 
 class TestCalculations(unittest.TestCase):
 
@@ -19,3 +19,5 @@ class TestCalculations(unittest.TestCase):
 
 if __name__== "__main__":
     unittest.main()
+
+# sul terminale digitare -> "python3 -m unittest -v" (per controllare i test)
