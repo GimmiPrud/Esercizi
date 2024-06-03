@@ -20,4 +20,4 @@ class TestCalculations(unittest.TestCase):
 if __name__== "__main__":
     unittest.main()
 
-# sul terminale digitare -> "python3 -m unittest -v" (per controllare i test)
+# sul terminale digitare -> python3 -m unittest -v (per controllare i test)
