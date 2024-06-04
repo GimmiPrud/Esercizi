@@ -22,3 +22,21 @@ Il sistema cerca un prodotto per verificare se esiste nell'inventario.
 Il sistema verifica la disponibilità dei prodotti in inventario.
 '''
 # Svolgimento ES. Magazzino:
+
+class Prodotto:
+    def __init__(self, nome: str, quantità: int):
+        self.nome = nome
+        self.quantità = quantità
+        
+class Magazzino:
+    def __init__(self):
+        pass
+    
+    def aggiungi_prodotto(self, prodotto: Prodotto):
+        pass
+    
+    def cerca_prodotto(self, nome: str)-> Prodotto:
+        pass
+    
+    def verifica_disponibilità(self, nome: str)-> str:
+        pass
