@@ -89,6 +89,19 @@ print(sala_rossa.prenota_posti(70))
 print(sala_rossa.posti_prenotati)
 print(sala_rossa.posti_disponibili())
 
+sala_blu = Sala(345, "Kill Bill",135)
+print(sala_blu.prenota_posti(20))
+print(sala_blu.prenota_posti(70))
+print(sala_blu.posti_prenotati)
+print(sala_blu.posti_disponibili())
+
+sala_verde = Sala(897, "Oppenheimer", 120)
+print(sala_verde.prenota_posti(20))
+print(sala_verde.prenota_posti(70))
+print(sala_verde.posti_prenotati)
+print(sala_verde.posti_disponibili())
+
+
 
 
 
