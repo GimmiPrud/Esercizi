@@ -37,25 +37,16 @@ class Magazzino:
     
     def cerca_prodotto(self, nome: str)-> Prodotto:
         for prodotto in self.lista_prodotti:
-            if prodotto.nome == nome and prodotto.quantità > 0:
-                return prodotto
+            if prodotto.nome == nome :
+                return prodotto.nome
+            else:
+                return None
     
     def verifica_disponibilità(self, nome: str)-> str:
         for prodotto in self.lista_prodotti:
             if prodotto.nome == nome and prodotto.quantità > 0:
-                return f"il prodotto {prodotto} è disponobile in magazzino\nQuantità: {prodotto.quantità}"
+                return f"il prodotto {prodotto.nome} è disponobile in magazzino\nQuantità: {prodotto.quantità}"
             else:
-                return f"Mi dispiace ma il profdotto {prodotto} è terminato"
-        
+                return f"Mi dispiace ma il prodotto {prodotto.nome} è terminato"
+            
 
-# Test case
-magazzino = Magazzino()
-prodotto1 = Prodotto("Penne", 10)
-prodotto2 = Prodotto("Quaderno", 5)
-prodotto3 = Prodotto("Matita", 3)
-
-magazzino.aggiungi_prodotto(prodotto1)
-magazzino.aggiungi_prodotto(prodotto2)
-magazzino.aggiungi_prodotto(prodotto3)
-
-print(magazzino.cerca_prodotto("Penne"))
