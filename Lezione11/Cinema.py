@@ -73,11 +73,12 @@ class Sala():
     
 class Cinema():
     
-    def __init__(self):
-        pass
+    def __init__(self,sale: list[Sala]):
+        self.sale = [sale]
 
     def aggiungi_sala(self, sala: Sala):
-        pass
+        self.sale.append(sala)
+        return self.sale
         
     def prenota_film(self, titolo_film: str, num_posti: int):
         pass
@@ -100,6 +101,10 @@ print(sala_verde.prenota_posti(50))
 print(sala_verde.prenota_posti(50))
 print(sala_verde.posti_prenotati)
 print(sala_verde.posti_disponibili())
+
+cinema_Barrini = Cinema(sale=[sala_rossa])
+cinema_Barrini.aggiungi_sala(sala_blu)
+cinema_Barrini.aggiungi_sala(sala_verde)
 
 
 
