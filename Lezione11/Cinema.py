@@ -44,7 +44,7 @@ class Film():
 
 class Sala():
 
-    def __init__(self, id: int, film_in_programmazione: str, posti_totali: int, posti_prenotati: int = 0):
+    def __init__(self, id: int, film_in_programmazione: Film, posti_totali: int, posti_prenotati: int = 0):
 
         self.id = id
         self.film_in_programmazione = film_in_programmazione
@@ -75,21 +75,33 @@ class Cinema():
     
     def __init__(self):
         self.sale = []
-
+    
     def aggiungi_sala(self, sala: Sala):
         self.sale.append(sala)
         
     def prenota_film(self, titolo_film: str, num_posti: int):
         pass
-
-
+                
+                
 
 Vois_Cinema = Cinema()
-sala_rossa = Sala()
-sala_blue = Sala()
-sala_verde = Sala()
+
+film1 = Film("Kill Bill Volume 1", 1.51)
+film2 = Film("Shutter Island", 2.18)
+film3 = Film("Oppenheimer", 3.00)
+
+sala_rossa = Sala(id= 1, film_in_programmazione= film1, posti_totali= 100, posti_prenotati= 0)
+sala_blue = Sala(id= 2, film_in_programmazione= film2, posti_totali= 100, posti_prenotati= 0)
+sala_verde = Sala(id= 3, film_in_programmazione= film3, posti_totali= 100, posti_prenotati= 0)
 
 Vois_Cinema.aggiungi_sala(sala_rossa)
-Vois_Cinema.aggiungi_sala(sala_verde)
 Vois_Cinema.aggiungi_sala(sala_blue)
+Vois_Cinema.aggiungi_sala(sala_verde)
+
+
+
+
+
+
+
 
