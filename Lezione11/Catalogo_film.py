@@ -29,3 +29,26 @@ un messaggio di errore se nessun film contiene la parola cercata nel titolo.
 '''
 # Svolgimento ES. Catalogo_film:
 
+class Moviecatalog:
+    
+    def __init__(self,):
+        pass
+    
+    def search_movie_by_title(self,title):
+        pass
+    
+    def list_directors(self):
+        pass
+    
+    def add_movie(self, director_name, movies):
+        pass
+    
+    def remove_movie(self, director_name, movie_name):
+        pass
+    
+    def get_movies_by_director(self,director_name):
+        pass
+    
+
+
+catalogo1 = Moviecatalog()
