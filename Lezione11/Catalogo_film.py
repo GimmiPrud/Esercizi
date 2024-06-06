@@ -40,8 +40,7 @@ class Moviecatalog:
             self.directors[director_name] = [movies]
         else:
             self.directors[director_name].append(movies)
-           
-                
+                       
     def remove_movie(self, director_name, movie_name):
         
         if director_name in self.directors and movie_name in self.directors[director_name]:
@@ -49,8 +48,7 @@ class Moviecatalog:
         
         if not self.directors[director_name]:  # quando un dizionario non ha valori perche parte tutto dalle chiavi 
           del self.directors[director_name]
-       
-          
+            
     def list_directors(self):
         pass
     
