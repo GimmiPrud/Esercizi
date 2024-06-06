@@ -32,33 +32,34 @@ un messaggio di errore se nessun film contiene la parola cercata nel titolo.
 class Moviecatalog:
     
     def __init__(self):
-        
         self.directors = {}
     
     def add_movie(self, director_name, movies):
-        self.directors[director_name]= movies
-        for k,v in self.directors.items():
-            if director_name == k:
-                v += movies
-            elif movies == v:
-                pass
-                
-                
-            
-            
         
+        if director_name not in self.directors:
+            self.directors[director_name] = [movies]
+        else:
+            self.directors[director_name].append(movies)
+           
+                
     def remove_movie(self, director_name, movie_name):
-        pass
-    
+        
+        if director_name in self.directors and movie_name in self.directors[director_name]:
+            self.directors[director_name].remove(movie_name)
+        
+        if not self.directors[director_name]:  # quando un dizionario non ha valori perche parte tutto dalle chiavi 
+          del self.directors[director_name]
+       
+          
     def list_directors(self):
-        for directors in self.directors.keys():
-            return directors
+        pass
     
     def search_movie_by_title(self,title):
         pass
     
     def get_movies_by_director(self,director_name):
         pass
+            
     
 
 
@@ -69,4 +70,8 @@ catalogo1.add_movie("Quentin Tarantino","Le iene")
 catalogo1.add_movie("Christopher Nolan","Inception")
 catalogo1.add_movie("Christopher Nolan","Il cavaliere oscuro")
 
+print(catalogo1.directors)
+catalogo1.remove_movie("Christopher Nolan","Il cavaliere oscuro")
+print(catalogo1.directors)
+catalogo1.remove_movie("Christopher Nolan","Inception")
 print(catalogo1.directors)
