@@ -31,19 +31,26 @@ un messaggio di errore se nessun film contiene la parola cercata nel titolo.
 
 class Moviecatalog:
     
-    def __init__(self,):
-        pass
+    def __init__(self):
+        
+        self.directors = {}
     
-    def search_movie_by_title(self,title):
+    def add_movie(self, director_name, movies):
+        
+        if director_name not in self.directors:
+            
+            self.directors[director_name]= movies
+            
+    
+    def remove_movie(self, director_name, movie_name):
         pass
     
     def list_directors(self):
-        pass
+        
+        for directors in self.directors.keys:
+            return f"Registi presenti in catalogo:\n{directors}"
     
-    def add_movie(self, director_name, movies):
-        pass
-    
-    def remove_movie(self, director_name, movie_name):
+    def search_movie_by_title(self,title):
         pass
     
     def get_movies_by_director(self,director_name):
