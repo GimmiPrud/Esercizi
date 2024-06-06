@@ -36,19 +36,23 @@ class Moviecatalog:
         self.directors = {}
     
     def add_movie(self, director_name, movies):
+        self.directors[director_name]= movies
+        for k,v in self.directors.items():
+            if director_name == k:
+                v += movies
+            elif movies == v:
+                pass
+                
+                
+            
+            
         
-        if director_name not in self.directors:
-            
-            self.directors[director_name]= movies
-            
-    
     def remove_movie(self, director_name, movie_name):
         pass
     
     def list_directors(self):
-        
-        for directors in self.directors.keys:
-            return f"Registi presenti in catalogo:\n{directors}"
+        for directors in self.directors.keys():
+            return directors
     
     def search_movie_by_title(self,title):
         pass
@@ -59,3 +63,10 @@ class Moviecatalog:
 
 
 catalogo1 = Moviecatalog()
+
+catalogo1.add_movie( director_name="Martin Scorsese", movies="Taxi Driver")
+catalogo1.add_movie("Quentin Tarantino","Le iene")
+catalogo1.add_movie("Christopher Nolan","Inception")
+catalogo1.add_movie("Christopher Nolan","Il cavaliere oscuro")
+
+print(catalogo1.directors)
