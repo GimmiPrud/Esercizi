@@ -74,12 +74,12 @@ class Sala():
 class Cinema():
     
     def __init__(self):
-        self.sale = {}
+        self.sale = []
     
     def aggiungi_sala(self, sala: Sala):
-        self.sale.update(sala)
+        self.sale.append(sala)
         
-    def prenota_film(self, titolo_film: str, num_posti: int):
+    def prenota_film(self, titolo_film: Film, num_posti: int):
         pass
                 
         
@@ -98,7 +98,7 @@ Vois_Cinema.aggiungi_sala(sala_rossa)
 Vois_Cinema.aggiungi_sala(sala_blue)
 Vois_Cinema.aggiungi_sala(sala_verde)
 
-Vois_Cinema.prenota_film("Kill Bill Volume 1",0)
+# Vois_Cinema.prenota_film("Kill Bill Volume 1",0)
 
 
 
