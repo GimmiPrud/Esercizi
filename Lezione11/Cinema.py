@@ -87,8 +87,6 @@ class Cinema():
 
             
                 
-                
-    
 Vois_Cinema = Cinema()
 
 film1 = Film("Kill Bill Volume 1", 1.51)
