@@ -46,7 +46,7 @@ class Moviecatalog:
         if director_name in self.directors and movie_name in self.directors[director_name]:
             self.directors[director_name].remove(movie_name)
         
-        if not self.directors[director_name]:  # quando un dizionario non ha valori perche parte tutto dalle chiavi 
+        if not self.directors[director_name]: 
           del self.directors[director_name]
             
     def list_directors(self):
@@ -56,7 +56,8 @@ class Moviecatalog:
         pass
     
     def get_movies_by_director(self,director_name):
-        pass
+        if director_name in self.directors.keys():
+            return f"Tutti i film di {director_name} in catalogo:\n{self.directors[director_name]}"
 
             
     
@@ -68,6 +69,7 @@ catalogo1.add_movie( director_name="Martin Scorsese", movies="Taxi Driver")
 catalogo1.add_movie("Quentin Tarantino","Le iene")
 catalogo1.add_movie("Christopher Nolan","Inception")
 catalogo1.add_movie("Christopher Nolan","Il cavaliere oscuro")
+catalogo1.add_movie("Quentin Tarantino","Django Unchained")
 
 print(catalogo1.directors)
 catalogo1.remove_movie("Christopher Nolan","Il cavaliere oscuro")
@@ -76,3 +78,5 @@ catalogo1.remove_movie("Christopher Nolan","Inception")
 print(catalogo1.directors)
 
 print(catalogo1.list_directors())
+
+print(catalogo1.get_movies_by_director("Quentin Tarantino"))
