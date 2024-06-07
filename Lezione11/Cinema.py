@@ -74,16 +74,13 @@ class Sala():
 class Cinema():
     
     def __init__(self):
-        self.sale = []
-       # self.film = []
+        pass
     
     def aggiungi_sala(self, sala: Sala,):
-        self.sale.append(sala)
-        #self.film.append(sala.film_in_programmazione)
+        pass
         
     def prenota_film(self, titolo_film: str, num_posti: int):
-        if titolo_film == sala_rossa.film_in_programmazione or sala_blue.film_in_programmazione or sala_verde.film_in_programmazione:
-            pass
+        pass
 
             
                 
