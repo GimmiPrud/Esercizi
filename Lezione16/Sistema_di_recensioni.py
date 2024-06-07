@@ -73,24 +73,26 @@ class Media:
             sum += i
         x = round(sum/len(self.reviews),2)
 
-        if 0<= x <= 1:
+        if 0 <= x <= 1:
             return "Giudizio: Terribile"
-        elif 1< x <= 2:
+        elif 1 < x <= 2:
             return "Giudizio: Brutto"
-        elif 2< x <= 3:
+        elif 2 < x <= 3:
             return "Giudizio: Normale"
-        elif 3< x <= 4:
+        elif 3 < x <= 4:
             return "Giudizio: Bello"
         else:
-            return "Grandioso"
+            return "Giudizio: Grandioso"
 
     def ratePercentage(self, voto):
         count = self.reviews.count(voto)
-        perc = (count / len(self.reviews)) *100
+        perc = (count / len(self.reviews)) *100  
+        return f"percentuale voto {voto}: {perc} %"
 
 
     def recensione(self):
         pass
+        
 
 class Film(Media):
 
@@ -100,24 +102,34 @@ class Film(Media):
 
 
 
-American_Psycho = Film("American Psycho")
+American_Psycho = Film(title="American Psycho",reviews=[])
+Il_Padrino = Film(title="Il Padrino",reviews=[])
 
 print(American_Psycho.get_title())
+print(Il_Padrino.get_title())
 
 American_Psycho.aggiungiValutazione(2)
 American_Psycho.aggiungiValutazione(4)
-American_Psycho.aggiungiValutazione(4)
-American_Psycho.aggiungiValutazione(2)
+American_Psycho.aggiungiValutazione(3)
 American_Psycho.aggiungiValutazione(3)
 American_Psycho.aggiungiValutazione(4)
 
+Il_Padrino.aggiungiValutazione(5)
+Il_Padrino.aggiungiValutazione(4)
+Il_Padrino.aggiungiValutazione(4.5)
+Il_Padrino.aggiungiValutazione(4.5)
+Il_Padrino.aggiungiValutazione(4.5)
+
 print(American_Psycho.getMedia())
+print(Il_Padrino.getMedia())
 
 print(American_Psycho.getRate())
+print(Il_Padrino.getRate())
 
 print(American_Psycho.ratePercentage(4))
+print(Il_Padrino.ratePercentage(4.5))
 
-
+print(American_Psycho.recensione())
 
 
 

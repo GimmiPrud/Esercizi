@@ -4,7 +4,6 @@
 # Esericzi sulle calssi 
 
 # Catalogo_film:
-
 '''
 Sviluppa un sistema in Python per la gestione di un catalogo film che permetta di aggiungere, rimuovere e cercare film di un particolare regista.
 Il sistema dovrebbe consentire anche di visualizzare tutti i registi e i loro film.
