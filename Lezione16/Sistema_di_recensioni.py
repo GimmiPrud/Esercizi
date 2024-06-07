@@ -85,9 +85,8 @@ class Media:
             return "Grandioso"
 
     def ratePercentage(self, voto):
-        count = 0
-        
-
+        count = self.reviews.count(voto)
+        perc = (count / len(self.reviews)) *100
 
 
     def recensione(self):
@@ -115,6 +114,8 @@ American_Psycho.aggiungiValutazione(4)
 print(American_Psycho.getMedia())
 
 print(American_Psycho.getRate())
+
+print(American_Psycho.ratePercentage(4))
 
 
 
