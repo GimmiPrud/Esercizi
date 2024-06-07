@@ -51,7 +51,6 @@ class Sala():
         self.posti_totali = posti_totali
         self.posti_prenotati = posti_prenotati
 
-
     def prenota_posti(self, num_posti: int):
 
         if self.posti_prenotati < self.posti_totali and self.posti_prenotati + num_posti < self.posti_totali:
@@ -66,7 +65,6 @@ class Sala():
         
         else:
             return "Mi dispiace ma i posti disponibili sono terminati "
-
 
     def posti_disponibili(self):
         return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
