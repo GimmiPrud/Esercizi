@@ -80,3 +80,5 @@ print(catalogo1.directors)
 print(catalogo1.list_directors())
 
 print(catalogo1.get_movies_by_director("Quentin Tarantino"))
+
+print(catalogo1.search_movie_by_title("Django"))
