@@ -44,35 +44,79 @@ aggiunga a ognuno dei due almeno dieci valutazioni e richiami il metodo recensio
 
 class Media:
 
-    def __init__(self, title: str, reviews: list[float]):
+    def __init__(self, title: str, reviews = []):
 
         self.title = title
         self.reviews = reviews
-        reviews = [i for i in range(1,5)]
 
     def set_title(self, title):
-        pass
+        self.title = title
     
     def get_title(self):
-        pass
+        return f"Titolo film: {self.title}"
     
     def aggiungiValutazione(self, voto):
-        pass
+        if 1 <= voto <= 5 :
+            self.reviews.append(voto)
+        else:
+            pass
 
     def getMedia(self):
-        pass
+        sum = 0
+        for i in self.reviews:
+            sum += i
+        return f"Voto medio: {sum/len(self.reviews)}"
 
     def getRate(self):
-        pass
+        sum = 0
+        for i in self.reviews:
+            sum += i
+        x = round(sum/len(self.reviews),2)
+
+        if 0<= x <= 1:
+            return "Giudizio: Terribile"
+        elif 1< x <= 2:
+            return "Giudizio: Brutto"
+        elif 2< x <= 3:
+            return "Giudizio: Normale"
+        elif 3< x <= 4:
+            return "Giudizio: Bello"
+        else:
+            return "Grandioso"
 
     def ratePercentage(self, voto):
-        pass
+        count = 0
+        
+
+
 
     def recensione(self):
         pass
 
 class Film(Media):
-     
-     def __init__(self, title: str, reviews: list[float]):
-         super().__init__(title, reviews)
+
+    def __init__(self, title: str, reviews=[]):
+        super().__init__(title, reviews)
+
+
+
+
+American_Psycho = Film("American Psycho")
+
+print(American_Psycho.get_title())
+
+American_Psycho.aggiungiValutazione(2)
+American_Psycho.aggiungiValutazione(4)
+American_Psycho.aggiungiValutazione(4)
+American_Psycho.aggiungiValutazione(2)
+American_Psycho.aggiungiValutazione(3)
+American_Psycho.aggiungiValutazione(4)
+
+print(American_Psycho.getMedia())
+
+print(American_Psycho.getRate())
+
+
+
+
 
