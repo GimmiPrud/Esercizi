@@ -103,7 +103,7 @@ class Media:
                 print(f"Normale: {self.ratePercentage(i)}")
             elif 3 < i <= 4:
                 print(f"Bello: {self.ratePercentage(i)}")
-            else:
+            elif 4 < i < 5:
                 print(f"Grandioso: {self.ratePercentage(i)}")
             
 class Film(Media):
@@ -131,14 +131,14 @@ Il_Padrino.aggiungiValutazione(4.5)
 Il_Padrino.aggiungiValutazione(4.5)
 Il_Padrino.aggiungiValutazione(4.5)
 
-'''print(American_Psycho.getMedia())
-print(Il_Padrino.getMedia())
+# print(American_Psycho.getMedia())
+# print(Il_Padrino.getMedia())
 
-print(American_Psycho.getRate())
-print(Il_Padrino.getRate())
+# print(American_Psycho.getRate())
+# print(Il_Padrino.getRate())
 
-print(American_Psycho.ratePercentage(4))
-print(Il_Padrino.ratePercentage(4.5))'''
+# print(American_Psycho.ratePercentage(4))
+# print(Il_Padrino.ratePercentage(4.5))
 
 Il_Padrino.recensione()
 print("-"*20)
