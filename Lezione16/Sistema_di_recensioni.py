@@ -33,5 +33,6 @@ Bello: 30.00%
 Grandioso: 40.00%
 
 Si verifichi il funzionamento scrivendo un codice che crei almeno due oggetti di tipo Film,
- aggiunga a ognuno dei due almeno dieci valutazioni e richiami il metodo recensione().
+aggiunga a ognuno dei due almeno dieci valutazioni e richiami il metodo recensione().
+
 '''
