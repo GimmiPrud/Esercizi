@@ -50,7 +50,7 @@ class Moviecatalog:
           del self.directors[director_name]
             
     def list_directors(self):
-        pass
+        return f" Registi in Catalogo:\n{self.directors.keys()}"
     
     def search_movie_by_title(self,title):
         pass
@@ -73,3 +73,4 @@ catalogo1.remove_movie("Christopher Nolan","Il cavaliere oscuro")
 print(catalogo1.directors)
 catalogo1.remove_movie("Christopher Nolan","Inception")
 print(catalogo1.directors)
+print(catalogo1.list_directors())
