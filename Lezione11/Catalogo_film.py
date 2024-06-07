@@ -73,4 +73,5 @@ catalogo1.remove_movie("Christopher Nolan","Il cavaliere oscuro")
 print(catalogo1.directors)
 catalogo1.remove_movie("Christopher Nolan","Inception")
 print(catalogo1.directors)
+
 print(catalogo1.list_directors())
