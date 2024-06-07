@@ -61,8 +61,6 @@ class Moviecatalog:
 
             
     
-
-
 catalogo1 = Moviecatalog()
 
 catalogo1.add_movie( director_name="Martin Scorsese", movies="Taxi Driver")
