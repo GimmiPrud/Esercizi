@@ -53,7 +53,8 @@ class Moviecatalog:
         return f" Registi in Catalogo:\n{self.directors.keys()}"
     
     def search_movie_by_title(self,title):
-        pass
+        search_movie = {}
+        
     
     def get_movies_by_director(self,director_name):
         if director_name in self.directors.keys():
