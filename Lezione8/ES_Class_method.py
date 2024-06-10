@@ -52,3 +52,11 @@ if True:
             perimeter_rectangle = (self.b*2) + (self.h*2)
             return f"Perimeter rectangle = {round(perimeter_rectangle,2)}"
         
+    
+    cerchio1 = Circle(5)
+    print(cerchio1.area())
+    print(cerchio1.perimeter())
+    
+    rectangle1 = Rectangle(15, 8)
+    print(rectangle1.area())
+    print(rectangle1.perimeter())
