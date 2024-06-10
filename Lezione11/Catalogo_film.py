@@ -55,6 +55,7 @@ class Moviecatalog:
     def search_movie_by_title(self,title):
         search_movie = {}
         
+        
     
     def get_movies_by_director(self,director_name):
         if director_name in self.directors.keys():
