@@ -83,7 +83,7 @@ print(professore1.ore_di_lezione)
 
 from abc import ABC, abstractmethod  # abstractmethod è un decorator (i decorator usano il cls=@) 
                                      # abstractmethod deve essere importato per essere utilizzato 
-class AbcAnimal(ABC):   # facciamo ereditare la funzione ABC alla classe
+class AbcAnimal(ABC):   # facciamo ereditare la funzione ABC alla classe (si utilizza per la classe astratta)
 
     @abstractmethod # si utilizza per creare una classe astratta 
     def verso(self):
