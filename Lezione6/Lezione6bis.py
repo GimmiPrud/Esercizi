@@ -81,7 +81,7 @@ print(professore1.ore_di_lezione)
 # Spiegazione ed esempi di ripasso:
 
 
-from abc import ABC, abstractmethod  # abstractmethod è un decorator (i decorator usano il cls=@) 
+from abc import ABC, abstractmethod  # abstractmethod è un decorator (i decorator usano il @) 
                                      # abstractmethod deve essere importato per essere utilizzato 
 class AbcAnimal(ABC):   # facciamo ereditare la funzione ABC alla classe (si utilizza per la classe astratta)
 
@@ -157,8 +157,8 @@ class contobancario():
         self.saldo -= importo
         print(f"{importo}£ prelevati. il nuovo saldo è {self.saldo}£")
     
-    @classmethod # metodi che si chiama e rigurda tutta la classe e non le singole istanza (come se fosse un metodo globale della Classe )
-
+    @classmethod # metodi che si chiama e rigurda tutta la classe e non le singole istanza (come se fosse un metodo globale della Classe)
+                 # (nel metodo di classe si utilizza cls invece di self) 
     def get_total_accounts(cls):
         print(f"Account totali creati: {cls.total_accounts}")
     

@@ -107,9 +107,7 @@ Create a Member class with the following attributes: name, member_id, borrowed_b
 The member class must contain the following methods:
 borrow_book(book) to add a book to the borrowed_books list.
 return_book(book) to remove a book from the borrowed_books list.
-
 __str__ method to return a string representation of the member.
-
 @classmethod from_string(cls, member_str) to create a Member instance from a string in the format "name, member_id".
 
 Create a Library class with the following attributes: books, members, total_books (class attribute to keep track of the total number of books)
@@ -118,9 +116,9 @@ add_book(book) to add a book to the library and increment total_books.
 remove_book(book) to remove a book from the library and decrement total_books.
 register_member(member) to add a member to the library.
 lend_book(book, member) to lend a book to a member. It should check if the book is available and if the member is registered.
-
 __str__ method to return a string representation of the library with the list of books and members.
 @classmethod library_statistics(cls) to print the total number of books.
+
 Create a script and play a bit with the classes:
 Create instances of books and members using class methods. Register members and add books to the library.
 Lend books to members and display the state of the library before and after lending.
@@ -128,4 +126,18 @@ Lend books to members and display the state of the library before and after lend
 # Svolgimento ES. 3:
 
 if True:
-    pass
+    
+    class Book:
+        def __init__(self, title: str, author: str, isbn: int):
+            self.title = title
+            self.author = author
+            self.isbn = isbn
+        
+        def __str__(self) -> str:
+            return f"book = {self.title},{self.author},{self.isbn}"
+        
+        @ classmethod
+        
+        def from_string(cls, book_str):
+            
+            
