@@ -51,12 +51,21 @@ class Moviecatalog:
             
     def list_directors(self):
         return f" Registi in Catalogo:\n{self.directors.keys()}"
-    
+  #------------------------------------------------------------------#  
     def search_movie_by_title(self,title):
-        search_movie = {}
-        
-        
-    
+        search_movie = {}                   # questa è una soluzione che ci permette, attraverso una parola, di cercare se all'interno di una lista di valori c'è uno che contiene quella parola in un dizionario 
+        for director,film in self.directors.items():    
+            for f in film:                        
+                if title.lower() in f.lower():
+                    if director in search_movie:
+                        search_movie[director].append(f)
+                    else:
+                        search_movie[director] = f
+        if search_movie:
+            return search_movie
+        else:
+            return "Film non trovato"
+# ------------------------------------------------------#
     def get_movies_by_director(self,director_name):
         if director_name in self.directors.keys():
             return f"Tutti i film di {director_name} in catalogo:\n{self.directors[director_name]}"
