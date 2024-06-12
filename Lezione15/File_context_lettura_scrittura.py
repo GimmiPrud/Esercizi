@@ -23,4 +23,31 @@ finally:
     reader.close()
 
 
+# Context manager 
+
+class Contextmanager:
+
+    def __enter__(self):
+
+        print("sono nell'enter")
+
+        return self
+    
+    def __exit__(self, exc_type, exc_value, traceback):
+
+        if exc_type is not None:
+
+            print("eccezionale!")
+    
+        return False
+    
+    
+with Contextmanager() as cm:
+
+    print("ciao")
+
+
+
+
+
 
