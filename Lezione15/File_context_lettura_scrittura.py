@@ -41,10 +41,11 @@ class Contextmanager:
     
         return False
     
-    
+
 with Contextmanager() as cm:
 
     print("ciao")
+    print(cm)  
 
 
 
