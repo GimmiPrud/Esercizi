@@ -67,18 +67,25 @@ class Sala():
             return "Mi dispiace ma i posti disponibili sono terminati "
 
     def posti_disponibili(self):
-        return f"i posti disponibili sono: {self.posti_totali - self.posti_prenotati}"
+        return self.posti_totali - self.posti_prenotati
     
 class Cinema():
     
     def __init__(self):
-        pass
+        self.sale = []
     
-    def aggiungi_sala(self, sala: Sala,):
-        pass
+    def aggiungi_sala(self, sala: Sala):
+        self.sale.append(sala)
+        return self.sale
         
     def prenota_film(self, titolo_film: str, num_posti: int):
-        pass
+        for sala in self.sale:
+            if sala.film_in_programmazione.titolo == titolo_film:
+                if num_posti <= sala.posti_disponibili():
+                    sala.prenota_posti(num_posti)
+                    return f"{num_posti} posti prenotati per il film {titolo_film}\nposti ancora disponibili: { sala.posti_disponibili()}"
+                else:
+                    return f"Posti non disponibili per il film {titolo_film}"
 
             
               
@@ -96,7 +103,25 @@ Vois_Cinema.aggiungi_sala(sala_rossa)
 Vois_Cinema.aggiungi_sala(sala_blue)
 Vois_Cinema.aggiungi_sala(sala_verde)
 
-print(Vois_Cinema.prenota_film("Oppenheimer", 23))
+print(sala_rossa.prenota_posti(60))
+print(sala_blue.prenota_posti(50))
+print(sala_verde.prenota_posti(35))
+
+print(sala_rossa.posti_disponibili())
+print(sala_blue.posti_disponibili())
+print(sala_verde.posti_disponibili())
+
+print(Vois_Cinema.prenota_film("Shutter Island",25))
+print(Vois_Cinema.prenota_film("Kill Bill Volume 1",35))
+print(Vois_Cinema.prenota_film("Oppenheimer",15))
+
+print(Vois_Cinema.prenota_film("Shutter Island",10))
+print(Vois_Cinema.prenota_film("Kill Bill Volume 1",35))
+
+
+
+
+
 
 
 

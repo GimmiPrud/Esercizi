@@ -30,5 +30,6 @@ Test Cases:
 '''
 # Svolgimento ES. Biblioteca:
 
-
+class Libro:
+    pass
 
