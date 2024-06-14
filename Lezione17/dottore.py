@@ -15,6 +15,7 @@ Gli attributi della classe dottore devono essere anch'essi privati.
 costruttore della classe Dottore, il quale richiede in input la specializzazione (specialization) di un dottore e la sua parcella (parcel).
 Tale metodo deve controllare che specialization sia una stringa e che parcel sia un float,
 altrimenti assegna None all'attributo che non verifica la condizione richiesta, mostrando un messaggio di errore, ad esempio, "La parcella inserita non è un float!".
+
 setSpecialization(specialization): consente di impostare la specializzazione di un dottore, modificando il valore del relativo attributo.
 Il valore viene modificato se e solo se viene passata al metodo una stringa.
 In caso contrario, stamapre un messaggio di errore, ad esempio "La specializzazione inserita non è una stringa!".
@@ -35,3 +36,44 @@ doctorGreet():tale metodo richiama la funzione greet() della classe Persona.
 Poi, stampa il seguente saluto "Sono un medico {specializzazione}"
 '''
 # Svolgimento:
+
+from persona import Persona
+
+class Dottore(Persona):
+    def __init__(self):
+        super().__init__()
+        self.__specializzazione = None
+        self.__parcella = None
+    
+    def init(self, specialization: str, parcel: float):
+        if type(specialization) != str:
+            specialization = None
+            return "La specializzazione inserita non è una stringa!"
+        elif type(parcel) != float:
+            parcel = None
+            return "La parcella inserita non è un float!"
+    
+    def setSpecialization(self, specialization: str):
+        if type(specialization) == str:
+            self.__specializzazione = specialization
+        else:
+            return "La specializzazione inserita non è una stringa!"
+        
+    def setParcel(self, parcel):
+        if type(parcel) == str:
+            self.__parcella = parcel
+        else:
+            return "La parcella inserita non è un float!"
+        
+    def getSpecialization(self):
+        return f"Specializzazione: {self.__specializzazione}"
+    
+    def getParcel(self):
+        return f"Parcella: {self.__parcella}"
+    
+    def isAValidDoctor(self):
+        pass
+
+
+
+
