@@ -72,7 +72,14 @@ class Dottore(Persona):
         return f"Parcella: {self.__parcella}"
     
     def isAValidDoctor(self):
-        pass
+        if self.__età > 30:
+            return "Doctor nome e cognome is valid!"
+        else:
+            return "Doctor nome e cognome is not valid!"
+        
+    def doctorGreet(self):
+        return self.greet(),f"\nSono un medico {self.__specializzazione}"
+    
 
 
 
