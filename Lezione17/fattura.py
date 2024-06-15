@@ -25,5 +25,6 @@ Stampare "Alla lista del Dottor cognome è stato rimosso il paziente {codice_ide
 # Svolgimento:
 
 class Fattura:
-    def __init__(self)
+    def __init__(self):
+        pass
     
