@@ -23,8 +23,24 @@ removePatient(idCode): consente di rimuovere un paziente alla lista di pazienti 
 Stampare "Alla lista del Dottor cognome è stato rimosso il paziente {codice_identificativo}".
 '''
 # Svolgimento:
+from dottore import Dottore
+from Paziente import Paziente
 
 class Fattura:
-    def __init__(self):
+    def __init__(self, patient: list[Paziente], doctor: Dottore):
+        self.patient = patient
+        self.doctor = doctor
+        
+    def getSalary(self):
         pass
+    
+    def getFatture(self):
+        pass
+    
+    def addPatient(self, newPatient):
+        pass
+    
+    def removePatient(self, idCode):
+        pass
+        
     
