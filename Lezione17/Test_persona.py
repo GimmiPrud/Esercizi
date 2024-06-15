@@ -9,7 +9,9 @@ if True:
     import unittest
 
     class Test_Persona(unittest.TestCase):
-        pass
+        
+        def setUp(self):
+            Giada = Persona("Giada","Lupi",23)
             
             
         
