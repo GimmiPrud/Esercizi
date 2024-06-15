@@ -19,7 +19,9 @@ addPatient(newPatient): consente di aggiungere un paziente alla lista di pazient
 aggiornando poi il numero di fatture ed il salario, richiamando il metodo getFatture() e getSalary(). 
 Stampare "Alla lista del Dottor cognome è stato aggiunto il paziente {codice_identificativo}"
 
-removePatient(idCode): consente di rimuovere un paziente alla lista di pazienti di un dottore ricevendo in input il codice identificativo del paziente da rimuovere, aggiornando poi il numero di fatture e il salario, richiamando il metodo get Fatture() e getSalary().
+removePatient(idCode): consente di rimuovere un paziente alla lista di pazienti di un dottore,
+ricevendo in input il codice identificativo del paziente da rimuovere,
+aggiornando poi il numero di fatture e il salario, richiamando il metodo get Fatture() e getSalary().
 Stampare "Alla lista del Dottor cognome è stato rimosso il paziente {codice_identificativo}".
 '''
 # Svolgimento:
@@ -30,17 +32,44 @@ class Fattura:
     def __init__(self, patient: list[Paziente], doctor: Dottore):
         self.patient = patient
         self.doctor = doctor
-        
-    def getSalary(self):
-        pass
+        self.fatture: int = None
+        self.salary: int = None
     
+    def init(self, patient, doctor):
+        if doctor.isAValidDoctor():
+            self.fatture = None
+            self.salary = 0
+        else:
+            self.patient = None
+            self.doctor = None
+            self.fatture = None
+            self.salary = None
+            return "Non è possibile creare la classe fattura poichè il dottore non è valido!"
+    
+    def getSalary(self):
+        patient = 0
+        for patient in self.patient:
+            patient += 1
+        self.salary = self.doctor.__parcella * patient
+        return f"salario guadagnato: {self.salary}"         
+            
     def getFatture(self):
-        pass
+        return f" numero fatture: {self.fatture}"
     
     def addPatient(self, newPatient):
-        pass
+        self.patient.append(newPatient)
+        return self.getFatture(), self.getSalary()
     
     def removePatient(self, idCode):
-        pass
+        for patient in self.patient:
+            if idCode == patient.__id:
+                self.patient.remove(patient)
+                
+        return f"Alla lista del Dottor cognome è stato rimosso il paziente {idCode}\n{self.getFatture()}, {self.getSalary()}"
+        
+        
+        
+            
+
         
     
