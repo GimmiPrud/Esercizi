@@ -23,9 +23,9 @@ patientInfo(): stampa in output le informazioni del paziente in questo modo:
 from persona import Persona
 
 class Paziente(Persona):
-    def __init__(self):
-        super().__init__()
-        self.__id = None
+    def __init__(self, __nome: str, __cognome: str, __età: int, __id: str):
+        super().__init__(__nome, __cognome, __età)
+        self.__id = __id
 
     def setIdCode(self,idCode):
         self.__id = idCode
