@@ -40,17 +40,18 @@ Poi, stampa il seguente saluto "Sono un medico {specializzazione}"
 from persona import Persona
 
 class Dottore(Persona):
-    def __init__(self):
-        super().__init__()
-        self.__specializzazione = None
-        self.__parcella = None
+    
+    def __init__(self, __nome: str, __cognome: str, __età: int, __specializzazione: str, __parcella: float):
+        super().__init__(__nome, __cognome, __età)
+        self.__specializzazione = __specializzazione
+        self.__parcella = __parcella
     
     def init(self, specialization: str, parcel: float):
         if type(specialization) != str:
-            specialization = None
+            self.__specializzazione = None
             return "La specializzazione inserita non è una stringa!"
         elif type(parcel) != float:
-            parcel = None
+            self.__parcella = None
             return "La parcella inserita non è un float!"
     
     def setSpecialization(self, specialization: str):
