@@ -36,17 +36,17 @@ greet(): stampa il seguente saluto "Ciao, sono nome cognome! Ho età anni!"
 # Svolgimento:
 
 class Persona:
-    def __init__(self):
-        self.__nome = None
-        self.__cognome = None
-        self.__età = None
+    def __init__(self,__nome: str, __cognome: str, __età: int):
+        self.__nome = __nome
+        self.__cognome = __cognome
+        self.__età = __età
     
     def init(self, first_name: str, last_name: str):
         if type(first_name) != str:
-            first_name = None
+            self.__nome = None
             return f"Il nome inserito non è una stringa!"
         elif type(last_name) != str:
-            last_name = None
+            self.__cognome = None
             return "Il cognome inserito non è una stringa!"
         elif type(first_name) and type(last_name) == str:
             self.__età = 0
