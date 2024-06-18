@@ -29,11 +29,11 @@ from dottore import Dottore
 from Paziente import Paziente
 
 class Fattura:
-    def __init__(self, patient: list[Paziente], doctor: Dottore):
+    def __init__(self, patient: list[Paziente], doctor: Dottore, fatture: int, salary: int):
         self.patient = patient
         self.doctor = doctor
-        self.fatture: int = None
-        self.salary: int = None
+        self.fatture: int = fatture
+        self.salary: int = salary
     
     def init(self, patient, doctor):
         if doctor.isAValidDoctor():
