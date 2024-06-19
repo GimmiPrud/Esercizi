@@ -41,18 +41,18 @@ Test della Classe Fattura
   '''
 
 if True:    
-    from persona import Persona
-    from dottore import Dottore
-    from fattura import Fattura
-    import unittest
+  from persona import Persona
+  from dottore import Dottore
+  from fattura import Fattura
+  import unittest
 
-    class Test_Persona(unittest.TestCase):
+  class Test_Persona(unittest.TestCase):
         
-        def setUp(self):
-            self.Giada = Persona("Giada","Lupi",23)
+    def setUp(self):
+      self.Giada = Persona("Giada","Lupi",23)
         
-        def test_init(self):
-            self.assertEqual(self.Giada.init())
+    def test_init(self):
+      self.assertEqual(self.Giada.init())
             
             
 
