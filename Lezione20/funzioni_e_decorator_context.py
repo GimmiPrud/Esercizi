@@ -62,3 +62,7 @@ def ciao():
 ciao()
 ciao = decorator(ciao)
 ciao()
+
+
+# Esempio di decorator applicato al merge_sort (funzioni ricorsive):
+# scrivere dei context manager utilizzando i decorator 
