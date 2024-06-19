@@ -8,7 +8,7 @@ def ciao(name: str)-> str:
 
     return f"Ciao {name}"
 
-def salve(name: str, i: int)-> str:
+def salve(name: str)-> str:
 
     return f"Salve {name}"
 
@@ -19,6 +19,9 @@ def saluta_Dio(func)-> str:    # func si utilizza per far capire che utiliziamo 
 
 print(saluta_Dio(ciao))
 print(saluta_Dio(salve))
+
+
+# Funzioni innestate
 
 def parent():   # le funzioni posso avere altre funzioni al loro interno (annidate)
 
@@ -36,4 +39,6 @@ def parent():   # le funzioni posso avere altre funzioni al loro interno (annida
     seconf_child()
     first_child()
 
+
+# Decorators (funzioni che ci permettono di andare a modificare il comportamento di un altra funzione )
 
