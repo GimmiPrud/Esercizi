@@ -40,5 +40,5 @@ def parent():   # le funzioni posso avere altre funzioni al loro interno (annida
     first_child()
 
 
-# Decorators (funzioni che ci permettono di andare a modificare il comportamento di un altra funzione )
+# Decorators (funzioni che ci permettono di andare a modificare il comportamento di un altra funzione)
 
