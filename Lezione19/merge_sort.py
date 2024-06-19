@@ -90,8 +90,10 @@ if __name__ == "__main__":
     plt.plot(cases, merge_sort_times, label="Merge")
     plt.plot(cases, bubble_sort_times, label="Bubble")
     plt.xscale("log")
+    plt.yscale("log")
     plt.legend()
     plt.show()
+
 # class Esempio:
     
 #     def __init__(self, name) -> None:
