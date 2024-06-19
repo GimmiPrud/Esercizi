@@ -41,4 +41,24 @@ def parent():   # le funzioni posso avere altre funzioni al loro interno (annida
 
 
 # Decorators (funzioni che ci permettono di andare a modificare il comportamento di un altra funzione)
+# design pattern
 
+def decorator(func):
+
+    def wrapper():
+
+        print("sono qui prima di func()")
+
+        func()
+
+        print("sonno qui dopo avre avviato la funzione func()")
+
+    return wrapper
+    
+def ciao():
+
+    print("ciao")
+
+ciao()
+ciao = decorator(ciao)
+ciao()
