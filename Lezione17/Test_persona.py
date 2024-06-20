@@ -50,9 +50,6 @@ if True:
         
     def setUp(self):
       self.Giada = Persona("Giada","Lupi",23)
-        
-    def test_init(self):
-      self.assertEqual(self.Giada.init())
             
             
 
