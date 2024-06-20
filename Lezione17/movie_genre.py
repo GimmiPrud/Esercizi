@@ -26,6 +26,17 @@ class Azione(Film):
         super().__init__(id, title)
         self.__genere = __genere
         self.__penale = __penale
+    
+    def  getGenere(self):
+        return f"Genere film: {self.__genere}"
+
+    def getPenale(self):
+        self.__penale = 3
+        return f"Valore penale: {self.__penale}"
+
+    def calcolaPenaleRitardo(self):
+        pass
+
 
 
 class Commedia(Film):
@@ -34,9 +45,27 @@ class Commedia(Film):
         self.__genere = __genere
         self.__penale = __penale
 
+    def  getGenere(self):
+        pass
+
+    def getPenale(self):
+        pass
+
+    def calcolaPenaleRitardo(self):
+        pass
+
 
 class Drama(Film):
     def __init__(self, id: str, title: str, __penale: float, __genere: str = "Drama"):
         super().__init__(id, title)
         self.__genere = __genere
         self.__penale = __penale
+    
+    def  getGenere(self):
+        pass
+
+    def getPenale(self):
+        pass
+
+    def calcolaPenaleRitardo(self):
+        pass
