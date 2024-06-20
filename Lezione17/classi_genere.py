@@ -22,15 +22,21 @@ Le tre classi Azione, Commedia e Drama devono essere contenute nel file "movie_g
 from film import Film
 
 class Azione(Film):
-    def __init__(self, id: str, title: str, __genere: str = "Azione"):
+    def __init__(self, id: str, title: str, __penale: float, __genere: str = "Azione"):
         super().__init__(id, title)
+        self.__genere = __genere
+        self.__penale = __penale
 
 
 class Commedia(Film):
-    def __init__(self, id: str, title: str, __genere: str = "Commedia"):
+    def __init__(self, id: str, title: str, __penale: float, __genere: str = "Commedia"):
         super().__init__(id, title)
+        self.__genere = __genere
+        self.__penale = __penale
 
 
 class Drama(Film):
-    def __init__(self, id: str, title: str, __genere: str = "Drama"):
+    def __init__(self, id: str, title: str, __penale: float, __genere: str = "Drama"):
         super().__init__(id, title)
+        self.__genere = __genere
+        self.__penale = __penale
