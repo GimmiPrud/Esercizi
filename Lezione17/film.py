@@ -35,26 +35,30 @@ class Film:
         return f"Titolo film: {self.title}"
     
     def isEqual(self, otherFilm):
-        pass
+        if self.id.lower() == otherFilm.id.lower():
+            return True
+        else:
+            return False 
 
 
 film1 = Film("1234","Shutter island")
-print(film1.getID())
-print(film1.getTitle())
-film1.set_ID("5632")
-film1.set_Title("Kill Bill vol 1")
-print(film1.getID())
-print(film1.getTitle())
+# print(film1.getID())
+# print(film1.getTitle())
+# film1.set_ID("5632")
+# film1.set_Title("Kill Bill vol 1")
+# print(film1.getID())
+# print(film1.getTitle())
 
 
 film2 = Film("1234","Maze Runner")
-print(film2.getID())
-print(film2.getTitle())
-film2.set_ID("4879")
-film2.set_Title("Scarface")
-print(film2.getID())
-print(film2.getTitle())
+# print(film2.getID())
+# print(film2.getTitle())
+# film2.set_ID("4879")
+# film2.set_Title("Scarface")
+# print(film2.getID())
+# print(film2.getTitle())
 
+print(film1.isEqual(film2))
 
         
 
