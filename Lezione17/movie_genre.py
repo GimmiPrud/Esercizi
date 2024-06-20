@@ -46,10 +46,11 @@ class Commedia(Film):
         self.__penale = __penale
 
     def  getGenere(self):
-        pass
+        return f"Genere film: {self.__genere}"
 
     def getPenale(self):
-        pass
+        self.__penale = 2.50
+        return f"Valore penale: {self.__penale}"
 
     def calcolaPenaleRitardo(self):
         pass
@@ -62,10 +63,12 @@ class Drama(Film):
         self.__penale = __penale
     
     def  getGenere(self):
-        pass
+        return f"Genere film: {self.__genere}"
 
     def getPenale(self):
-        pass
+        self.__penale = 2
+        return f"Valore penale: {self.__penale}"
+        
 
     def calcolaPenaleRitardo(self):
         pass
