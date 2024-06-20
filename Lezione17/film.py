@@ -16,4 +16,33 @@ In un file chiamato "film.py", si definisca la classe Film che rappresenta un fi
 '''
 # Svolgimento:
 
+class Film:
+
+    def __init__(self, id: str, title: str):
+        self.id = id
+        self.title = title
+
+    def set_ID(self, id: str):
+        self.id = id
+    
+    def set_Title(self, title: str):
+        self.title = title
+        return self.title
+    
+    def getID(self):
+        return f"id film: {self.id}"
+    
+    def getTitle(self):
+        return f"Titolo film: {self.title}"
+    
+    def isEqual(self, otherFilm):
+        pass
+
+
+
+
+
+
+    
+
 
