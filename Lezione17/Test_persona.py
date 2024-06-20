@@ -51,6 +51,7 @@ if True:
     def setUp(self):
       self.Giada = Persona("Giada","Lupi",23)
             
+ 
             
 
 if __name__ == "main":
