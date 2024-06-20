@@ -27,7 +27,6 @@ class Film:
     
     def set_Title(self, title: str):
         self.title = title
-        return self.title
     
     def getID(self):
         return f"id film: {self.id}"
@@ -37,6 +36,27 @@ class Film:
     
     def isEqual(self, otherFilm):
         pass
+
+
+film1 = Film("1234","Shutter island")
+print(film1.getID())
+print(film1.getTitle())
+film1.set_ID("5632")
+film1.set_Title("Kill Bill vol 1")
+print(film1.getID())
+print(film1.getTitle())
+
+
+film2 = Film("1234","Maze Runner")
+print(film2.getID())
+print(film2.getTitle())
+film2.set_ID("4879")
+film2.set_Title("")
+print(film2.getID())
+print(film2.getTitle())
+
+
+        
 
 
 
