@@ -81,7 +81,7 @@ print(p.dettagli_Pagamento())
 
 
 class PagamentoCartaDiCredito(Pagamento):
-    def __init__(self, nome_titolare_carta: str, data_scadenza: str, numero_carta_credito: int):
+    def __init__(self, nome_titolare_carta: str, data_scadenza: str, numero_carta_credito: str):
         super().__init__()
         self.nome_titolare_carta = nome_titolare_carta
         self.data_scadenza = data_scadenza
@@ -89,9 +89,11 @@ class PagamentoCartaDiCredito(Pagamento):
     
     
     def dettagli_Pagamento(self):
-        return f"{super().dettagli_Pagamento()} effettuato con la carta di credito\n Nome sulla carta: {self.nome_titolare_carta}\n Data di scadenza: {self.data_scadenza}\n Numero della carta: {self.numero_carta_credito}"
+        if len(self.numero_carta_credito) == 16:
+            return f"{super().dettagli_Pagamento()} effettuato con la carta di credito\n Nome sulla carta: {self.nome_titolare_carta}\n Data di scadenza: {self.data_scadenza}\n Numero della carta: {self.numero_carta_credito}"
+        else:
+            return "numero carta di credito non valida"
 
-
-p1 = PagamentoCartaDiCredito("bill","12/03/2025",123434334343564)
+p1 = PagamentoCartaDiCredito("bill","12/03/2025","")
 p1.set_pagamento(2500)
 print(p1.dettagli_Pagamento())
