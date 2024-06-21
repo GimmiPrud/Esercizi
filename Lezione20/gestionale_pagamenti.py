@@ -46,3 +46,52 @@ Data di scadenza: 01/25
 Numero della carta: 6543210987654321
 '''
 # Svolgimento:
+
+class Pagamento:
+
+    def __init__(self):
+        self.__importo_pagamento: float = None
+    
+    def set_pagamento(self, importo: float):
+        self.__importo_pagamento = importo
+
+    def get_pagamento(self):
+        return self.__importo_pagamento
+
+    def dettagli_Pagamento(self):
+        return f" pagamento di £{self.__importo_pagamento}"
+
+
+class PagamentoContanti(Pagamento):
+    def __init__(self):
+        super().__init__()
+    
+    def dettagli_Pagamento(self):
+        return f"{super().dettagli_Pagamento()} in contanti"
+
+    def inPezziDa(self):
+        tagli = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.20, 0.10, 0.05, 0.01]
+
+
+
+p = PagamentoContanti()
+p.set_pagamento(12000)
+print(p.dettagli_Pagamento())
+        
+
+
+class PagamentoCartaDiCredito(Pagamento):
+    def __init__(self, nome_titolare_carta: str, data_scadenza: str, numero_carta_credito: int):
+        super().__init__()
+        self.nome_titolare_carta = nome_titolare_carta
+        self.data_scadenza = data_scadenza
+        self.numero_carta_credito = numero_carta_credito
+    
+    
+    def dettagli_Pagamento(self):
+        return f"{super().dettagli_Pagamento()} effettuato con la carta di credito\n Nome sulla carta: {self.nome_titolare_carta}\n Data di scadenza: {self.data_scadenza}\n Numero della carta: {self.numero_carta_credito}"
+
+
+p1 = PagamentoCartaDiCredito("bill","12/03/2025",123434334343564)
+p1.set_pagamento(2500)
+print(p1.dettagli_Pagamento())
