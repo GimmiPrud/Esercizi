@@ -70,7 +70,9 @@ class PagamentoContanti(Pagamento):
         return f"{super().dettagli_Pagamento()} in contanti"
 
     def inPezziDa(self):
+        importo = self.get_pagamento()
         tagli = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.20, 0.10, 0.05, 0.01]
+        
 
 
 
@@ -93,7 +95,3 @@ class PagamentoCartaDiCredito(Pagamento):
             return f"{super().dettagli_Pagamento()} effettuato con la carta di credito\n Nome sulla carta: {self.nome_titolare_carta}\n Data di scadenza: {self.data_scadenza}\n Numero della carta: {self.numero_carta_credito}"
         else:
             return "numero carta di credito non valida"
-
-p1 = PagamentoCartaDiCredito("bill","12/03/2025","")
-p1.set_pagamento(2500)
-print(p1.dettagli_Pagamento())
