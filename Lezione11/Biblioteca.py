@@ -5,7 +5,9 @@
 
 # Biblioteca:
 '''
-Si desidera sviluppare un sistema per la gestione di una biblioteca in Python. Il sistema deve permettere di gestire un inventario di libri e le operazioni di prestito e restituzione degli stessi. Gli utenti del sistema devono essere in grado di aggiungere libri al catalogo, prestarli, restituirli e visualizzare quali libri sono disponibili in un dato momento.
+Si desidera sviluppare un sistema per la gestione di una biblioteca in Python. 
+Il sistema deve permettere di gestire un inventario di libri e le operazioni di prestito e restituzione degli stessi.
+Gli utenti del sistema devono essere in grado di aggiungere libri al catalogo, prestarli, restituirli e visualizzare quali libri sono disponibili in un dato momento.
  
 Classi:
 - Libro: Rappresenta un libro con titolo, autore, stato del prestito. Il libro deve essere inizialmente disponibile (non prestato).
@@ -31,5 +33,19 @@ Test Cases:
 # Svolgimento ES. Biblioteca:
 
 class Libro:
-    pass
+    def __init__(self, titolo: str, autore: str, stato_del_prestito: str = "non prestato"):
+        self.titolo = titolo
+        self.autore = autore
+        self.stato_del_prestito = stato_del_prestito
+
+class Biblioteca:
+    def __init__(self):
+        self.lista_libri: list[Libro] = []
+    
+    def aggiungi_libro(self,libro: Libro):
+        self.lista_libri.append(libro)
+    
+    def presta_libro(self, titolo: str):
+        pass
+
 
