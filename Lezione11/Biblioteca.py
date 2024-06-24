@@ -63,10 +63,20 @@ class Biblioteca:
                 return f"Il libro è stato già prestato"
         
     def restituisci_libro(self, titolo):
-        pass
+        for libro in self.lista_libri:
+            if libro in self.libri_prestati and libro.stato_del_prestito == "prestato":
+                self.libri_prestati.remove(libro)
+                self.lista_libri.append(libro)
+                libro.stato_del_prestito = "non prestato"
+                return f"libro disponibile per il prestito"
+
 
     def  mostra_libri_disponibili(self):
-        pass
+        for libro in self.lista_libri:
+            if self.lista_libri == []:
+                return f"Nessun libro disponibile"
+            else:
+                return f" libri disponibili:\n{libro}"
 
 
     
