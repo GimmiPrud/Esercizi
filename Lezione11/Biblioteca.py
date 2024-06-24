@@ -21,7 +21,8 @@ Classi:
 
     - restituisci_libro(titolo): Cerca un libro per titolo e, se trovato e prestato, lo segna come disponibile. Restituisce un messaggio di stato.
 
-    - mostra_libri_disponibili(): Restituisce una lista dei titoli dei libri attualmente disponibili. Se non ci sono libri disponibili, restituisce un messaggio di errore.
+    - mostra_libri_disponibili(): Restituisce una lista dei titoli dei libri attualmente disponibili.
+    Se non ci sono libri disponibili, restituisce un messaggio di errore.
 
 Test Cases:
 - Un amministratore della biblioteca aggiunge alcuni libri all'inventario.
@@ -41,11 +42,46 @@ class Libro:
 class Biblioteca:
     def __init__(self):
         self.lista_libri: list[Libro] = []
-    
+        self.libri_prestati: list[Libro] = []
+
     def aggiungi_libro(self,libro: Libro):
         self.lista_libri.append(libro)
+        return f" il libro {libro.titolo} di {libro.autore} è stato aggiunto al catalogo"
     
     def presta_libro(self, titolo: str):
+        for libro in self.lista_libri:
+            if titolo.lower() == libro.titolo.lower():
+                self.lista_libri.remove(libro)
+                self.libri_prestati.append(libro)
+                libro.stato_del_prestito = "prestato"
+                return f"Libro disponibile per il prestito"
+        
+            elif titolo.lower() != libro.titolo.lower() and titolo.lower() not in self.libri_prestati:
+                return f"Il libro {titolo} non è presente in catalogo"
+        
+            elif titolo in self.libri_prestati and libro.stato_del_prestito == "prestato":
+                return f"Il libro è stato già prestato"
+        
+    def restituisci_libro(self, titolo):
         pass
+
+    def  mostra_libri_disponibili(self):
+        pass
+
+
+    
+b = Biblioteca()
+libro1 = Libro("catorcio","lupo lucio")
+libro2 = Libro("la ladra di cani","alessia stuppi")
+libro3 = Libro("il dargo di sassi","leonardo verte")
+
+print(b.aggiungi_libro(libro1))
+b.aggiungi_libro(libro2)
+b.aggiungi_libro(libro3)
+print(b.lista_libri)
+print(b.presta_libro("catorcio"))
+print(b.libri_prestati)
+print(b.lista_libri)
+
 
 
