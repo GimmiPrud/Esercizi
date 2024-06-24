@@ -72,14 +72,13 @@ class PagamentoContanti(Pagamento):
     def inPezziDa(self):
         importo = self.get_pagamento()
         tagli = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.20, 0.10, 0.05, 0.01]
-        
-
-
-
-p = PagamentoContanti()
-p.set_pagamento(12000)
-print(p.dettagli_Pagamento())
-        
+        for taglio in tagli: 
+            if taglio < 5:
+                print(f"{importo//taglio} monete da {taglio} euro ")
+                importo = importo%taglio
+            else:
+                print(f"{importo//taglio} banconote da {taglio} euro ")
+                importo = importo%taglio
 
 
 class PagamentoCartaDiCredito(Pagamento):
