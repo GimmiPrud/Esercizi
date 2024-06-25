@@ -97,8 +97,6 @@ print(b.presta_libro("catorcio"))
 print(b.presta_libro("catorcio"))
 print(b.presta_libro("laico"))
 
-print(b.mostra_libri_disponibili())
-
 
 
 
