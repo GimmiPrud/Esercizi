@@ -54,14 +54,15 @@ class Biblioteca:
                 self.lista_libri.remove(libro)
                 self.libri_prestati.append(libro)
                 libro.stato_del_prestito = "prestato"
-                return f"Libro disponibile per il prestito"
-        
-            elif titolo.lower() != libro.titolo.lower() and titolo.lower() not in self.libri_prestati:
-                return f"Il libro {titolo} non è presente in catalogo"
-        
-            elif titolo in self.libri_prestati and libro.stato_del_prestito == "prestato":
-                return f"Il libro è stato già prestato"
-        
+                return f"Il libro {libro.titolo} è disponibile per il prestito"
+            else:
+                
+             for lib in self.libri_prestati:
+                if titolo.lower() == lib.titolo.lower():
+                    return f"il libro {titolo} è stato già prestato"    
+                else:
+                    return f"Il libro {titolo} non è persente in catalogo"
+            
     def restituisci_libro(self, titolo):
         for libro in self.lista_libri:
             if libro in self.libri_prestati and libro.stato_del_prestito == "prestato":
@@ -72,26 +73,35 @@ class Biblioteca:
 
 
     def  mostra_libri_disponibili(self):
-        for libro in self.lista_libri:
             if self.lista_libri == []:
                 return f"Nessun libro disponibile"
             else:
-                return f" libri disponibili:\n{libro}"
+                for libro in self.lista_libri:
+                    return f"Libri disponibili:\nTitolo: {libro.titolo}\nAutore: {libro.autore}\nStato del prestito: {libro.stato_del_prestito}"
 
 
     
 b = Biblioteca()
 libro1 = Libro("catorcio","lupo lucio")
 libro2 = Libro("la ladra di cani","alessia stuppi")
-libro3 = Libro("il dargo di sassi","leonardo verte")
+libro3 = Libro("il drago di sassi","leonardo verte")
 
 print(b.aggiungi_libro(libro1))
-b.aggiungi_libro(libro2)
-b.aggiungi_libro(libro3)
+print(b.aggiungi_libro(libro2))
+print(b.aggiungi_libro(libro3))
+
 print(b.lista_libri)
-print(b.presta_libro("catorcio"))
 print(b.libri_prestati)
-print(b.lista_libri)
+
+print(b.presta_libro("catorcio"))
+print(b.presta_libro("catorcio"))
+print(b.presta_libro("laico"))
+
+print(b.mostra_libri_disponibili())
+
+
+
+
 
 
 
