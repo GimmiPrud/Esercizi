@@ -2,7 +2,7 @@
 # Giammarco Prudenzi 
 # Merge_sort --> O(nlogn)
 
-def mergeSort(list_input: list[int]) -> list[int]:
+'''def mergeSort(list_input: list[int]) -> list[int]:
     """
     
     """
@@ -93,6 +93,7 @@ if __name__ == "__main__":
     plt.yscale("log")
     plt.legend()
     plt.show()
+    '''
 
 # class Esempio:
     
