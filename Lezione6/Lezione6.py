@@ -134,7 +134,70 @@ if False:
     print(restaurant.number_served)
     print(restaurant.set_number_served(5))
     print(restaurant.increment_number_served(40))
+    
 
+# ES. 9-6 Ice Cream Stand: 
+'''
+An ice cream stand is a specific kind of restaurant.
+Write a class called IceCreamStand that inherits from the Restaurant class you wrote in Exercise 9-1  or Exercise 9-4.
+Either version of the class will work; just pick the one you like better. Add an attribute called flavors that stores a list of ice cream flavors.
+Write a method that displays these flavors. Create an instance of IceCreamStand, and call this method. 
+'''
+
+# ES. 9-7 Admin: 
+'''
+An administrator is a special kind of user.
+Write a class called Admin that inherits from the User class you wrote in Exercise 9-3 or Exercise 9-5.
+Add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user", and so on. 
+Write a method called show_privileges() that lists the administrator’s set of privileges. Create an instance of Admin, and call your method. 
+'''
+
+# ES. 9-8. Privileges: 
+'''
+Write a separate Privileges class. The class should have one attribute, privileges, that stores a list of strings as described in Exercise 9-7.
+Move the show_privileges() method to this class. Make a Privileges instance as an attribute in the Admin class.
+Create a new instance of Admin and use your method to show its privileges.
+'''
+
+# 9-10. Imported Restaurant:
+'''
+Using your latest Restaurant class, store it in a module.
+Make a separate file that imports Restaurant.
+Make a Restaurant instance, and call one of Restaurant’s methods to show that the import statement is working properly.
+'''
+
+# 9-11. Imported Admin:
+'''
+Start with your work from Exercise 9-8.
+Store the classes User, Privileges, and Admin in one module.
+Create a separate file, make an Admin instance, and call show_privileges() to show that everything is working correctly.
+'''
+
+# 9-12. Multiple Modules:
+'''
+Store the User class in one module, and store the Privileges and Admin classes in a separate module. 
+In a separate file, create an Admin instance and call show_privileges() to show that everything is still working correctly.
+'''
+
+# 9-13. Dice:
+'''
+Make a class Die with one attribute called sides, which has a default value of 6.
+Write a method called roll_die() that prints a random number between 1 and the number of sides the die has.
+Make a 6-sided die and roll it 10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
+'''
+
+# 9-14. Lottery:
+'''
+Make a list or tuple containing a series of 10 numbers and 5 letters.
+Randomly select 4 numbers or letters from the list and print a message saying that any ticket matching these 4 numbers or letters wins a prize.
+'''
+
+# 9-15. Lottery Analysis: 
+'''
+You can use a loop to see how hard it might be to win the kind of lottery you just modeled.
+Make a list or tuple called my_ticket. Write a loop that keeps pulling numbers until your ticket wins.
+Print a message reporting how many times the loop had to run to give you a winning ticket.
+'''
 
 
 
