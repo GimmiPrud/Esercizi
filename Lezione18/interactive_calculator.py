@@ -18,10 +18,6 @@ The user is then prompted to provide new input, and so on, until the user enters
 
 
 
-
-
-
-
 # Personalized math library: 
 '''
 Create a Python library that provides functions for handling fractions, with built-in error handling.
