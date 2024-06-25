@@ -354,7 +354,7 @@ Terminate the loop when the user guesses the number correctly or reaches the max
 '''
 # Svolgimento ES. 2:
 
-if True:
+if False:
     from random import*
 
     def casual_number():
@@ -373,6 +373,134 @@ if True:
                     
     
     print(casual_number())
+
+
+# ES. 3 E-commerce Shopping Cart:
+'''
+Create a function that defines a product with a name, price, and quantity.
+Create a function that manages the shopping cart, allowing the user to add, remove, and view products in the cart.
+The function should calculate the cart total and apply any discounts or taxes.
+Implement a for loop to iterate over the items in the cart and print detailed information about each product and the total.
+'''
+# Svolgimento ES. 3:
+
+
+# ES. 4 Text Analysis:
+'''
+Create a function that reads a text file and counts the number of occurrences of each word.
+The function should print a report showing the most frequent words and their number of occurrences.
+You can use a for loop to iterate over the words in the text and a dictionary to store the occurrences.
+Implement error handling to handle missing files or other input issues.
+'''
+# Svolgimento ES. 4:
+
+# ES. 5 Inventory Management System:
+'''
+Create a function that defines an item with a code, name, quantity, and price.
+Create a database or dictionary to store the items in inventory.
+Implement functions to add, remove, search, and update items in the inventory.
+Use for loops and conditional statements to manage the various inventory operations.
+'''
+# Svolgimento ES. 5:
+
+# ES.6 Password Generator:
+'''
+Create a function that generates a random password with a specified length and
+desired character types (lowercase letters, uppercase letters, numbers, symbols).
+Allow the user to specify the password length and desired character types.
+Generate and return a random password that meets the user's criteria.
+'''
+# Svolgimento ES. 6:
+
+
+# ES. 7 Roman Numeral Conversion:
+'''
+Create a function that converts a given integer to its Roman numeral representation.
+Handle numbers from 1 to 3999.
+Use a combination of string manipulation and conditional statements to build the Roman numeral.
+'''
+# Svolgimento ES. 7:
+
+
+# ES. 8 ATM Machine Simulator:
+'''
+Create a function that simulates an ATM machine.
+Initialize an account with a starting balance.
+Allow the user to perform transactions such as deposit, withdraw, and check balance.
+Validate transactions against the account balance and available funds.
+Provide appropriate feedback to the user for each transaction.
+'''
+# Svolgimento ES. 8:
+
+
+# ES. 9 Caesar Cipher Encryption/Decryption:
+'''
+Create functions for encrypting and decrypting a message using the Caesar cipher.
+Allow the user to specify the shift value (number of positions to shift each letter).
+Handle both encryption and decryption using the same function with appropriate adjustments.
+Encrypt and decrypt the given message using the specified shift value.
+'''
+# Svolgimento ES. 9:
+
+
+# ES. 10 Anagram Checker:
+'''
+Create a function that checks whether two given strings are anagrams of each other.
+Convert both strings to lowercase and remove any non-alphabetic characters.
+Sort the characters of each string and compare the sorted strings for equality.
+Indicate whether the strings are anagrams or not.
+'''
+# Svolgimento ES. 10:
+
+
+# ES. 11 Word Search Puzzle Solver:
+'''
+Create a function that solves a word search puzzle.
+Provide a 2D grid representing the puzzle and a list of words to find.
+Implement a backtracking algorithm to search for the words in the grid, marking visited cells to avoid repetition.
+Output the locations of the found words within the grid.
+'''
+# Svolgimento ES. 11:
+
+
+#ES. 12 Sieve of Eratosthenes Prime Number Generator:
+'''
+Create a function that generates a list of prime numbers up to a specified limit using the Sieve of Eratosthenes algorithm.
+Initialize an array of all numbers up to the limit, marking each number as prime initially.
+Iterate through the array, starting from 2, and mark every multiple of the current number as non-prime.
+The remaining unmarked numbers are the prime numbers within the limit.
+Return the list of prime numbers.
+'''
+# Svolgimento ES. 12:
+
+
+# ES. 13 Fractal Tree Generator:
+'''
+Create a function that generates a fractal tree using recursion.
+Specify the starting trunk length and branching angle.
+Draw the trunk and then recursively call the function to draw two branches at the specified angle, each with a shorter length.
+Repeat the branching process until a desired level of detail is reached.
+'''
+# Svolgimento ES. 13:
+
+
+# ES. 14 Sudoku Solver:
+'''
+Create a function that solves a Sudoku puzzle using backtracking.
+Provide a 9x9 grid representing the puzzle with some numbers filled in and others left blank.
+Implement a backtracking algorithm to check for valid placements in empty cells, ensuring no row, column, or 3x3 subgrid contains duplicates.
+Solve the puzzle by filling in the remaining empty cells with valid numbers.
+'''
+# Svolgimento ES. 14:
+
+# ES. 15 Text Editor with Basic Functionality:
+'''
+Create a simple text editor that allows the user to open, edit, and save text files.
+Implement basic functionality such as inserting, deleting, and copying text.
+Provide undo/redo functionality to allow users to reverse actions.
+Save the edited text to a file when the user chooses to save.
+'''
+# Svolgimento ES. 15:
             
             
             
