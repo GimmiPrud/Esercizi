@@ -142,7 +142,7 @@ if True:
 
 
 
-# ES. 4: University Management System
+# ES. 4 University Management System
 '''
 Create a system to manage a university with departments, courses, professors, and students. 
 Create an abstract class Person:
