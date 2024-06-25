@@ -169,3 +169,137 @@ Scrivi una funzione che elimini dalla lista dati certi elementi specificati in u
 Il dizionario contiene elementi da rimuovere come chiavi e il numero di volte che devono essere rimossi come valori.
 '''
 # Svolgimento ES.8:
+
+# ES. 9:
+'''
+Scrivi una funzione che converta una lista di tuple (chiave, valore) in un dizionario.
+Se la chiave è già presente, aggiungi il valore alla lista di valori già associata alla chiave.
+'''
+# Svolgimento ES.9:
+
+
+# ES. 10:
+'''
+Scrivi una funzione che prende una lista di numeri e ritorna un dizionario che classifica i numeri in liste separate per numeri pari e dispari.
+'''
+# Svolgimento ES.10:
+
+# ES. 11:
+'''
+Scrivi una funzione che converte una temperatura da gradi Celsius a Fahrenheit e viceversa a seconda del parametro.
+Utilizza il concetto di parametri opzionali.
+'''
+# Svolgimento ES.11:
+
+
+# ES. 12:
+'''
+Scrivi una funzione che somma tutti i numeri interi di una lista che sono maggiori di un dato valore intero definito threshold.
+'''
+# Svolgimento ES.12:
+
+# ES. 13
+'''
+Scrivi una funzione che, data una lista, ritorni un dictionary che mappa ogni elemento alla sua frequenza nella lista.
+'''
+# Svolgimento ES.13:
+
+# ES. 14:
+'''
+Scrivi una funzione che ritorna un dizionario che unisce due dizionari.
+Se una chiave è presente in entrambi, somma i loro valori nel nuovo dizionario.
+'''
+# Svolgimento ES.14:
+
+
+# ES. 15:
+'''
+Scrivi una funzione che, dato un insieme e una lista di numeri interi da rimuovere, ritorni un nuovo insieme senza i numeri specificati nella lista.
+'''
+# Svolgimento ES.15:
+
+# ES. 16:
+'''
+Scrivi una funzione che ritorna il valore massimo, minimo e la media di una lista di numeri interi.
+'''
+# Svolgimento ES.16:
+
+# ES. 17:
+'''
+Scrivi una funzione che calcola la media di una lista di numeri e ritorna il valore arrotondato all'intero più vicino.
+'''
+# Svolgimento ES.17:
+ 
+# ES. 18:
+'''
+Scrivi una funzione che rimuove tutti i duplicati da una lista, contenente sia numeri che lettere, mantenendo l'ordine originale degli elementi.
+'''
+# Svolgimento ES.18:
+
+# ES. 19:
+''' 
+Scrivi una funzione che ruota gli elementi di una lista verso sinistra di un numero specificato k di posizioni.
+La rotazione verso sinistra significa che ciascun elemento della lista viene spostato a sinistra di una posizione e
+l'elemento iniziale viene spostato alla fine della lista.
+Per la rotazione utilizzare lo slicing e gestire il caso in cui il numero specificato di posizioni sia maggiore della lunghezza della lista.
+'''
+# Svolgimento ES.19:
+
+# ES. 20: 
+'''
+Scrivi una funzione che accetti tre parametri: username, password e status di attivazione dell'account (attivo/non attivo).
+L'accesso è consentito solo se il nome utente è "admin", la password corrisponde a "12345" e l'account è attivo.
+'''
+# Svolgimento ES.20:
+
+# ES. 21: 
+'''
+Scrivi una funzione che verifica se una combinazione di condizioni (A, B, e C) è soddisfatta per procedere con un'operazione.
+L'operazione può procedere solo se la condizione A è vera o se entrambe le condizioni B e C sono vere.
+'''
+# Svolgimento ES.21:
+
+# ES. 22:
+''' 
+Scrivi una funzione che riceve un numero e stampa un conto alla rovescia da quel numero a zero.
+'''
+# Svolgimento ES.22:
+
+
+# ES. 23:
+''' 
+Scrivi una funzione che, dato un numero intero, determina se è un "numero magico".
+Un numero magico è definito come un numero che contiene il numero 7.
+'''
+# Svolgimento ES.23:
+ 
+# ES. 24:
+'''
+Scrivi una funzione che verifica se in una stringa le parentesi '(' e ')'
+sono bilanciate, cioè per ogni parentesi che apre c'è la corrispondente parentesi che chiude.
+'''
+# Svolgimento ES.24:
+
+# ES. 25: 
+'''
+Scrivi una funzione che conta quante volte un elemento appare isolato in una lista di numeri interi.
+Un elemento è considerato isolato se non è affiancato da elementi uguali.
+'''
+# Svolgimento ES.25:
+
+# ES. 26:
+'''
+Scrivi una funzione chiamata create_contact() che accetta il nome e cognome, e-mail (facoltativo) e numero di telefono (facoltativo).
+La funzione dovrebbe restituire un dizionario con i dettagli del contatto.
+
+ESEMPIO: create_contact("Mario Rossi", email="mario.rossi@gmail.com", telefono=69876543)
+
+OUTPUT: {'profile': 'Mario Rossi', 'email': 'mario.rossi@gmail.com', 'telefono': 788787}
+
+Scrivi una funzione chiamata update_contact() che accetta il dizionario creato, il nome e cognome del contatto da aggiornare, e il dettaglio facoltativo da aggiornare. Questa funzione dovrebbe aggiornare il dizionario del contatto.
+
+ESEMPIO: update_contact(dict, "Mario Rossi", telefono=123456789)
+
+OUTPUT: {'profile': 'Mario Rossi', 'email': 'mario.rossi@gmail.com', 'telefono': 123456789}
+'''
+# Svolgimento ES.26:
