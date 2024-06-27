@@ -6,7 +6,7 @@
 import sys
 
 a = []
-b = a 
+b = a  
 
 print(sys.getrefcount(a))   # getrefcount conta quante volte si fa riferimento ad una determinata variabile
 
