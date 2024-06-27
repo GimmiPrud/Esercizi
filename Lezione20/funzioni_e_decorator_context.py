@@ -93,3 +93,21 @@ def area_cerchio(raggio: float):
 
 area_cerchio(1)
 
+
+#---------------------------------------------------#
+# Decorator
+# @contextmanager(che fa parte della libreria di python contextlib):
+
+def generatore():
+
+
+    yield "A"
+    yield "B"
+    yield "C"
+
+prova_generatore = generatore()
+
+print(next(prova_generatore))
+print(next(prova_generatore))
+print(next(prova_generatore))
+print(next(prova_generatore))
