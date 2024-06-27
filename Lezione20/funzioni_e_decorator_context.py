@@ -133,3 +133,7 @@ def context_manager_decorator(*args):
 def area_cerchio(raggio: float):
 
     return raggio * raggio * 3.14
+
+#------------------------------------------------#
+
+# Note --> (ogni processo ha un id diverso ed una zona di memoria diversa)
