@@ -67,3 +67,29 @@ ciao()
 # Esempio di decorator applicato al merge_sort (funzioni ricorsive):
 # scrivere dei context manager utilizzando i decorator 
 
+# Altro esempio di decorator:
+class Analisi:
+
+    @staticmethod
+    def tempo(func):
+
+        def wrapper(*args):
+            import time
+
+            start = time.time()
+
+            value = func(*args)
+
+            print(f"Time elapsed: {time.time() - start}")
+
+            return value, time.time() - start
+        
+        return wrapper
+    
+@ Analisi.tempo
+def area_cerchio(raggio: float):
+
+    return raggio * raggio * 3.14
+
+area_cerchio(1)
+
