@@ -112,7 +112,7 @@ print(next(prova_generatore))
 print(next(prova_generatore))
 print(next(prova_generatore))
 
-# ES.
+# ES. 
 
 from contextlib import contextmanager
 
@@ -131,5 +131,5 @@ def context_manager_decorator(*args):
 
 @ context_manager_decorator
 def area_cerchio(raggio: float):
-    
+
     return raggio * raggio * 3.14
