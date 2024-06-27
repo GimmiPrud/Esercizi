@@ -384,6 +384,14 @@ Implement a for loop to iterate over the items in the cart and print detailed in
 '''
 # Svolgimento ES. 3:
 
+if True:
+
+    def product(name: str, price: float, quantity: int):
+        return f"Name product: {name}\nQuantity: {quantity}\nprice: {price}"
+    
+    def shopping_cart():
+        pass
+
 
 # ES. 4 Text Analysis:
 '''
