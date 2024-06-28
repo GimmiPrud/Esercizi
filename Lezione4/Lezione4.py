@@ -430,10 +430,23 @@ Implement error handling to handle missing files or other input issues.
 '''
 # Svolgimento ES. 4:
 
-if True:
-    pass
+if False:
+    
+    def occurrences_text(text: str):  # metodo per determinare quante parole vengono ripetute in un testo o file: 
+        word_count = {}               
+        word = text.lower().split()  
+        for w in word:
+            word_count[w] = word_count.get(w, 0) + 1  # metodo fondamentale (metodo .get())   
+            for k,v in word_count.items():
+                    print(f"word: {k} -> occurrences: {v}") # con print itera il dict con return no 
 
+    text1 = '''e ci trovammo li, al cospetto di Borg il re serpente.
+    Borg, è sempre stato un sovrano temuto in tutto il regno del serpente dorato ed ha sempre creduto 
+    che un giorno il grande serpente della quarta era sarebbe tornato con un dono che avrebbe reso il regno 
+    il più potente dei 5 regni sovrani comandati dai 5 ordini del serpente dorato e di ametista'''
 
+    occurrences_text(text1) 
+    
 
 # ES. 5 Inventory Management System:
 '''
