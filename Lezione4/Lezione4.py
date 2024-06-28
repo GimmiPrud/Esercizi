@@ -457,6 +457,11 @@ Use for loops and conditional statements to manage the various inventory operati
 '''
 # Svolgimento ES. 5:
 
+if True:
+    pass
+        
+    
+
 # ES.6 Password Generator:
 '''
 Create a function that generates a random password with a specified length and
