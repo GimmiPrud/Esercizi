@@ -387,10 +387,38 @@ Implement a for loop to iterate over the items in the cart and print detailed in
 if True:
 
     def product(name: str, price: float, quantity: int):
-        return f"Name product: {name}\nQuantity: {quantity}\nprice: {price}"
+        product = {}
+        product["name"] = name
+        product["price"] = price
+        product["quantity"] = quantity
+        return product
     
-    def shopping_cart():
-        pass
+    def add_product(shopping_cart: list, product: product):
+        shopping_cart.append(product)
+    
+    def remove_product(shopping_cart: list, product: product):
+        shopping_cart.remove(product)
+    
+    def total_price(shopping_cart: list[product]):
+
+        tot = sum(p["price"] * p["quantity"] for p in shopping_cart)
+        return f"Totale spesa: {tot} €"
+                           
+                            
+        
+Mouse = product("Mouse", 20.50, 5)
+Cuffie = product("Cuffie", 90, 6)        
+MicroSD = product("MicroSD 64 GB", 17.99, 3)     
+
+shopping_cart = []
+
+add_product(shopping_cart,Mouse)
+add_product(shopping_cart,Cuffie)
+add_product(shopping_cart,MicroSD)
+remove_product(shopping_cart,Cuffie)
+
+print(shopping_cart)
+print(total_price(shopping_cart))
 
 
 # ES. 4 Text Analysis:
