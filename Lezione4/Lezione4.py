@@ -384,7 +384,7 @@ Implement a for loop to iterate over the items in the cart and print detailed in
 '''
 # Svolgimento ES. 3:
 
-if True:
+if False:
 
     def product(name: str, price: float, quantity: int):
         product = {}
@@ -406,19 +406,19 @@ if True:
                            
                             
         
-Mouse = product("Mouse", 20.50, 5)
-Cuffie = product("Cuffie", 90, 6)        
-MicroSD = product("MicroSD 64 GB", 17.99, 3)     
+    Mouse = product("Mouse", 20.50, 5)
+    Cuffie = product("Cuffie", 90, 6)        
+    MicroSD = product("MicroSD 64 GB", 17.99, 3)     
 
-shopping_cart = []
+    shopping_cart = []
 
-add_product(shopping_cart,Mouse)
-add_product(shopping_cart,Cuffie)
-add_product(shopping_cart,MicroSD)
-remove_product(shopping_cart,Cuffie)
+    add_product(shopping_cart,Mouse)
+    add_product(shopping_cart,Cuffie)
+    add_product(shopping_cart,MicroSD)
+    remove_product(shopping_cart,Cuffie)
 
-print(shopping_cart)
-print(total_price(shopping_cart))
+    print(shopping_cart)
+    print(total_price(shopping_cart))
 
 
 # ES. 4 Text Analysis:
@@ -429,6 +429,11 @@ You can use a for loop to iterate over the words in the text and a dictionary to
 Implement error handling to handle missing files or other input issues.
 '''
 # Svolgimento ES. 4:
+
+if True:
+    pass
+
+
 
 # ES. 5 Inventory Management System:
 '''
