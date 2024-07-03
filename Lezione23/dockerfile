@@ -3,3 +3,5 @@ FROM python
 WORKDIR /app  
 COPY . /app
 CMD [ "python", "testdocker.py" ]
+
+# docker build -t esempio .
