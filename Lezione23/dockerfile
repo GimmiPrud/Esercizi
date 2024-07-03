@@ -4,4 +4,8 @@ WORKDIR /app
 COPY . /app
 CMD [ "python","testdocker.py"]
 
-# docker build -t esempio . (si utilizza per il testing)
+# 
+# docker build -t esempio . = si utilizza per il building perche permette di copiare l'immagine sul container di docker 
+# (ogni volta che si modifica il file bisogna eseguire questo comando per permettere di copiare la nuova immagine)
+
+# docker run (nome file) = si utilizza per eseguire l'immagine precendentemente copiata 
