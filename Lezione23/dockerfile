@@ -4,4 +4,4 @@ WORKDIR /app
 COPY . /app
 CMD [ "python","testdocker.py"]
 
-# docker build -t esempio .
+# docker build -t esempio . (si utilizza per il testing)
