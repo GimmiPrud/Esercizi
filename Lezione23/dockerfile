@@ -9,3 +9,4 @@ CMD [ "python","testdocker.py"]
 # (ogni volta che si modifica il file bisogna eseguire questo comando per permettere di copiare la nuova immagine)
 
 # docker run (nome utilizzato per il build del comando precedente[esempio .]) = si utilizza per eseguire l'immagine precendentemente copiata sul container docker che si riferisce al nostro file 
+
