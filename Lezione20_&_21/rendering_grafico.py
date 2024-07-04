@@ -55,3 +55,32 @@ Ecco un Triangolo avente base 4 ed altezza 4!
 L'area di questo triangolo vale: 8.0
 '''
 # Svolgimento:
+
+from abc import ABC, abstractmethod
+
+class Forma(ABC):
+
+    @abstractmethod
+    def getArea(self):
+        pass
+
+    @abstractmethod
+    def render(self):
+        pass
+
+class Quadrato(Forma):
+    def __init__(self, l1: float) -> None:
+        super().__init__()
+        self.l1 = l1
+
+class Rettangolo(Forma):
+    def __init__(self, b: float, h: float) -> None:
+        super().__init__()
+        self.b = b
+        self.h = h
+
+class Triangolo(Forma):
+    def __init__(self, l1: float) -> None:
+        super().__init__()
+        self.l1 = l1
+        
