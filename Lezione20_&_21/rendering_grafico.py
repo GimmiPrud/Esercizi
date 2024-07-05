@@ -102,6 +102,8 @@ class Triangolo(Forma):
     def render(self):
         pass
     
+
+    
 quadrato1 = Quadrato(4)
 print(quadrato1.getArea())
 quadrato1.render()
