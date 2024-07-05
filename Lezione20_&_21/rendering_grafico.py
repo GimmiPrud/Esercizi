@@ -75,10 +75,11 @@ class Quadrato(Forma):
 
     def getArea(self):
         A_quadrato = self.l1**2
-        return f"Area quadrato = {A_quadrato} cm"
+        return f"Area quadrato = {A_quadrato} cm\n"
     
     def render(self):
-        print(f"Ecco un quadrato di lato {self.l1}!\n")
+        print(f"\nEcco un quadrato di lato {self.l1}!\n")
+
         for l in range(self.l1):     
             print("*", end=" ")
         print()
@@ -100,10 +101,11 @@ class Rettangolo(Forma):
     
     def getArea(self):
         A_rettangolo = self.b * self.h
-        return f"Area rettangolo = {A_rettangolo} cm"
+        return f"Area rettangolo = {A_rettangolo} cm\n"
 
     def render(self):
-        print(f"Ecco un Rettangolo avente base {self.b} ed altezza {self.h}!")
+        print(f"\nEcco un Rettangolo avente base {self.b} ed altezza {self.h}!\n")
+
         for l in range(self.b):    
             print("*", end=" ")
         print()
@@ -125,21 +127,22 @@ class Triangolo(Forma):
     def getArea(self):
         h = self.b
         A_trinagolo = (self.b * h) / 2
-        return f"Area triangolo = {A_trinagolo}"
+        return f"Area triangolo = {A_trinagolo}\n"
 
     def render(self):
-        print(f"Ecco un triangolo avente base {self.b} ed altezza {self.b}!")
-        # for l in range(self.b):    
-        #     print("*", end=" ")
-        # print()
-        # for a in range(self.b-2): 
-        #     print("*", end=" ")
-        #     for t in range(self.b):
-        #         print(" ", end=" ")
-        #     print("*")
-        # for o in range(self.b):     
-        #     print("*", end=" ")
-        # print()
+        print(f"\nEcco un triangolo avente base {self.b} ed altezza {self.b}!\n")
+
+        for l in range(self.b):    
+            print("*", end=" ")
+        print()
+        for a in range(self.b-2): 
+            print("*", end=" ")
+            for t in range(self.b):
+                print(" ", end=" ")
+            print("*")
+        for o in range(self.b):     
+            print("*", end=" ")
+        print()
 
         
 
@@ -147,18 +150,17 @@ class Triangolo(Forma):
 
 
 # quadrato1 = Quadrato(4)
-# print(quadrato1.getArea())
 # quadrato1.render()
+# print(quadrato1.getArea())
 
 
 # rettangolo1 = Rettangolo(6,3)
-# print(rettangolo1.getArea())
 # rettangolo1.render()
+# print(rettangolo1.getArea())
 
 
-triangolo1 = Triangolo(10)
-print(triangolo1.getArea())
+triangolo1 = Triangolo(4)
 triangolo1.render()
-
+print(triangolo1.getArea())
 
 
