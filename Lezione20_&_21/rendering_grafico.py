@@ -129,17 +129,19 @@ class Triangolo(Forma):
 
     def render(self):
         print(f"Ecco un triangolo avente base {self.b} ed altezza {self.b}!")
-        for l in range(self.b):    
-            print("*", end=" ")
-        print()
-        for a in range(self.h-2): 
-            print("*", end=" ")
-            for t in range(self.h+1):
-                print(" ", end=" ")
-            print("*")
-        for o in range(self.b):     
-            print("*", end=" ")
-        print()
+        # for l in range(self.b):    
+        #     print("*", end=" ")
+        # print()
+        # for a in range(self.b-2): 
+        #     print("*", end=" ")
+        #     for t in range(self.b):
+        #         print(" ", end=" ")
+        #     print("*")
+        # for o in range(self.b):     
+        #     print("*", end=" ")
+        # print()
+
+        
 
     
 
@@ -152,6 +154,11 @@ class Triangolo(Forma):
 # rettangolo1 = Rettangolo(6,3)
 # print(rettangolo1.getArea())
 # rettangolo1.render()
+
+
+triangolo1 = Triangolo(10)
+print(triangolo1.getArea())
+triangolo1.render()
 
 
 
