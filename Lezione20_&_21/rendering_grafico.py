@@ -91,6 +91,7 @@ class Quadrato(Forma):
             print("*", end=" ")
         print()
 
+
 class Rettangolo(Forma):
     def __init__(self, b: float, h: float) -> None:
         super().__init__()
@@ -114,6 +115,7 @@ class Rettangolo(Forma):
         for o in range(self.b):     
             print("*", end=" ")
         print()
+
 
 class Triangolo(Forma):
     def __init__(self, l1: float) -> None:
