@@ -78,7 +78,17 @@ class Quadrato(Forma):
         return f"Area quadrato = {A_quadrato} cm"
     
     def render(self):
-        pass
+        for l in range(self.l1):     
+            print("*", end=" ")
+        print()
+        for a in range(self.l1-2): 
+            print("*", end=" ")
+            for t in range(self.l1-2):
+                print(" ", end=" ")
+            print("*")
+        for o in range(self.l1):     
+            print("*", end=" ")
+        print()
 
 class Rettangolo(Forma):
     def __init__(self, b: float, h: float) -> None:
@@ -88,9 +98,20 @@ class Rettangolo(Forma):
     
     def getArea(self):
         A_rettangolo = self.b * self.h
+        return f"Area rettangolo = {A_rettangolo}"
 
     def render(self):
-        pass
+        for l in range(self.l1):     
+            print("*", end=" ")
+        print()
+        # for a in range(self.l1-2): 
+        #     print("*", end=" ")
+        #     for t in range(self.l1-2):
+        #         print(" ", end=" ")
+        #     print("*")
+        # for o in range(self.l1):     
+        #     print("*", end=" ")
+        # print()
 
 class Triangolo(Forma):
     def __init__(self, l1: float) -> None:
@@ -103,8 +124,12 @@ class Triangolo(Forma):
         pass
     
 
-    
-quadrato1 = Quadrato(4)
-print(quadrato1.getArea())
-quadrato1.render()
+
+# quadrato1 = Quadrato(4)
+# print(quadrato1.getArea())
+# quadrato1.render()
+
+rettangolo1 = Rettangolo(6,3)
+print(rettangolo1.getArea())
+rettangolo1.render()
 
