@@ -149,14 +149,14 @@ class Triangolo(Forma):
     
 
 
-# quadrato1 = Quadrato(4)
-# quadrato1.render()
-# print(quadrato1.getArea())
+quadrato1 = Quadrato(4)
+quadrato1.render()
+print(quadrato1.getArea())
 
 
-# rettangolo1 = Rettangolo(6,3)
-# rettangolo1.render()
-# print(rettangolo1.getArea())
+rettangolo1 = Rettangolo(6,3)
+rettangolo1.render()
+print(rettangolo1.getArea())
 
 
 triangolo1 = Triangolo(4)
