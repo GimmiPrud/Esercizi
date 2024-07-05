@@ -100,7 +100,7 @@ class Rettangolo(Forma):
     
     def getArea(self):
         A_rettangolo = self.b * self.h
-        return f"Area rettangolo = {A_rettangolo}"
+        return f"Area rettangolo = {A_rettangolo} cm"
 
     def render(self):
         print(f"")
