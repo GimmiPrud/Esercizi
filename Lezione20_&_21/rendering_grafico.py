@@ -73,14 +73,9 @@ class Quadrato(Forma):
         super().__init__()
         self.l1 = l1
 
-class Rettangolo(Forma):
-    def __init__(self, b: float, h: float) -> None:
-        super().__init__()
-        self.b = b
-        self.h = h
-
-class Triangolo(Forma):
-    def __init__(self, l1: float) -> None:
-        super().__init__()
-        self.l1 = l1
-        
+    def getArea(self):
+        A_quadrato = self.l1**2
+        return f"Area quadrato = {A_quadrato}"
+    
+    def render(self):
+        pass
