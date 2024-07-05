@@ -21,7 +21,7 @@ Il metodo getArea() deve calcolare l'area del rettangolo.
 Il metodo render() deve stampare su schermo un rettangolo avente base ed altezza pari ai valori passati nel costruttore.
  Il rettangolo da stampare deve essere un rettangolo vuoto (" "), avente degli asterischi ("*") lungo il suo perimetro. (Vedi Esempio di output)
 
-Definire la classe Triangolo che estende la classe Forma e aggiunge specifiche circa la dimensione di un lato del trinagolo (per semplicità, 
+Definire la classe Triangolo che estende la classe Forma e aggiunge specifiche circa la dimensione di un lato del triangolo (per semplicità, 
 si suppone che il triangolo in questione sia un triangolo rettangolo).
 Il costruttore della classe deve ricevere come argomento solo il lato del triangolo, ed impostare il nome della forma su "Triangolo".
 Il metodo getArea() deve calcolare l'area del triangolo.
@@ -78,7 +78,7 @@ class Quadrato(Forma):
         return f"Area quadrato = {A_quadrato} cm"
     
     def render(self):
-        print(f"Ecco un quadrato di lato {self.l1}\n")
+        print(f"Ecco un quadrato di lato {self.l1}!\n")
         for l in range(self.l1):     
             print("*", end=" ")
         print()
@@ -103,7 +103,7 @@ class Rettangolo(Forma):
         return f"Area rettangolo = {A_rettangolo} cm"
 
     def render(self):
-        print(f"")
+        print(f"Ecco un Rettangolo avente base {self.b} ed altezza {self.h}!")
         for l in range(self.b):    
             print("*", end=" ")
         print()
@@ -118,14 +118,29 @@ class Rettangolo(Forma):
 
 
 class Triangolo(Forma):
-    def __init__(self, l1: float) -> None:
+    def __init__(self, b: float) -> None:
         super().__init__()
+        self.b = b
     
     def getArea(self):
-        A_trinagolo = ()
+        h = self.b
+        A_trinagolo = (self.b * h) / 2
+        return f"Area triangolo = {A_trinagolo}"
 
     def render(self):
-        pass
+        print(f"Ecco un triangolo avente base {self.b} ed altezza {self.b}!")
+        for l in range(self.b):    
+            print("*", end=" ")
+        print()
+        for a in range(self.h-2): 
+            print("*", end=" ")
+            for t in range(self.h+1):
+                print(" ", end=" ")
+            print("*")
+        for o in range(self.b):     
+            print("*", end=" ")
+        print()
+
     
 
 
@@ -133,7 +148,10 @@ class Triangolo(Forma):
 # print(quadrato1.getArea())
 # quadrato1.render()
 
-rettangolo1 = Rettangolo(6,3)
-print(rettangolo1.getArea())
-rettangolo1.render()
+
+# rettangolo1 = Rettangolo(6,3)
+# print(rettangolo1.getArea())
+# rettangolo1.render()
+
+
 
