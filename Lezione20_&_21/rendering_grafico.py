@@ -78,6 +78,7 @@ class Quadrato(Forma):
         return f"Area quadrato = {A_quadrato} cm"
     
     def render(self):
+        print(f"Ecco un quadrato di lato {self.l1}\n")
         for l in range(self.l1):     
             print("*", end=" ")
         print()
@@ -101,17 +102,18 @@ class Rettangolo(Forma):
         return f"Area rettangolo = {A_rettangolo}"
 
     def render(self):
-        for l in range(self.l1):     
+        print(f"")
+        for l in range(self.b):    
             print("*", end=" ")
         print()
-        # for a in range(self.l1-2): 
-        #     print("*", end=" ")
-        #     for t in range(self.l1-2):
-        #         print(" ", end=" ")
-        #     print("*")
-        # for o in range(self.l1):     
-        #     print("*", end=" ")
-        # print()
+        for a in range(self.h-2): 
+            print("*", end=" ")
+            for t in range(self.h+1):
+                print(" ", end=" ")
+            print("*")
+        for o in range(self.b):     
+            print("*", end=" ")
+        print()
 
 class Triangolo(Forma):
     def __init__(self, l1: float) -> None:
