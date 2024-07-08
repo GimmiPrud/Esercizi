@@ -106,17 +106,11 @@ class Rettangolo(Forma):
     def render(self):
         print(f"\nEcco un Rettangolo avente base {self.b} ed altezza {self.h}!\n")
 
-        for l in range(self.b):    
-            print("*", end=" ")
-        print()
-        for a in range(self.h-2): 
-            print("*", end=" ")
-            for t in range(self.h+1):
-                print(" ", end=" ")
-            print("*")
-        for o in range(self.b):     
-            print("*", end=" ")
-        print()
+        for i in range(self.h):
+            if i == 0 or i == self.h - 1:
+                print("*" * self.b)
+            else:
+                print("*"+" "*(self.b-2) + "*")
 
 
 class Triangolo(Forma):
@@ -131,13 +125,16 @@ class Triangolo(Forma):
 
     def render(self):
         print(f"\nEcco un triangolo avente base {self.b} ed altezza {self.b}!\n")
+
+        for i in range(1,self.b+1):
+            print("*"*i)
         
         
 
     
 
 
-quadrato1 = Quadrato(4)
+quadrato1 = Quadrato(5)
 quadrato1.render()
 print(quadrato1.getArea())
 
