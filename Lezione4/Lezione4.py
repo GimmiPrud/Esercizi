@@ -448,7 +448,7 @@ if False:
     occurrences_text(text1) 
     
 
-# ES. 5 Inventory Management System:
+# ES. 5 Inventory Management System:  (con utilizzo delle classi)
 '''
 Create a function that defines an item with a code, name, quantity, and price.
 Create a database or dictionary to store the items in inventory.
@@ -458,9 +458,35 @@ Use for loops and conditional statements to manage the various inventory operati
 # Svolgimento ES. 5:
 
 if True:
-    pass
+    class Items:
+        def __init__(self, code: str, name: str, quantity: int, price: float):
+            self.code = code
+            self.name = name
+            self.quantity = quantity
+            self.price = price
+            
+    class Database:
+        def __init__(self):
+            self.database = {}
         
-    
+        def add_items(self, items: Items):
+            items[ items.name] = items
+            self.database.append(items)
+        
+        def remove_items(self, items: Items):
+            pass
+        
+        def search_items(self, items: Items):
+            pass
+            
+        def update_items(self):
+            pass
+
+    database = Database()
+    forbici = Items("2345", "forbici",5,10)
+    forbici = Items("2697", "cuffie",10,30)
+    forbici = Items("9786", "penna",30,2)
+        
 
 # ES.6 Password Generator:
 '''
