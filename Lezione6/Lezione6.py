@@ -185,6 +185,24 @@ Make a class Die with one attribute called sides, which has a default value of 6
 Write a method called roll_die() that prints a random number between 1 and the number of sides the die has.
 Make a 6-sided die and roll it 10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
 '''
+if True:
+    from random import *
+    class Die:
+        def __init__(self, sides: int = 6):
+            self.sides = sides
+        
+        def roll_die(self):
+            x = randrange(0, self.sides)+1
+            return f"Roll = {x}"
+    
+die_6 = Die()
+die_20 = Die(sides=20)
+
+x = print(die_6.roll_die())
+y = print(die_20.roll_die())
+
+
+
 
 # 9-14. Lottery:
 '''
