@@ -185,6 +185,7 @@ Make a class Die with one attribute called sides, which has a default value of 6
 Write a method called roll_die() that prints a random number between 1 and the number of sides the die has.
 Make a 6-sided die and roll it 10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
 '''
+# Svolgimento:
 if True:
     from random import *
     class Die:
@@ -202,13 +203,14 @@ x = print(die_6.roll_die())
 y = print(die_20.roll_die())
 
 
-
-
 # 9-14. Lottery:
 '''
 Make a list or tuple containing a series of 10 numbers and 5 letters.
 Randomly select 4 numbers or letters from the list and print a message saying that any ticket matching these 4 numbers or letters wins a prize.
 '''
+# Svolgimento:
+
+
 
 # 9-15. Lottery Analysis: 
 '''
