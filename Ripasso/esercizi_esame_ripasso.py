@@ -410,13 +410,13 @@ if True:
                 return "Nessuna ricetta contiene l'ingrediente specificato."
             return self.recipe
         
-manager = RecipeManager()
+    manager = RecipeManager()
 
-print(manager.create_recipe("Pizza Margherita", ["Farina", "Acqua", "Lievito", "Pomodoro", "Mozzarella"]))
-print(manager.add_ingredient("Pizza Margherita", "Basilico"))
-print(manager.update_ingredient("Pizza Margherita", "Mozzarella", "Mozzarella di Bufala"))
-print(manager.remove_ingredient("Pizza Margherita", "Acqua"))
-print(manager.list_ingredients("Pizza Margherita"))
+    print(manager.create_recipe("Pizza Margherita", ["Farina", "Acqua", "Lievito", "Pomodoro", "Mozzarella"]))
+    print(manager.add_ingredient("Pizza Margherita", "Basilico"))
+    print(manager.update_ingredient("Pizza Margherita", "Mozzarella", "Mozzarella di Bufala"))
+    print(manager.remove_ingredient("Pizza Margherita", "Acqua"))
+    print(manager.list_ingredients("Pizza Margherita"))
 
 # result:
 '''
