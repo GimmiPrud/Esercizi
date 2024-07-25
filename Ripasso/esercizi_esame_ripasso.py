@@ -355,47 +355,60 @@ if True:
         def __init__(self):
             self.recipe = {}
 
-        def create_recipe(self, name: str, ingredients:list[str]):
-            if name not in self.recipe.keys():
+        def create_recipe(self, name, ingredients):
+            if name in self.recipe:
+                return "La ricetta esiste già."
+            else:
                 self.recipe[name] = ingredients
                 return self.recipe
+
+        def add_ingredient(self, recipe_name, ingredient):
+            if recipe_name not in self.recipe:
+                return "La ricetta non esiste."
+            if ingredient in self.recipe[recipe_name]:
+                return "L'ingrediente esiste già"
             else:
-                return "la ricetta esiste già"
-        
-        def add_ingredient(self, recipe_name: str, ingredient: str):
-            if recipe_name in self.recipe.keys():
-                self.recipe[recipe_name] += [ingredient]
+                self.recipe[recipe_name].append(ingredient)
                 return self.recipe
+
+        def remove_ingredient(self, recipe_name, ingredient):
+            if recipe_name not in self.recipe:
+                return "La ricetta non esiste."
+            if ingredient not in self.recipe[recipe_name]:
+                return "L'ingrediente non è presente"
             else:
-                return "l'ingrediente non è presente o la ricetta non esiste"
-            
-        def remove_ingredient(self, recipe_name: str, ingredient: str): 
-            if recipe_name in self.recipe.keys():
                 self.recipe[recipe_name].remove(ingredient)
                 return self.recipe
-            else:
-                return "l'ingrediente non è presente o la ricetta non esiste"
 
-        def update_ingredient(self, recipe_name: str, old_ingredient: str, new_ingredient: str):
-            if recipe_name and old_ingredient:
+        def update_ingredient(self, recipe_name, old_ingredient, new_ingredient):
+            if recipe_name not in self.recipe:
+                return "La ricetta non esiste."
+            if old_ingredient not in self.recipe[recipe_name]:
+                return "L'ingrediente da sostituire non è presente"
+            else:
                 self.recipe[recipe_name].remove(old_ingredient)
-                self.recipe[recipe_name] += [new_ingredient]
+                self.recipe[recipe_name].append(new_ingredient)
                 return self.recipe
-            else:
-                return "l'ingrediente non è presente o la ricetta non esiste"
-                
+
         def list_recipes(self):
+            lista = []
+            for k in self.recipe:
+                lista.append(k)
+            return lista
+
+        def list_ingredients(self, recipe_name):
+            if recipe_name not in self.recipe:
+                return "La ricetta non esiste."
+            return self.recipe[recipe_name]
+
+        def search_recipe_by_ingredient(self, ingredient):
+            recipes= []
+            for k,v in self.recipe.items():
+                if v in self.recipe.values():
+                    recipes.append(k)
+            if not recipes:
+                return "Nessuna ricetta contiene l'ingrediente specificato."
             return self.recipe
-
-        def list_ingredients(self, recipe_name: str):
-            if recipe_name in self.recipe.keys():
-                return self.recipe[recipe_name]
-            else:
-                return "l'ingrediente non esiste"
-
-        def search_recipe_by_ingredient(self, ingredient: str):
-            if ingredient in self.recipe.values():
-                return self.recipe.values(ingredient)
         
 manager = RecipeManager()
 
