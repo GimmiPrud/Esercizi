@@ -424,32 +424,51 @@ Classe Bank:
 '''
 if False:
     class Account:
-        def __init__(self, account_id: str, balance: float):
+        def __init__(self, account_id: str):
             self.account_id = account_id
-            self.balance = balance
+            self.balance:float = 0.0
 
-        
         def deposit(self, amount: float):
-            pass
-
+            self.balance += amount
 
         def get_balance(self):
-            pass
-
-
+            return int(self.balance)
     class Bank:
-        def __init__(self, accounts:[str,Account]):
-            self.accounts = accounts
-
+        def __init__(self):
+            self.accounts: dict[str,Account] = {}
         
         def create_account(self, account_id):
-            pass
+            if account_id not in self.accounts.keys():
+                self.accounts[account_id] = Account(account_id,)
+            else:
+                print("Account whit this ID already exists")
+            return self.accounts[account_id]
 
         def deposit(self, account_id, amount):
-            pass
+            if account_id in self.accounts.keys():
+                self.accounts[account_id].deposit(amount)
 
         def get_balance(self, account_id):
-            pass
+            if account_id in self.accounts.keys():
+                return self.accounts[account_id].get_balance()
+            else:
+                print(" Account not found")
+
+    bank = Bank()
+    account1 = bank.create_account("123")
+    print(account1.get_balance())
+    # result 0
+    bank = Bank()
+    account1 = bank.create_account("123")
+    bank.deposit("123",100)
+    print(bank.get_balance("123"))
+    # result 100
+    bank = Bank()
+    account2 = bank.create_account("456")
+    bank.deposit("456",200)
+    print(bank.get_balance("456"))
+    # result 200
+        
 
 #-----------------------------------------------------------#
 '''
