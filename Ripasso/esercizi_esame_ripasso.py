@@ -350,33 +350,70 @@ Classe:
     - search_recipe_by_ingredient(ingredient): Trova e restituisce tutte le ricette che contengono un determinato ingrediente.
     Restituisce un elenco di ricette o un messaggio di errore se nessuna ricetta contiene l'ingrediente.
 '''
-if False:
+if True:
     class RecipeManager:
         def __init__(self):
-            self.recipe = []
+            self.recipe = {}
 
         def create_recipe(self, name: str, ingredients:list[str]):
-            ricetta = {}
-            ricetta[name] = ingredients
-            return ricetta
+            if name not in self.recipe.keys():
+                self.recipe[name] = ingredients
+                return self.recipe
+            else:
+                return "la ricetta esiste già"
         
         def add_ingredient(self, recipe_name: str, ingredient: str):
-            pass
-
+            if recipe_name in self.recipe.keys():
+                self.recipe[recipe_name] += [ingredient]
+                return self.recipe
+            else:
+                return "l'ingrediente non è presente o la ricetta non esiste"
+            
         def remove_ingredient(self, recipe_name: str, ingredient: str): 
-            pass
+            if recipe_name in self.recipe.keys():
+                self.recipe[recipe_name].remove(ingredient)
+                return self.recipe
+            else:
+                return "l'ingrediente non è presente o la ricetta non esiste"
 
         def update_ingredient(self, recipe_name: str, old_ingredient: str, new_ingredient: str):
-            pass
-
+            if recipe_name and old_ingredient:
+                self.recipe[recipe_name].remove(old_ingredient)
+                self.recipe[recipe_name] += [new_ingredient]
+                return self.recipe
+            else:
+                return "l'ingrediente non è presente o la ricetta non esiste"
+                
         def list_recipes(self):
-            pass
+            return self.recipe
 
         def list_ingredients(self, recipe_name: str):
-            pass
+            if recipe_name in self.recipe.keys():
+                return self.recipe[recipe_name]
+            else:
+                return "l'ingrediente non esiste"
 
         def search_recipe_by_ingredient(self, ingredient: str):
-            pass
+            if ingredient in self.recipe.values():
+                return self.recipe.values(ingredient)
+        
+manager = RecipeManager()
+
+print(manager.create_recipe("Pizza Margherita", ["Farina", "Acqua", "Lievito", "Pomodoro", "Mozzarella"]))
+print(manager.add_ingredient("Pizza Margherita", "Basilico"))
+print(manager.update_ingredient("Pizza Margherita", "Mozzarella", "Mozzarella di Bufala"))
+print(manager.remove_ingredient("Pizza Margherita", "Acqua"))
+print(manager.list_ingredients("Pizza Margherita"))
+
+# result:
+'''
+{'Pizza Margherita': ['Farina', 'Acqua', 'Lievito', 'Pomodoro', 'Mozzarella']}
+{'Pizza Margherita': ['Farina', 'Acqua', 'Lievito', 'Pomodoro', 'Mozzarella', 'Basilico']}
+{'Pizza Margherita': ['Farina', 'Acqua', 'Lievito', 'Pomodoro', 'Mozzarella di Bufala', 'Basilico']}
+{'Pizza Margherita': ['Farina', 'Lievito', 'Pomodoro', 'Mozzarella di Bufala', 'Basilico']}
+['Farina', 'Lievito', 'Pomodoro', 'Mozzarella di Bufala', 'Basilico']
+'''
+
 
 #---------------------------------------------------------------------------#
 '''
@@ -440,7 +477,7 @@ if False:
         
         def create_account(self, account_id):
             if account_id not in self.accounts.keys():
-                self.accounts[account_id] = Account(account_id,)
+                self.accounts[account_id] = Account(account_id)
             else:
                 print("Account whit this ID already exists")
             return self.accounts[account_id]
@@ -504,24 +541,21 @@ Metodi:
     return_book(member_id: str, book_id: str): Permette al membro di restituire il libro.
     get_borrowed_books(member_id): list[Book] - restituisce la lista dei libri presi in prestito dal membro.
 '''
-if True:
+if False:
     class Book:
-        def __init__(self, book_id: str, title: str, author: str, is_borrowed: bool):
+        def __init__(self, book_id: str, title: str, author: str):
             self.book_id = book_id
             self.title = title
             self.author = author
-            self.is_borrowed = is_borrowed
+            self.is_borrowed = False
         
         def borrow(self):
-            if self.is_borrowed == False:
-                self.is_borrowed = True
+            self.is_borrowed = True
 
         def return_book(self):
             self.is_borrowed = False
-
-    
     class Member:
-        def __init__(self, member_id: str, name: str, borrowed_books: list[Book]):
+        def __init__(self, member_id: str, name: str):
             self.member_id = member_id
             self.name = name
             self.borrowed_books: list[Book] = []
@@ -533,43 +567,46 @@ if True:
         def return_book(self, book: Book):
             if book.book_id in self.borrowed_books:
                 self.borrowed_books.remove(book)
-
-
-    class library:
-        def __init__(self, books: dict[str, Book], members: dict[str, Member]):
+    class Library:
+        def __init__(self):
             self.books: dict[str, Book] = {}
             self.members: dict[str, Member] = {}
 
         def add_book(self, book_id: str, title: str, author: str): 
-            pass
+            if book_id not in self.books.keys():
+                self.books[book_id] = Book(book_id,title,author)
 
         def register_member(self, member_id:str, name: str):
-            pass
+            if member_id not in self.members.keys():
+                self.members[member_id] = Member(member_id,name)
 
         def borrow_book(self, member_id: str, book_id: str): 
-            pass
-
+            if member_id in self.members.keys() and book_id in self.books.keys():
+                self.members[member_id].borrow_book(self.books[book_id])
+                
         def return_book(self, member_id: str, book_id: str): 
-            pass
+            if member_id in self.members and book_id in self.books:
+                self.members[member_id].return_book(self.books[book_id])
 
-        def get_borrowed_books(member_id): list[Book]
-        pass
-    
-    library = library()
+        def get_borrowed_books(self, member_id):
+            if member_id in self.members:
+                return self.members[member_id].borrowed_books
+
+        
+        
+    library = Library()
 
     library.add_book("B001", "The Great Gatsby", "F. Scott Fitzgerald")
     library.add_book("B002", "1984", "George Orwell")
     library.add_book("B003", "To Kill a Mockingbird", "Harper Lee")
-
     # Register members
     library.register_member("M001", "Alice")
     library.register_member("M002", "Bob")
     library.register_member("M003", "Charlie")
-
     # Borrow books
     library.borrow_book("M001", "B001")
     library.borrow_book("M002", "B002")
-
+    
     print(library.get_borrowed_books("M001"))  # Expected output: ['The Great Gatsby']
     print(library.get_borrowed_books("M002"))  # Expected output: ['1984']
 
