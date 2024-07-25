@@ -504,8 +504,7 @@ Metodi:
     return_book(member_id: str, book_id: str): Permette al membro di restituire il libro.
     get_borrowed_books(member_id): list[Book] - restituisce la lista dei libri presi in prestito dal membro.
 '''
-if False:
-
+if True:
     class Book:
         def __init__(self, book_id: str, title: str, author: str, is_borrowed: bool):
             self.book_id = book_id
@@ -514,10 +513,11 @@ if False:
             self.is_borrowed = is_borrowed
         
         def borrow(self):
-            pass
+            if self.is_borrowed == False:
+                self.is_borrowed = True
 
         def return_book(self):
-            pass  
+            self.is_borrowed = False
 
     
     class Member:
@@ -552,6 +552,24 @@ if False:
 
         def get_borrowed_books(member_id): list[Book]
         pass
+    
+    # library = Library()
+
+    library.add_book("B001", "The Great Gatsby", "F. Scott Fitzgerald")
+    library.add_book("B002", "1984", "George Orwell")
+    library.add_book("B003", "To Kill a Mockingbird", "Harper Lee")
+
+    # Register members
+    library.register_member("M001", "Alice")
+    library.register_member("M002", "Bob")
+    library.register_member("M003", "Charlie")
+
+    # Borrow books
+    library.borrow_book("M001", "B001")
+    library.borrow_book("M002", "B002")
+
+    print(library.get_borrowed_books("M001"))  # Expected output: ['The Great Gatsby']
+    print(library.get_borrowed_books("M002"))  # Expected output: ['1984']
 
 #--------------------------------------------------------------------#
 '''
