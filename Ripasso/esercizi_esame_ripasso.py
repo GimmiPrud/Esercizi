@@ -417,7 +417,7 @@ if True:
     print(manager.update_ingredient("Pizza Margherita", "Mozzarella", "Mozzarella di Bufala"))
     print(manager.remove_ingredient("Pizza Margherita", "Acqua"))
     print(manager.list_ingredients("Pizza Margherita"))
-
+    
 # result:
 '''
 {'Pizza Margherita': ['Farina', 'Acqua', 'Lievito', 'Pomodoro', 'Mozzarella']}
