@@ -604,8 +604,6 @@ if False:
         def get_borrowed_books(self, member_id):
             if member_id in self.members:
                 return self.members[member_id].borrowed_books
-
-        
         
     library = Library()
 
