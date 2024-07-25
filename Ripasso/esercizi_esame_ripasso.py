@@ -524,19 +524,21 @@ if True:
         def __init__(self, member_id: str, name: str, borrowed_books: list[Book]):
             self.member_id = member_id
             self.name = name
-            self.borrowed_books = borrowed_books
+            self.borrowed_books: list[Book] = []
 
         def borrow_book(self, book: Book):
-            pass
+            if book.book_id not in self.borrowed_books:
+                self.borrowed_books.append(book)    
 
         def return_book(self, book: Book):
-            pass
+            if book.book_id in self.borrowed_books:
+                self.borrowed_books.remove(book)
 
 
     class library:
         def __init__(self, books: dict[str, Book], members: dict[str, Member]):
-            self.books = books
-            self.members = members
+            self.books: dict[str, Book] = {}
+            self.members: dict[str, Member] = {}
 
         def add_book(self, book_id: str, title: str, author: str): 
             pass
@@ -553,7 +555,7 @@ if True:
         def get_borrowed_books(member_id): list[Book]
         pass
     
-    # library = Library()
+    library = library()
 
     library.add_book("B001", "The Great Gatsby", "F. Scott Fitzgerald")
     library.add_book("B002", "1984", "George Orwell")
