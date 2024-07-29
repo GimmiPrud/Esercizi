@@ -350,7 +350,7 @@ Classe:
     - search_recipe_by_ingredient(ingredient): Trova e restituisce tutte le ricette che contengono un determinato ingrediente.
     Restituisce un elenco di ricette o un messaggio di errore se nessuna ricetta contiene l'ingrediente.
 '''
-if True:
+if False:
     class RecipeManager:
         def __init__(self):
             self.recipe = {}
