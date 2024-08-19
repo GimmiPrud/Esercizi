@@ -658,6 +658,7 @@ if False:
 # Esercizio esame python teorico:
 '''
 Progettare un semplice sistema di gestione di studenti e corsi con i seguenti requisiti:
+
 1. Classe Student:
 Attributi:
 student_id: str - identificatore univoco per lo studente.
@@ -665,6 +666,7 @@ courses: list[str] - la lista dei corsi ai quali lo studente è iscritto.
 Metodi:
 enroll(course: str)-aggiunge il corso specificato alla lista dei corsi dello studente oppure stampa il messaggio "Lo studente è già iscritto al corso {course}."
 get_courses(): restituisce la lista dei corsi ai quali lo studente è iscritto.
+
 Classe School:
 Attributi:
 students: dict[str, Student] - un dizionario per memorizzare gli studenti, in cui la chiave è una stringa ID mentre il valore è un oggetto di tipo Studente.
