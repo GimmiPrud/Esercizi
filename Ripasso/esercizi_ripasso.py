@@ -112,7 +112,7 @@ Ad esempio, se il rimbalzo avviene al tempo 4, allora la funzione stamperà:
  
 "Tempo: 4 Rimbalzo!"
 '''
-if True:
+if False:
     
     def rimbalzo() -> None:
 
@@ -153,8 +153,8 @@ if True:
     Tempo: 26 Altezza: 281.5
     Tempo: 27 Altezza: 155.75
     Tempo: 28 Rimbalzo!
-    '''
-    
+    '''  
+#-----------------------------------------------------#
     
     
 
